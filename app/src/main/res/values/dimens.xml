@@ -9,9 +9,6 @@
     <dimen name="dimens_30dp">30dp</dimen>
     <dimen name="dimens_5sp">5dp</dimen>
     <dimen name="dimens_25sp">25sp</dimen>
-    <dimen name="dimens_80sp">80dp</dimen>
-    <dimen name="dimens_12dp">16sp</dimen>
-    <dimen name="dimens_28">28sp</dimen>
     <dimen name="dimens_40sp">40sp</dimen>
     <dimen name="dimens_15sp">15dp</dimen>
     <dimen name="dimens_10sp">10dp</dimen>
@@ -19,4 +16,5 @@
     <dimen name="dimens_18sp">18sp</dimen>
     <dimen name="dimens_8sp">8dp</dimen>
     <dimen name="dimens_50sp">50sp</dimen>
+    <dimen name="dimens_5dp">5dp</dimen>
 </resources>
