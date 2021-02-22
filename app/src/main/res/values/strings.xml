@@ -6,4 +6,6 @@
     <string name="discover_new_places">Discover new places</string>
     <string name="top_categories">Top categories</string>
     <string name="show_all">Show all</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="log_in_to_your_account">log into your account</string>
 </resources>
