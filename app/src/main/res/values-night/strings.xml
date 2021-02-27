@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_an_account">Create an account</string>
+    <string name="your_emailrecovery">your email</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="please_enter_your_email_address_you_will_nreceive_a_link_to_create_a_new_password_via_email">Please enter your email address.You will\nreceive a link to create a new password via email</string>
+    <string name = "appl_name">Spinner</string>
+    <string name ="selected_item">Selected item:</string>
+    <string name="enter_your_otp_code_here">Enter your OTP code here</string>
+    <string name="resend_a_new_code">Resend a new code</string>
+</resources>

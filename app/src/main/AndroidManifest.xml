@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resto">
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.Resto"
-            android:label="@string/app_name">
+        <activity android:name=".ui.registration.SignupActivity"></activity>
+        <activity android:name=".ui.otp.PhoneVerificationActivity" />
+        <activity android:name=".ui.phoneverification.VerifyYourPhoneActivity" />
+        <activity android:name=".ui.recoverpassword.ForgotPasswordActivity" />
+        <activity android:name=".ui.authentification.AuthentificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Resto">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

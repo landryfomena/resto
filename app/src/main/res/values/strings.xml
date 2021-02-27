@@ -6,4 +6,27 @@
     <string name="discover_new_places">Discover new places</string>
     <string name="top_categories">Top categories</string>
     <string name="show_all">Show all</string>
+    <string name="log_in_to_your_account">Log in to your account</string>
+    <string name="forgot_your_password">forgot your password?</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="sign_up">Sign up</string>
+    <string name="authentification_sign_up">Sign Up</string>
+    <string name="your_email">Your email</string>
+    <string name="send">Send</string>
+    <string name="your_emailrecovery">your email</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="please_enter_your_email_address_you_will_nreceive_a_link_to_create_a_new_password_via_email">Please enter your email address.You will\nreceive a link to create a new password via email</string>
+    <string name="verify_your_n_phone">Verify your\n phone</string>
+    <string name="authentification_Social_network">Social_network</string>
+    <string name="or_login_with">Or login with</string>
+    <string name="appl_name">Spinner</string>
+    <string name="selected_item">Selected item</string>
+    <string name="enter_your_otp_code_here">Enter your OTP code here</string>
+    <string name="phone_verification">Phone Verification</string>
+    <string name="resend_a_new_code">Resend a new code</string>
+    <string name="password">Password</string>
 </resources>

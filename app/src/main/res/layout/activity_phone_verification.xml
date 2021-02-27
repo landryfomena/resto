@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.otp.PhoneVerificationActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimens_40sp"
+        android:text="@string/phone_verification"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="@dimen/dimens_40sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/title_color"
+        android:id="@+id/otp_title"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/otp_title"
+        android:layout_marginTop="@dimen/dimens_30dp"
+        android:text="@string/enter_your_otp_code_here"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:id="@+id/otp_subTitle"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_40sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/otp_subTitle"
+        android:layout_marginHorizontal="@dimen/dimens_16dp"
+        android:singleLine="true"
+        android:id="@+id/otp_inputlinear">
+
+        <EditText
+            android:id="@+id/otp_input1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/rounded_shape_otp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLength="1"
+            android:layout_marginRight="@dimen/dimens_8dp"
+            tools:ignore="LabelFor,Suspicious0dp"
+
+            />
+        <EditText
+            android:id="@+id/otp_input2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/rounded_shape_otp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLength="1"
+            android:layout_marginRight="@dimen/dimens_8dp"
+            tools:ignore="LabelFor,Suspicious0dp" />
+        <EditText
+            android:id="@+id/otp_input3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_shape_otp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLength="1"
+            tools:ignore="LabelFor,Suspicious0dp" />
+        <EditText
+            android:id="@+id/otp_input4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_shape_otp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLength="1"
+            tools:ignore="LabelFor,Suspicious0dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/otp_inputlinear"
+        android:layout_marginTop="@dimen/dimens_40sp"
+        android:text="Didn't you received any code?"
+        android:textAlignment="center"
+        android:textSize="@dimen/dimens_20sp"
+        android:fontFamily="sans-serif"
+        android:id="@+id/otp_subEndtext"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/otp_subEndtext"
+        android:text="@string/resend_a_new_code"
+        android:textAlignment="center"
+        android:textSize="@dimen/dimens_20sp"
+        android:fontFamily="sans-serif"
+        android:id="@+id/otp_endtext"
+        android:textColor="@color/purple_700"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
