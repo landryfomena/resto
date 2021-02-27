@@ -24,4 +24,14 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         return root
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+    }
+    fun initRecycleview(){
+        (0..5).forEach{
+
+        }
+    }
 }
