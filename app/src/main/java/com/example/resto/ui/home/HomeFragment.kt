@@ -32,11 +32,7 @@ class HomeFragment : Fragment() {
         return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        initRecycleView()
-        initTopCategories()
-    }
+
     fun initRecycleView(){
         var items = mutableListOf<Item_resto_Extended>()
         (0..5).forEach{
@@ -59,6 +55,16 @@ class HomeFragment : Fragment() {
             adapter = GroupAdapter<ViewHolder>().apply {
                 add(Section(items))
             }
+        }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+    }
+    fun initRecycleview(){
+        (0..5).forEach{
+
         }
     }
 }
