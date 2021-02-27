@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.verifyyourphone.VerifyYourPhoneActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TitleVerifyyourphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Verify your phone"
+            android:textColor="@color/Title_color"
+            android:textAlignment="center"
+            android:textSize="@dimen/dimens_34sp"
+            android:layout_marginTop="@dimen/dimens8dp"
+            />
+        <TextView
+            android:id="@+id/Sub_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TitleAuthentification"
+            android:text="We have sent you an SMS with a code to number"
+            android:textColor="@color/Text_Sub_Title"
+            android:textAlignment="center"
+            android:textSize="@dimen/dimens_16sp"
+            android:layout_marginTop="@dimen/dimens8dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_shape_into_text"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="@dimen/dimens_16dp">
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/dimens_16dp"
+            app:ccp_defaultNameCode="CM"
+            app:ccp_showPhoneCode="true"
+            android:id="@+id/calendar_icon"
+            android:layout_height="match_parent"/>
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/Sub_Title"
+                android:background="@android:color/transparent"
+                android:layout_marginHorizontal="@dimen/dimens_16dp"
+                android:textSize="@dimen/dimens_25sp"
+                android:padding="@dimen/dimens5dp"
+                android:inputType="phone"
+                android:textColorHint="@color/Text_color_sub"
+                />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/social_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            android:paddingTop="30dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/forgot"
+                android:text="Or login with"
+                android:textColor="@color/Text_Sub_Title"
+                android:textAlignment="center"
+                android:textSize="@dimen/dimens_16sp"
+                android:layout_marginTop="@dimen/dimens8dp"
+                />
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Social network"
+                android:textColor="#FF8C00"
+                android:textAlignment="center"
+                android:textSize="@dimen/dimens_16sp"
+                android:layout_marginTop="@dimen/dimens8dp"
+                />
+        </LinearLayout>
+        <Button
+            android:text="next"
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            app:layout_constraintTop_toBottomOf="@id/social_network"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="log_into_your_acompt">log into your acompt</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="selected_item">Selected item:</string>
 </resources>

@@ -28,4 +28,12 @@ class HomeFragment : Fragment() {
         })
         return root
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+    }
+    fun initRecycleview(){
+        (0..5)forEach{
+
+        }  }
 }
