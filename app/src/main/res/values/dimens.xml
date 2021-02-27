@@ -10,4 +10,16 @@
     <dimen name="dimens5dp">5dp</dimen>
     <dimen name="dimens_20dp">20dp</dimen>
     <dimen name="dimens_35dp">35dp</dimen>
+    <dimen name="dimens_34sp">34sp</dimen>
+    <dimen name="dimens_8dp">8dp</dimen>
+    <dimen name="dimens_16sp">16sp</dimen>
+    <dimen name="dimens_25sp">25sp</dimen>
+    <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_16dp">16dp</dimen>
+    <dimen name="dimens_30dp">30dp</dimen>
+    <dimen name="dimens_20sp">20sp</dimen>
+    <dimen name="dimens_10dp">10dp</dimen>
+    <dimen name="dimens_17sp">17sp</dimen>
+    <dimen name="dimens_40dp">40dp</dimen>
+    <dimen name="dimens_50dp">50dp</dimen>
 </resources>
