@@ -4,107 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.verifyyourphone.PhoneVerificationActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="100dp"
-        android:orientation="vertical">
+    tools:context=".ui.verifyyourphone.PhoneVerificationActivity"
+    android:paddingTop="100dp"
+    android:orientation="vertical">
 
         <TextView
             android:id="@+id/TitlePhoneVerification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Phone verification"
-            android:textColor="@color/Title_color"
-            android:textAlignment="center"
-            android:textSize="@dimen/dimens_34sp"
             android:layout_marginTop="@dimen/dimens8dp"
-            />
+            android:text="@string/phone_verification"
+            android:textAlignment="center"
+            android:textColor="@color/Title_color"
+            android:textSize="@dimen/dimens_34sp"
+            app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/Sub_Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TitleAuthentification"
-            android:text="Enter your OTP code here"
-            android:textColor="@color/Text_Sub_Title"
-            android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp"
             android:layout_marginTop="@dimen/dimens8dp"
-            />
+            android:text="@string/enter_your_otp_code_here"
+            android:textAlignment="center"
+            android:textColor="@color/Text_Sub_Title"
+            android:textSize="@dimen/dimens_16sp"
+            app:layout_constraintTop_toBottomOf="@+id/TitlePhoneVerification" />
         <LinearLayout
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/Sub_Title"
+            android:layout_height="70dp"
+            android:layout_marginLeft="@dimen/dimens_16dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="@dimen/dimens_35dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/Sub_Title">
             <EditText
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/dimens_edit_phone_code"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimens8dp"
                 android:background="@drawable/rounded_shape_phone_verification"
-                android:layout_marginHorizontal="@dimen/dimens8dp"
-                android:textSize="@dimen/dimens_20dp"
                 android:inputType="phone"
+                android:textAlignment="center"
                 android:maxLength="1"
                 android:textColorHint="@color/Text_color_sub"
-                />
+                android:imeOptions="actionNext" />
             <EditText
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/rounded_shape_phone_verification"
+                android:layout_width="@dimen/dimens_edit_phone_code"
+                android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/dimens8dp"
-                android:textSize="@dimen/dimens_20dp"
+                android:background="@drawable/rounded_shape_phone_verification"
                 android:inputType="phone"
+                android:textAlignment="center"
                 android:maxLength="1"
                 android:textColorHint="@color/Text_color_sub"
-                />
+                android:imeOptions="actionNext" />
             <EditText
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/rounded_shape_phone_verification"
+                android:layout_width="@dimen/dimens_edit_phone_code"
+                android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/dimens8dp"
-                android:textSize="@dimen/dimens_20dp"
+                android:background="@drawable/rounded_shape_phone_verification"
                 android:inputType="phone"
+                android:textAlignment="center"
                 android:maxLength="1"
                 android:textColorHint="@color/Text_color_sub"
-                />
+                android:imeOptions="actionNext" />
             <EditText
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/dimens_edit_phone_code"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimens8dp"
                 android:background="@drawable/rounded_shape_phone_verification"
-                android:layout_marginHorizontal="@dimen/dimens8dp"
-                android:textSize="@dimen/dimens_20dp"
                 android:inputType="phone"
+                android:textAlignment="center"
                 android:maxLength="1"
                 android:textColorHint="@color/Text_color_sub"
-                />
+                android:imeOptions="actionNext" />
+
         </LinearLayout>
 
         <TextView
             android:id="@+id/didnt_code"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text"
-            android:text="Didn't you received any code?"
+            android:layout_marginTop="@dimen/dimens_80dp"
+            android:text="@string/didn_t_you_received_any_code"
             android:textColor="@color/Text_Sub_Title"
             android:textSize="@dimen/dimens_16sp"
-            android:layout_marginTop="@dimen/dimens8dp"
-            />
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text" />
         <TextView
             android:id="@+id/recent"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@+id/didnt_code"
-            android:text="Recent a new code."
-            android:textColor="#FF8C00"
-            android:textSize="@dimen/dimens_16sp"
             android:layout_marginTop="@dimen/dimens8dp"
-            />
-    </LinearLayout>
+            android:text="@string/recent_a_new_code"
+            android:textAlignment="center"
+            android:textColor="@color/orange_clear"
+            android:textSize="@dimen/dimens_16sp"
+            app:layout_constraintTop_toBottomOf="@+id/didnt_code" />
 </androidx.constraintlayout.widget.ConstraintLayout>

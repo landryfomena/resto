@@ -4,11 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
+import com.example.resto.ui.home.item.ItemTopCategories
+import com.example.resto.ui.home.item.Item_Resto_Extended
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.Section
+import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -18,22 +26,42 @@ class HomeFragment : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+        ): View? {
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
         })
         return root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        initRecycleview()
+        initTopCategories()
     }
     fun initRecycleview(){
-        (0..5)forEach{
-
-        }  }
+        var items= mutableListOf<Item_Resto_Extended>()
+        (0..5).forEach{
+          items.add(Item_Resto_Extended())
+        }
+        new_places_container.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
+    fun initTopCategories(){
+        var items= mutableListOf<ItemTopCategories>()
+        (0..5).forEach{
+            items.add(ItemTopCategories())
+        }
+        topCategories.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
 }

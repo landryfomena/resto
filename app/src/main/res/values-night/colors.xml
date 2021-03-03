@@ -3,4 +3,6 @@
     <color name="Title_color">#0A1F44</color>
     <color name="Text_Sub_Title">#707070</color>
     <color name="button_color">#F44336</color>
+    <color name="orange_clear">#FF8C00</color>
+    <color name="gris_clear">#B8BBC6</color>
 </resources>
