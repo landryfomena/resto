@@ -7,13 +7,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="100dp"
+        android:layout_width="@dimen/dimens_80dp"
         app:cardCornerRadius="10dp"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/dimens_8dp"
         android:id="@+id/image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="100dp">
+        android:layout_height="90dp">
         <ImageView
             android:layout_width="match_parent"
             android:background="#B8BBC6"
@@ -22,17 +22,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="@dimen/dimens_20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/dimens_10dp"
         android:id="@+id/droite"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toEndOf="@id/image">
         <TextView
             android:layout_width="match_parent"
             android:textColor="@color/black"
             android:layout_marginTop="8dp"
-            android:textSize="20sp"
+            android:textSize="@dimen/dimens_15sp"
             android:id="@+id/title"
             android:text="Kellys cafe and expresso"
             android:layout_height="wrap_content"/>
@@ -40,7 +39,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_marginTop="8dp"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:id="@+id/location"
             app:layout_constraintStart_toStartOf="@+id/title"
             android:text="882 swift courts apt 912"
@@ -62,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:text="4.8"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:id="@+id/mark"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -71,7 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="(233 ratings)"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:id="@+id/votes"
                 android:layout_marginHorizontal="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -90,6 +89,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="free delivery"
+                    android:textSize="@dimen/dimens_8sp"
                     android:layout_marginHorizontal="20dp"
                     android:textColor="@color/white"
                     android:layout_height="wrap_content"/>

@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/username"
             android:layout_marginTop="@dimen/dimens_45dp"
-            android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:gravity="center">
 

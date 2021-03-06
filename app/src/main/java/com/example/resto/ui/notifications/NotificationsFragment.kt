@@ -36,19 +36,12 @@ class NotificationsFragment : Fragment() {
         initItemCollection()
     }
     fun initItemCollection(){
-        var items= mutableListOf<Collection_Item>()
+        val items= mutableListOf<Collection_Item>()
         (0..9).forEach{
             items.add(Collection_Item())
         }
-       /*  collection_by_fossi_item.setLayoutManager(
-            GridLayoutManager(
-                this,
-                2
-            )
-        )*/
         collection_by_fossi_item.apply {
-            // GridLayoutManager(requireContext(),2,GridLayoutManager.VERTICAL,false)
-            layoutManager = LinearLayoutManager(requireContext(), GridLayoutManager.VERTICAL, false)
+            layoutManager = GridLayoutManager(requireContext(), 2)
 
             adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))

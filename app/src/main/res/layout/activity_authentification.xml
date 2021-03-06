@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.65"
         app:layout_constraintHeight_default="percent"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/rounded_shape_authentification">
@@ -46,6 +46,7 @@
             android:layout_marginTop="@dimen/dimens8dp"
             />
         <EditText
+            android:inputType="textEmailAddress"
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,6 +61,7 @@
             android:textSize="@dimen/dimens_25sp"
             app:layout_constraintTop_toBottomOf="@id/Sub_Title" />
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

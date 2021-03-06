@@ -24,4 +24,6 @@
     <string name="popular_this_weeek">Popular this weeek</string>
     <string name="collections_by_fozzi">Collections by Fozzi</string>
     <string name="andy_and_cindi_s_diner">Andy and Cindi\'s diner</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="please_enter_your_email_address_you_will_receive_a_link_to_create_a_new_password_via_email">Please enter your email address. You will receive a link to create a new password via email</string>
 </resources>

@@ -15,4 +15,5 @@
     <dimen name="dimens_48dp">48dp</dimen>
     <dimen name="dimens_300dp">300dp</dimen>
     <dimen name="dimens_4dp">4dp</dimen>
+    <dimen name="dimens_8sp">8sp</dimen>
 </resources>
