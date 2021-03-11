@@ -13,8 +13,8 @@ class AuthenticationActivity : AppCompatActivity() {
     lateinit var button: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_authentication)
-        button = findViewById<TextView>(R.id.button_login)
+        setContentView(R.layout.activity_authentification)
+        button = findViewById<TextView>(R.id.buttonlogin)
         button.setOnClickListener {
             var intent = Intent(this@AuthenticationActivity, MainActivity::class.java)
             startActivity(intent)

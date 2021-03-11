@@ -12,7 +12,7 @@
         android:layout_marginTop="@dimen/dimens_30dp"
         app:layout_constraintTop_toTopOf="parent"
         android:textAlignment="center"
-        android:textColor="@color/Title_Color"
+        android:textColor="@color/Title_color"
         android:textSize="@dimen/dimens_40sp"
         android:textStyle="bold"
         android:text="@string/create_an_account"

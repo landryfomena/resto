@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -11,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.home.item.ItemTopCategories
-import com.example.resto.ui.home.item.Item_resto_Extended
+import com.example.resto.ui.home.item.Item_Resto_Extended
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
@@ -25,46 +26,42 @@ class HomeFragment : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+        ): View? {
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
+        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        })
         return root
     }
 
-
-    fun initRecycleView(){
-        var items = mutableListOf<Item_resto_Extended>()
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        initRecycleview()
+        initTopCategories()
+    }
+    fun initRecycleview(){
+        var items= mutableListOf<Item_Resto_Extended>()
         (0..5).forEach{
-            items.add(Item_resto_Extended())
+          items.add(Item_Resto_Extended())
         }
-        new_places_container.apply{
-            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
-            adapter = GroupAdapter<ViewHolder>().apply {
+        new_places_container.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))
             }
         }
     }
     fun initTopCategories(){
-        var items = mutableListOf<ItemTopCategories>()
+        var items= mutableListOf<ItemTopCategories>()
         (0..5).forEach{
             items.add(ItemTopCategories())
         }
-        topCategories.apply{
-            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
-            adapter = GroupAdapter<ViewHolder>().apply {
+        topCategories.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))
             }
-        }
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-    fun initRecycleview(){
-        (0..5).forEach{
-
         }
     }
 }

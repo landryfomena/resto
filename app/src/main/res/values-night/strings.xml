@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="create_an_account">Create an account</string>
-    <string name="your_emailrecovery">your email</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="dont_have_account">Dont have account?</string>
+    <string name="sign_up">sign up</string>
+    <string name="user_name">User name</string>
+    <string name="phone">Phone</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="your_email">Your email</string>
     <string name="forgot_password">Forgot password</string>
-    <string name="please_enter_your_email_address_you_will_nreceive_a_link_to_create_a_new_password_via_email">Please enter your email address.You will\nreceive a link to create a new password via email</string>
-    <string name = "appl_name">Spinner</string>
-    <string name ="selected_item">Selected item:</string>
+    <string name="phone_verification">Phone verification</string>
     <string name="enter_your_otp_code_here">Enter your OTP code here</string>
-    <string name="resend_a_new_code">Resend a new code</string>
+    <string name="didn_t_you_received_any_code">Didn\'t you received any code ?</string>
+    <string name="recent_a_new_code">Recent a new code.</string>
+    <string name="verify_your_phone">Verify your phone</string>
+    <string name="we_have_sent_you_an_sms_with_a_code_to_number">We have sent you an SMS with a code to number</string>
+    <string name="or_login_with">Or login with</string>
+    <string name="social_network">Social network</string>
+    <string name="next">Next</string>
+    <string name="burgers">Burgers</string>
+    <string name="popular_this_weeek">Popular this weeek</string>
+    <string name="collections_by_fozzi">Collections by Fozzi</string>
+    <string name="andy_and_cindi_s_diner">Andy and Cindi\'s diner</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="please_enter_your_email_address_you_will_receive_a_link_to_create_a_new_password_via_email">Please enter your email address. You will receive a link to create a new password via email</string>
 </resources>

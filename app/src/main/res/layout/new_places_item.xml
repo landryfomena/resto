@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
+        android:layout_width="@dimen/dimens_200dp"
         app:cardCornerRadius="10dp"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/dimens_8dp"
         android:id="@+id/image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="250dp">
+        android:layout_height="@dimen/dimens_250dp">
         <ImageView
             android:layout_width="match_parent"
             android:background="#B8BBC6"
@@ -20,18 +21,18 @@
     <TextView
         android:layout_width="match_parent"
         android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        android:textSize="25sp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:textSize="@dimen/dimens_25sp"
         android:id="@+id/title"
         app:layout_constraintStart_toStartOf="@+id/image"
-        android:text="Andy and Cindi's diner"
+        android:text="@string/andy_and_cindi_s_diner"
         app:layout_constraintTop_toBottomOf="@+id/image"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_marginTop="8dp"
-        android:textSize="20sp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:textSize="@dimen/dimens_20sp"
         android:id="@+id/location"
         app:layout_constraintStart_toStartOf="@+id/title"
         android:text="Andy and Cindi's diner"
@@ -54,7 +55,7 @@
             android:layout_width="wrap_content"
             android:text="4.8"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/dimens_16sp"
             android:id="@+id/mark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -63,9 +64,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="(233 ratings)"
-            android:textSize="16sp"
+            android:textSize="@dimen/dimens_16sp"
             android:id="@+id/votes"
-            android:layout_marginHorizontal="4dp"
+            android:layout_marginHorizontal="@dimen/dimens_4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/mark"
@@ -75,7 +76,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:cardCornerRadius="20dp"
             android:backgroundTint="@color/purple_700"
-            android:layout_marginHorizontal="8dp"
+            android:layout_marginHorizontal="@dimen/dimens_8dp"
             app:layout_constraintStart_toEndOf="@+id/votes"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_height="wrap_content">
