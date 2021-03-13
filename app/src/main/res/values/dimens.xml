@@ -33,4 +33,11 @@
     <dimen name="dimens_90dp">90dp</dimen>
     <dimen name="dimens_15sp">15sp</dimen>
     <dimen name="dimens_8sp">8sp</dimen>
+    <dimen name="dimens_10sp">10sp</dimen>
+    <dimen name="dimens_100dp">100dp</dimen>
+    <dimen name="dimens_60dp">60dp</dimen>
+    <dimen name="dimens_55dp">55dp</dimen>
+    <dimen name="dimens_1dp">1dp</dimen>
+    <dimen name="dimens_0dp">0dp</dimen>
+    <dimen name="dimens_12sp">12sp</dimen>
 </resources>

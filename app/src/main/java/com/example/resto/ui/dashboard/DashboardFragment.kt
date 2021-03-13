@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.dashboard.item.ItemCollection
@@ -37,9 +38,9 @@ class DashboardFragment : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        var items=ItemPopular()
         initPopular()
         initCollection()
+        setOnClickListener()
     }
     fun initPopular(){
         var items= mutableListOf<ItemPopular>()
@@ -65,6 +66,11 @@ class DashboardFragment : Fragment() {
             adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))
             }
+        }
+    }
+    fun setOnClickListener(){
+        view_all_collection.setOnClickListener {
+            Navigation.findNavController(it).navigate(DashboardFragmentDirections.actionNavigationDashboardToCollectionByFozzi2())
         }
     }
 }

@@ -33,4 +33,5 @@ class AuthentificationActivity : AppCompatActivity() {
             startActivity(intent1)
         }
     }
+
 }

@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_130dp"
-            android:text="@string/burgers"
+            android:text="Asia"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/dimens_25sp" />
