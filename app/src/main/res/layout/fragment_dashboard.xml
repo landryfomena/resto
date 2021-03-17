@@ -46,11 +46,13 @@
                     android:layout_height="wrap_content"
                     android:text="@string/popular_this_weeek"
                     android:textColor="@color/black"
+                    android:id="@+id/pop"
                     android:textSize="@dimen/dimens_20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
                     android:layout_width="wrap_content"
+                    android:id="@+id/show1"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_baseline_arrow_right_24"
                     android:text="@string/show_all"

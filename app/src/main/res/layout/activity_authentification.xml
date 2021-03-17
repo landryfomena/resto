@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/TitleAuthentification"
             android:text="@string/log_into_your_acompt"
-            android:textColor="@color/Text_Sub_Title"
+            android:textColor="@color/Text_color_sub"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_16sp"
             android:layout_marginTop="@dimen/dimens8dp"
@@ -67,7 +67,7 @@
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingHorizontal="@dimen/dimens_20dp"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             app:layout_constraintTop_toBottomOf="@id/Sub_Title" />
         <EditText
             android:inputType="textPassword"
@@ -82,7 +82,7 @@
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingBottom="@dimen/dimens_5dp"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             app:layout_constraintTop_toBottomOf="@id/username" />
         <Button
            android:text="@string/login"
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/login_btn"
             android:text="@string/forgot_your_password"
-            android:textColor="@color/Text_Sub_Title"
+            android:textColor="@color/Text_color_sub"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_16sp"
             android:layout_marginTop="@dimen/dimens_20dp"
@@ -121,7 +121,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/forgot"
             android:text="@string/dont_have_account"
-            android:textColor="@color/Text_Sub_Title"
+            android:textColor="@color/Text_color_sub"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_16sp" />
             <TextView

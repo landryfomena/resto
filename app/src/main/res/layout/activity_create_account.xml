@@ -34,7 +34,7 @@
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingBottom="@dimen/dimens_5dp"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             app:layout_constraintTop_toBottomOf="@id/Sub_Title" />
         <EditText
             android:inputType="textEmailAddress"
@@ -45,7 +45,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_shape_into_text"
             android:layout_marginHorizontal="@dimen/dimens_16dp"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             android:paddingHorizontal="@dimen/dimens_20dp"
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingBottom="@dimen/dimens_5dp"
@@ -64,7 +64,7 @@
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingBottom="@dimen/dimens_5dp"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             app:layout_constraintTop_toBottomOf="@id/email" />
         <EditText
             android:inputType="date"
@@ -75,7 +75,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_shape_into_text"
             android:layout_marginHorizontal="@dimen/dimens_16dp"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             android:paddingHorizontal="@dimen/dimens_20dp"
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingBottom="@dimen/dimens_5dp"
@@ -90,7 +90,7 @@
             android:layout_marginTop="@dimen/dimens_10dp"
             android:background="@drawable/rounded_shape_into_text"
             android:layout_marginHorizontal="@dimen/dimens_16dp"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_20sp"
             android:paddingHorizontal="@dimen/dimens_20dp"
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingBottom="@dimen/dimens_5dp"
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/login_btn"
             android:text="By clicking Sign up you agree the following Term and Condition without reservation"
-            android:textColor="@color/Text_Sub_Title"
+            android:textColor="@color/Text_color_sub"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_16sp"
             android:layout_marginTop="@dimen/dimens8dp" />

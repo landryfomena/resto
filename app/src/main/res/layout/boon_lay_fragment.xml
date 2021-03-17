@@ -296,6 +296,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/dimens_0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/myOrder"
                         android:layout_marginEnd="@dimen/dimens_10dp"
                         android:backgroundTint="@color/orange_clear"
                         app:cardCornerRadius="@dimen/dimens_8dp"

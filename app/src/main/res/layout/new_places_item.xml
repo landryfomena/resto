@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:textColor="@color/black"
         android:layout_marginTop="@dimen/dimens_8dp"
-        android:textSize="@dimen/dimens_25sp"
+        android:textSize="@dimen/dimens_20sp"
         android:id="@+id/title"
         app:layout_constraintStart_toStartOf="@+id/image"
         android:text="@string/andy_and_cindi_s_diner"

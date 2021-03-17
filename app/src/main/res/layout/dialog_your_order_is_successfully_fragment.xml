@@ -16,41 +16,37 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical">
-            <ImageView
-                android:id="@+id/replay"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/dimens_30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimens_20dp"
-                android:src="@drawable/ic_lock_overturning"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/replay"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_icon_check_alt2" />
         <TextView
             android:id="@+id/text1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/your_password_has_been_reset"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/dimens_30dp"
             android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/dimens_10dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:text="@string/your_order_is_successfully"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/dimens_10dp"
             android:textSize="@dimen/dimens_30sp"
-            app:layout_constraintTop_toBottomOf="@+id/replay"/>
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_marginHorizontal="@dimen/dimens_20dp"
             android:layout_marginTop="@dimen/dimens_30dp"
-            android:text="@string/you_ll_shortly_receive_an_email_with_a_code_to_setup_an_new_password"
+            android:text="You can track the delivery in the Order section. "
             android:textColor="@color/black"
-            android:textSize="@dimen/dimens_15sp"
-            app:layout_constraintTop_toBottomOf="@+id/text1"/>
+            android:textSize="@dimen/dimens_15sp"/>
         <androidx.cardview.widget.CardView
-            android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/orange_clear"
@@ -64,10 +60,11 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_marginVertical="@dimen/dimens_10dp"
-                android:text="Done"
+                android:text="@string/continue_shopping"
                 android:textSize="@dimen/dimens_20sp"
                 android:textColor="@color/white"/>
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

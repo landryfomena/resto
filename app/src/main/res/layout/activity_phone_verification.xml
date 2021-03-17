@@ -25,7 +25,7 @@
             android:layout_marginTop="@dimen/dimens8dp"
             android:text="@string/enter_your_otp_code_here"
             android:textAlignment="center"
-            android:textColor="@color/Text_Sub_Title"
+            android:textColor="@color/Text_color_sub"
             android:textSize="@dimen/dimens_16sp"
             app:layout_constraintTop_toBottomOf="@+id/TitlePhoneVerification" />
         <LinearLayout
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_80dp"
             android:text="@string/didn_t_you_received_any_code"
-            android:textColor="@color/Text_Sub_Title"
+            android:textColor="@color/Text_color_sub"
             android:textSize="@dimen/dimens_16sp"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/edit_text" />

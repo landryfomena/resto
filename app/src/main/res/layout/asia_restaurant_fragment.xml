@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dimens_20dp"
                 android:text="128 places"
-                android:textSize="@dimen/dimens_25sp"
+                android:textSize="@dimen/dimens_20sp"
                 android:textColor="@color/Title_color"
                 app:layout_constraintTop_toTopOf="parent"/>
 

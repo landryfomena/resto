@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/dimens_8dp"
     android:paddingVertical="@dimen/dimens_16dp"
-    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingStart="@dimen/dimens_10dp"
     android:background="@drawable/rounded_shape_item_restaurant">
 
     <androidx.cardview.widget.CardView
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.25">
+        app:layout_constraintWidth_percent="0.28">
 
         <ImageView
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimens_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimens_8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,9 +50,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingEnd="@dimen/dimens_16dp"
-            android:text="Little Creatures - Club Street"
+            android:text="@string/little_creatures_club_street"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="@dimen/dimens_25sp"
             app:layout_constraintTop_toTopOf="parent"
             android:textStyle="bold"/>
         <androidx.constraintlayout.widget.ConstraintLayout

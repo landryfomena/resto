@@ -72,5 +72,8 @@ class DashboardFragment : Fragment() {
         view_all_collection.setOnClickListener {
             Navigation.findNavController(it).navigate(DashboardFragmentDirections.actionNavigationDashboardToCollectionByFozzi2())
         }
+        view_all_popular.setOnClickListener {
+            Navigation.findNavController(it).navigate(DashboardFragmentDirections.actionNavigationDashboardToRestoFeatureBoonLayFragment())
+        }
     }
 }

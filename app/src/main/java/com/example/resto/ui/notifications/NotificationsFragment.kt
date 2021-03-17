@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.home.item.Item_Resto_Extended
 import com.example.resto.ui.notifications.item.Collection_Item
+import com.example.resto.ui.restaurant.item.Item_Feature_Boon
 import com.example.resto.ui.restaurant.item.Item_Recommend
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
@@ -35,25 +36,14 @@ class NotificationsFragment : Fragment() {
     ): View? {
         notificationsViewModel =
                 ViewModelProvider(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.boon_lay_fragment, container, false)
+        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
 
         return root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initFeature_item()
+
     }
-    fun initFeature_item(){
-        var items= mutableListOf<Collection_Item>()
-        (0..5).forEach{
-            items.add(Collection_Item())
-        }
-        feature_collection.apply {
-            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL,false)
-            adapter = GroupAdapter<ViewHolder>().apply{
-                add(Section(items))
-            }
-        }
-    }
+
 
 }

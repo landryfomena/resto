@@ -45,11 +45,20 @@
     <string name="_137k">137k</string>
     <string name="bookmark">Bookmark</string>
     <string name="_346">346</string>
-    <string name="photo">Photo</string>
     <string name="order_now">Order now</string>
     <string name="full_menu">Full Menu</string>
     <string name="view_all">View all</string>
     <string name="popular_items">popular items</string>
     <string name="_3">3</string>
     <string name="salads">salads</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_4">4</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="your_order_is_successfully">Your order is successfully</string>
+    <string name="good_food_is_always_cooking_go_ahead_order_some_yummy_items_from_the_menu">Good food is always cooking! Go ahead, order some yummy items from the menu.</string>
+    <string name="little_creatures_club_street">Little Creatures - Club Street</string>
+    <string name="from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889_as_a_family_bakery_and_patisserie_savour_a_selection_of_viennoiserie_croissants_etc">From the French countryside, to your doorstep. PAUL was founded in 1889 as a family bakery and patisserie. Savour a selection of viennoiserie (croissants etc.)...</string>
+    <string name="photo">Photo</string>
 </resources>
