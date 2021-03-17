@@ -40,11 +40,18 @@
     <string name="authentification_sign_up">Sign Up</string>
     <string name="send">Send</string>
     <string name="your_emailrecovery">your email</string>
-    <string name="please_enter_your_email_address_you_will_nreceive_a_link_to_create_a_new_password_via_email">Please enter your email address.You will\nreceive a link to create a new password via email</string>
     <string name="verify_your_n_phone">Verify your\n phone</string>
     <string name="authentification_Social_network">Social_network</string>
     <string name="appl_name">Spinner</string>
     <string name="resend_a_new_code">Resend a new code</string>
     <string name="asia">Asia</string>
     <string name="_128places">128 Places</string>
+    <string name="you_ll_shortly_receive_an_email_with_a_code_to_detup_a_new_password">You will shortly receive an email with a code to setup a new password</string>
+    <string name="done">Done</string>
+    <string name="your_passwordd_has_been_reset">Your passwordd has been reset</string>
+    <string name="lock_image">Lock image</string>
+    <string name="chocolat_n_spice">Chocolat\' N Spice</string>
+    <string name="_27_miles">27 miles</string>
+    <string name="_33_min">33 min</string>
+    <string name="from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889as_a_family_bakery_and_patisserie_saviour_a_selection_of_viennoiserie_croissants_etc">From the French country side, to your doorstep. Paul was founded in 1889as a family bakery and patisserie .Saviour a selection of viennoiserie (croissants etc.)…</string>
 </resources>

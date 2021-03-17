@@ -101,6 +101,7 @@
         android:layout_marginTop="@dimen/dimens_40sp"
         android:background="@drawable/rounded_shape_butom"
         android:text="@string/sign_up"
+        android:onClick="showDialog"
         android:textSize="@dimen/dimens_20sp"
         android:id="@+id/registration_button"
         />
@@ -115,4 +116,11 @@
         android:text="By clicking Sign up you agree to the following \n Terms and Conditions without reservation"
         android:id="@+id/resgistration_endText"
         />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/password_confirm_dialog"
+        tools:itemCount="0"
+        android:id="@+id/sing_up_dialog"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
