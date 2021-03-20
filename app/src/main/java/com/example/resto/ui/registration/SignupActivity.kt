@@ -39,7 +39,6 @@ class SignupActivity : AppCompatActivity() {
                 .setView(mDialogView)
             val mAlertDialog = builder.show()
             mDialogView.dialog_button.setOnClickListener { mAlertDialog.dismiss() }
-
         }
     }
 }

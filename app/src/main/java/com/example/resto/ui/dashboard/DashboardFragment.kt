@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.dashboard.item.ItemCollection
@@ -40,6 +41,13 @@ class DashboardFragment : Fragment() {
         var items=ItemPopular()
         initPopular()
         initCollection()
+        setOnClickListener()
+    }
+    fun setOnClickListener(){
+        show1.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToCheckoutFragment())
+        }
     }
     fun initPopular(){
         var items= mutableListOf<ItemPopular>()

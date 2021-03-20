@@ -11,15 +11,19 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_popularThisWeek"
-            app:destination="@id/popularThisWeek" />
+            android:id="@+id/action_navigation_home_to_filters_full_fragment"
+            app:destination="@id/filters_full_fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.resto.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_checkout_fragment"
+            app:destination="@id/checkout_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -27,7 +31,13 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
-        android:id="@+id/popularThisWeek"
-        android:label="popular_this_week_fragment"
-        tools:layout="@layout/popular_this_week_fragment" />
+        android:id="@+id/filters_full_fragment"
+        android:name="com.example.resto.ui.filtersfull.filters_full_fragment"
+        android:label="filters_full_fragment_fragment"
+        tools:layout="@layout/filters_full_fragment" />
+    <fragment
+        android:id="@+id/checkout_fragment"
+        android:name="com.example.resto.ui.checkout.checkout_fragment"
+        android:label="checkout_fragment_fragment"
+        tools:layout="@layout/checkout_fragment_fragment" />
 </navigation>

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resto">
+        <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".ui.registration.SignupActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -27,7 +28,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ui.authentification.AuthentificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

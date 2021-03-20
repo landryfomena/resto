@@ -33,7 +33,7 @@ class AuthentificationActivity : AppCompatActivity() {
             startActivity(intent)
         }
             //********************************************************************
-        recover = findViewById<TextView>(R.id.endText)
+        recover = findViewById<TextView>(R.id.fogotText)
         recover.setOnClickListener {
             var intent = Intent(this@AuthentificationActivity, ForgotPasswordActivity::class.java)
             startActivity(intent)
