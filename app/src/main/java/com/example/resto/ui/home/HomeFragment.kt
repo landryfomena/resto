@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.home.item.ItemTopCategories
@@ -39,6 +40,12 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         initRecycleview()
         initTopCategories()
+        setOnClickListener()
+    }
+    fun setOnClickListener(){
+        view_all_title.setOnClickListener{
+            Navigation.findNavController(it).navigate(HomeFragmentDirections.actionNavigationHomeToPopularThisWeek())
+        }
     }
     fun initRecycleview(){
         var items= mutableListOf<Item_Resto_Extended>()
