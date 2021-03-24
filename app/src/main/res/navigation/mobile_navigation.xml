@@ -81,5 +81,10 @@
             android:id="@+id/action_boonLayFragment_to_myOrder"
             app:destination="@id/myOrder" />
     </fragment>
+    <fragment
+        android:id="@+id/checkout_fragment"
+        android:name="com.example.resto.ui.checkout.checkout_fragment"
+        android:label="checkout_fragment_fragment"
+        tools:layout="@layout/checkout_fragment_fragment" />
 
 </navigation>

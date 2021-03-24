@@ -46,7 +46,11 @@ class DashboardFragment : Fragment() {
     fun setOnClickListener(){
         show1.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(DashboardFragmentDirections.actionNavigationDashboardToCheckoutFragment())
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToRestoFeatureBoonLayFragment())
+        }
+        show2.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToCollectionByFozzi2())
         }
     }
     fun initPopular(){

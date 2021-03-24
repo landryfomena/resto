@@ -45,7 +45,15 @@ class HomeFragment : Fragment() {
     fun setOnClickListener(){
         show.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(HomeFragmentDirections.actionNavigationHomeToFiltersFullFragment())
+                .navigate(HomeFragmentDirections.actionNavigationHomeToBoonLayFragment())
+        }
+        topCategories_Title.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(HomeFragmentDirections.actionNavigationHomeToChocolatSpiceRestaurant())
+        }
+        search_fragment.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(HomeFragmentDirections.actionNavigationHomeToSearch())
         }
     }
     fun initRecycleview(){
