@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.resto">
 
     <application
@@ -18,6 +19,43 @@
         <activity android:name=".ui.otp.PhoneVerificationActivity" />
         <activity android:name=".ui.phoneverification.VerifyYourPhoneActivity" />
         <activity android:name=".ui.recoverpassword.ForgotPasswordActivity" />
+        <activity android:name=".ui.restaurant.AsiaRestaurantFragment"
+            tools:ignore="Instantiatable"></activity>
+        <activity android:name=".ui.verifyyourphone.PhoneVerificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.verifyyourphone.VerifyYourPhoneActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.createaccount.CreateAccountActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.authentification.ForgotPasswordActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.authentification.AuthentificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -35,7 +73,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.restaurantDetails.activity_restaurant_details" />
     </application>
 
 </manifest>

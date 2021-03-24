@@ -18,11 +18,23 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.resto.ui.dashboard.DashboardFragmentDirections
+import com.example.resto.ui.home.item.ItemTopCategories
+import com.example.resto.ui.home.item.Item_Resto_Extended
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.Section
+import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.fragment_dashboard.*
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlin.math.round
+import kotlinx.android.synthetic.main.fragment_home.icon_search as icon_search1
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-
+    lateinit var dialog: Dialog
+    lateinit var cardView: CardView
+    lateinit var recent: TextView
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -72,4 +84,65 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+       dialog= Dialog(requireContext())
+        initRecycleview()
+        initTopCategories()
+        setOnClickListener()
+        openDialogPassword()
+       // showDialog1(requireView())
+
+    }
+    fun initRecycleview(){
+        var items= mutableListOf<Item_Resto_Extended>()
+        (0..5).forEach{
+          items.add(Item_Resto_Extended())
+        }
+        new_places_container.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
+    fun initTopCategories(){
+        var items= mutableListOf<ItemTopCategories>()
+        (0..5).forEach{
+            items.add(ItemTopCategories())
+        }
+        topCategories.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
+    fun setOnClickListener(){
+        icon_search.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(HomeFragmentDirections.actionNavigationHomeToSearch())
+        }
+        show.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(HomeFragmentDirections.actionNavigationHomeToBoonLayFragment())
+        }
+        topCat.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(HomeFragmentDirections.actionNavigationHomeToChocolatSpiceRestaurant())
+        }
+    }
+    private fun openDialogPassword() {
+        dialog.setContentView(R.layout.dialog_localisation_fragment)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
+        cardView=dialog.findViewById(R.id.card)
+        dialog.show()
+    }
+   /* fun showDialog1(view: View){
+        val builder=AlertDialog.Builder(requireContext())
+        builder.setTitle("yo man")
+        builder.setMessage("trop fort toi")
+        builder.show()
+    }*/
 }

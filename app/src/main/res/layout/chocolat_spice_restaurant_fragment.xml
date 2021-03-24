@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#707070"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.restaurant.ChocolatSpiceRestaurant">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimens_55dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/layo"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#707070">
+            <ImageView
+                android:id="@+id/bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:layout_marginStart="@dimen/dimens_10dp" />
+        </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/layo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimens_10dp"
+        android:background="@drawable/rounded_shape_authentification">
+        <TextView
+            android:id="@+id/TitleRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_marginHorizontal="@dimen/dimens_15dp"
+            android:text="Chocolat'N Spice"
+            android:textColor="@color/Title_color"
+            android:textSize="@dimen/dimens_34sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_10dp"
+            android:layout_marginVertical="@dimen/dimens_5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TitleRestaurant">
+
+            <ImageView
+                android:id="@+id/location_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/gris_clear" />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_10dp"
+                android:text="@string/_856_esta_underpass"
+                android:textSize="@dimen/dimens_15sp"
+                android:textColor="@color/gris_clear"
+                app:layout_constraintStart_toEndOf="@+id/location_on"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/free"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_10dp"
+            android:layout_marginVertical="@dimen/dimens_15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_free"
+                android:backgroundTint="@color/orange_clear"
+                app:cardCornerRadius="@dimen/dimens_20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens_16dp"
+                    android:text="@string/free_delivery"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimens_15sp" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_30dp"
+                android:text="33 min"
+                android:textSize="@dimen/dimens_15sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/card_free"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_30dp"
+                android:text="27 milles"
+                android:textSize="@dimen/dimens_15sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/times"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/pageCaract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_8dp"
+            android:background="#F7F8FA"
+            android:paddingVertical="@dimen/dimens_8dp"
+            android:layout_marginTop="@dimen/dimens_15dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/free"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimens_10dp">
+                <ImageView
+                    android:id="@+id/oval_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_oval_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic__icon_start"
+                    android:layout_marginStart="@dimen/dimens_8dp"
+                    app:layout_constraintStart_toStartOf="@id/oval_start"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens_8dp"
+                    android:text="@string/_4_5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimens_15sp"
+                    app:layout_constraintStart_toEndOf="@+id/start"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="ratings"
+                    android:textSize="@dimen/dimens_15sp"
+                    android:textColor="@color/gris_clear"
+                    app:layout_constraintStart_toEndOf="@+id/start"
+                    app:layout_constraintTop_toBottomOf="@+id/mark" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/trait1"
+                android:layout_width="@dimen/dimens_1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimens_5dp"
+                app:cardBackgroundColor="@color/gris_clear" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_10dp">
+                <ImageView
+                    android:id="@+id/oval_start1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_oval_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/red" />
+                <ImageView
+                    android:id="@+id/start1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_bookmark_24"
+                    android:layout_marginStart="@dimen/dimens_8dp"
+                    app:layout_constraintStart_toStartOf="@id/oval_start1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/mark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens_8dp"
+                    android:text="@string/_137k"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimens_15sp"
+                    app:layout_constraintStart_toEndOf="@+id/start1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/bookmark"
+                    android:textSize="@dimen/dimens_15sp"
+                    android:textColor="@color/gris_clear"
+                    app:layout_constraintStart_toEndOf="@+id/start1"
+                    app:layout_constraintTop_toBottomOf="@+id/mark1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/trait2"
+                android:layout_width="@dimen/dimens_1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimens_5dp"
+                app:cardBackgroundColor="@color/gris_clear" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_10dp">
+                <ImageView
+                    android:id="@+id/oval_start2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_oval_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/blue" />
+                <ImageView
+                    android:id="@+id/start2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_photo"
+                    android:layout_marginStart="@dimen/dimens_5dp"
+                    android:layout_marginBottom="@dimen/dimens_8dp"
+                    app:layout_constraintStart_toStartOf="@id/oval_start2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/mark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens_8dp"
+                    android:text="@string/_346"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimens_15sp"
+                    app:layout_constraintStart_toEndOf="@+id/start2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/photo"
+                    android:textSize="@dimen/dimens_15sp"
+                    android:textColor="@color/gris_clear"
+                    app:layout_constraintStart_toEndOf="@+id/start2"
+                    app:layout_constraintTop_toBottomOf="@+id/mark2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/text_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889_as_a_family_bakery_and_patisserie_savour_a_selection_of_viennoiserie_croissants_etc"
+            app:layout_constraintTop_toBottomOf="@id/pageCaract"
+            android:layout_marginTop="@dimen/dimens_25dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/dimens_15sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="@dimen/dimens_10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_des"
+            android:text="@string/photo"
+            android:layout_marginHorizontal="@dimen/dimens_20dp"
+            android:textSize="@dimen/dimens_30sp"
+            android:id="@+id/text_photo"
+            android:textColor="@color/black"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_16dp"
+            android:id="@+id/photo"
+            android:orientation="horizontal"
+            tools:itemCount="1"
+            tools:listitem="@layout/photo_fragment"
+            app:layout_constraintTop_toBottomOf="@+id/text_photo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>
