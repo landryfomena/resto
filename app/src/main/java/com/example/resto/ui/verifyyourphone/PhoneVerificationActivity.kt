@@ -22,6 +22,12 @@ class PhoneVerificationActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.dialog_pass_fragment)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
         cardView=dialog.findViewById(R.id.card)
+        cardView.setOnClickListener(object :View.OnClickListener{
+            override fun onClick(view: View) {
+                dialog.dismiss()
+                //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show
+            }
+        })
         dialog.show()
     }
 }

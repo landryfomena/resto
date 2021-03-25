@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="email">email</string>
-    <string name="password">password</string>
+    <string name="app_name">Resto</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="log_into_your_acompt">Log into your acompt</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="discover_new_places">Discover new places</string>
+    <string name="top_categories">Top categories</string>
+    <string name="show_all">Show all</string>
+    <string name="log_in_to_your_account">Log into your account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="forgot_your_password">Forgot your password ?</string>
     <string name="dont_have_account">Dont have account?</string>
-    <string name="sign_up">sign up</string>
+    <string name="sign_up">Sign up</string>
     <string name="user_name">User name</string>
     <string name="phone">Phone</string>
     <string name="date_of_birth">Date of birth</string>
@@ -17,13 +28,13 @@
     <string name="recent_a_new_code">Recent a new code.</string>
     <string name="verify_your_phone">Verify your phone</string>
     <string name="we_have_sent_you_an_sms_with_a_code_to_number">We have sent you an SMS with a code to number</string>
-    <string name="or_login_with">Or login with</string>
-    <string name="social_network">Social network</string>
+    <string name="or_login_with">Or login with </string>
+    <string name="social_network"> Social network</string>
     <string name="next">Next</string>
     <string name="burgers">Burgers</string>
     <string name="popular_this_weeek">Popular this weeek</string>
     <string name="collections_by_fozzi">Collections by Fozzi</string>
-    <string name="andy_and_cindi_s_diner">Andy and Cindi\'s diner</string>
+    <string name="andy_and_cindi_s_diner">Andy &amp; Cindi\'s diner</string>
     <string name="create_an_account">Create an account</string>
     <string name="please_enter_your_email_address_you_will_receive_a_link_to_create_a_new_password_via_email">Please enter your email address. You will receive a link to create a new password via email</string>
     <string name="pickup_on_your_time_your_order_is_ready_when_you_are">Pickup on your time. Your order is ready when you are.</string>
@@ -61,4 +72,17 @@
     <string name="little_creatures_club_street">Little Creatures - Club Street</string>
     <string name="from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889_as_a_family_bakery_and_patisserie_savour_a_selection_of_viennoiserie_croissants_etc">From the French countryside, to your doorstep. PAUL was founded in 1889 as a family bakery and patisserie. Savour a selection of viennoiserie (croissants etc.)...</string>
     <string name="photo">Photo</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="done">Done</string>
+    <string name="cameron_cook">Cameron Cook</string>
+    <string name="darrell_bailey_gmail_com">darrell_bailey@gmail.com</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="_16_04_1988">16/04/1988</string>
+    <string name="_65_39879_343">+65 39879 343</string>
+    <string name="profile">Profile</string>
+    <string name="favourite">Favourite</string>
+    <string name="my_order">My Order</string>
+    <string name="explore">Explore</string>
+    <string name="places">Places</string>
 </resources>

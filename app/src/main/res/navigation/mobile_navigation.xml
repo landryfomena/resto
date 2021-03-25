@@ -81,5 +81,15 @@
             android:id="@+id/action_boonLayFragment_to_myOrder"
             app:destination="@id/myOrder" />
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.resto.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/myFavorite"
+        android:name="com.example.resto.ui.favorite.MyFavorite"
+        android:label="my_favorite_fragment"
+        tools:layout="@layout/my_favorite_fragment" />
 
 </navigation>

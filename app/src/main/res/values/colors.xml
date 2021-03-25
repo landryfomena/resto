@@ -15,4 +15,5 @@
     <color name="orange_transparent">#22F44336</color>
     <color name="red">#FF2D55</color>
     <color name="blue">#5856D6</color>
+    <color name="arriere_plan_transparant">#F7F8FA</color>
 </resources>

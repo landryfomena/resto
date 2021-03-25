@@ -71,4 +71,17 @@
     <string name="little_creatures_club_street">Little Creatures - Club Street</string>
     <string name="from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889_as_a_family_bakery_and_patisserie_savour_a_selection_of_viennoiserie_croissants_etc">From the French countryside, to your doorstep. PAUL was founded in 1889 as a family bakery and patisserie. Savour a selection of viennoiserie (croissants etc.)...</string>
     <string name="photo">Photo</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="done">Done</string>
+    <string name="cameron_cook">Cameron Cook</string>
+    <string name="darrell_bailey_gmail_com">darrell_bailey@gmail.com</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="_16_04_1988">16/04/1988</string>
+    <string name="_65_39879_343">+65 39879 343</string>
+    <string name="profile">Profile</string>
+    <string name="favourite">Favourite</string>
+    <string name="my_order">My Order</string>
+    <string name="explore">Explore</string>
+    <string name="places">Places</string>
 </resources>

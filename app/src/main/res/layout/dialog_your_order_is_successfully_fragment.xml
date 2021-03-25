@@ -47,6 +47,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/dimens_15sp"/>
         <androidx.cardview.widget.CardView
+            android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/orange_clear"
@@ -64,7 +65,6 @@
                 android:textSize="@dimen/dimens_20sp"
                 android:textColor="@color/white"/>
         </androidx.cardview.widget.CardView>
-
     </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

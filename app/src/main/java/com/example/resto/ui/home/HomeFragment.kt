@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -99,6 +100,12 @@ class HomeFragment : Fragment() {
         dialog.setContentView(R.layout.dialog_localisation_fragment)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
         cardView=dialog.findViewById(R.id.card)
+        cardView.setOnClickListener(object :View.OnClickListener{
+            override fun onClick(view: View) {
+               dialog.dismiss()
+                //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show
+            }
+        })
         dialog.show()
     }
    /* fun showDialog1(view: View){
