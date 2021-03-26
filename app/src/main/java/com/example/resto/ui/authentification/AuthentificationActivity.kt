@@ -27,7 +27,7 @@ class AuthentificationActivity : AppCompatActivity() {
             startActivity(intent)
         }
             //*********************************************************************************
-        signup = findViewById<Button>(R.id.sing_up)
+        signup = findViewById<TextView>(R.id.sing_up)
         signup.setOnClickListener {
             var intent = Intent(this@AuthentificationActivity ,SignupActivity::class.java)
             startActivity(intent)

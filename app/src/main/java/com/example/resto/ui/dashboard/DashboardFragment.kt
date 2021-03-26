@@ -31,10 +31,7 @@ class DashboardFragment : Fragment() {
         dashboardViewModel =
                 ViewModelProvider(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
         return root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -48,6 +45,10 @@ class DashboardFragment : Fragment() {
         show1.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(DashboardFragmentDirections.actionNavigationDashboardToCheckoutFragment())
+        }
+        search_icon.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToSearch())
         }
     }
     fun initPopular(){

@@ -9,10 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.notifications.item.Collection_Item
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.collection_by_fozzy_fragment.*
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import kotlinx.android.synthetic.main.fragment_notifications.*
 
@@ -33,19 +33,6 @@ class NotificationsFragment : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initItemCollection()
     }
-    fun initItemCollection(){
-        val items= mutableListOf<Collection_Item>()
-        (0..9).forEach{
-            items.add(Collection_Item())
-        }
-        collection_by_fossi_item.apply {
-            layoutManager = GridLayoutManager(requireContext(), 2)
 
-            adapter = GroupAdapter<ViewHolder>().apply{
-                add(Section(items))
-            }
-        }
-    }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimens_50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CollectionByFozzi.item.collection_by_fozzy">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/collections_by_fozzi_item"
+        tools:itemCount="1"
+        android:layout_gravity="center"
+        android:id="@+id/collectionItems"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

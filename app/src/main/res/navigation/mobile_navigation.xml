@@ -13,8 +13,6 @@
         <action
             android:id="@+id/action_navigation_home_to_filters_full_fragment"
             app:destination="@id/filters_full_fragment" />
-    </fragment>
-        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_search"
             app:destination="@id/search" />
@@ -24,6 +22,9 @@
         <action
             android:id="@+id/action_navigation_home_to_boonLayFragment"
             app:destination="@id/boonLayFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_collection_by_fozzy"
+            app:destination="@id/collection_by_fozzy" />
     </fragment>
 
     <fragment
@@ -34,30 +35,21 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_checkout_fragment"
             app:destination="@id/checkout_fragment" />
-    </fragment>
-
-        tools:layout="@layout/fragment_dashboard" >
-        <action
-            android:id="@+id/action_navigation_dashboard_to_collectionByFozzi2"
-            app:destination="@id/collectionByFozzi" />
         <action
             android:id="@+id/action_navigation_dashboard_to_restoFeatureBoonLayFragment"
             app:destination="@id/restoFeatureBoonLayFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_collection_by_fozzy"
+            app:destination="@id/collection_by_fozzy" />
     </fragment>
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.resto.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/collectionByFozzi"
-        android:name="com.example.resto.ui.CollectionByFozzi.CollectionByFozzi"
-        android:label="popular_this_week_fragment"
-        tools:layout="@layout/popular_this_week_fragment" >
-        <action
-            android:id="@+id/action_collectionByFozzi_to_asiaRestaurantFragment"
-            app:destination="@id/asiaRestaurantFragment" />
-    </fragment>
     <fragment
         android:id="@+id/asiaRestaurantFragment"
         android:name="com.example.resto.ui.restaurant.AsiaRestaurantFragment"
@@ -92,15 +84,24 @@
             android:id="@+id/action_boonLayFragment_to_myOrder"
             app:destination="@id/myOrder" />
     </fragment>
-
     <fragment
         android:id="@+id/filters_full_fragment"
         android:name="com.example.resto.ui.filtersfull.filters_full_fragment"
-        android:label="filters_full_fragment_fragment"
-        tools:layout="@layout/filters_full_fragment" />
+        android:label="filters_full_fragment" />
     <fragment
         android:id="@+id/checkout_fragment"
         android:name="com.example.resto.ui.checkout.checkout_fragment"
         android:label="checkout_fragment_fragment"
         tools:layout="@layout/checkout_fragment_fragment" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.resto.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+    <fragment
+        android:id="@+id/collection_by_fozzy"
+        android:name="com.example.resto.ui.CollectionByFozzi.item.collection_by_fozzy"
+        android:label="collection by fozzy fragment"
+        tools:layout="@layout/collection_by_fozzy_fragment" />
+
 </navigation>
