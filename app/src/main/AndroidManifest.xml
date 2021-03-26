@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.resto">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -41,6 +42,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.authentification.AuthentificationActivity">
+            <meta-data android:name="com.google.android.safetynet.ATTEST_API_KEY"
+                android:value="@string/safety_net_api_key"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

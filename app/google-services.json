@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "137275816840",
+    "project_id": "delivery-c2e0e",
+    "storage_bucket": "delivery-c2e0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137275816840:android:b81c56bf58d1ef8e4ed83d",
+        "android_client_info": {
+          "package_name": "com.barometer.store.smarteats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137275816840-s5fndajs4j4utuioc027gc2ub5l5i43g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnre6-Xc1W1q2yJQuVag6vzYlbocosnwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137275816840-s5fndajs4j4utuioc027gc2ub5l5i43g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137275816840:android:2821275d54a2f9534ed83d",
+        "android_client_info": {
+          "package_name": "com.example.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137275816840-jrdfjib7g6gv8is4imsr9oc3gjsbgp7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.delivery",
+            "certificate_hash": "74d46699dba3662451f07c7dcfd4ebdbef39f34f"
+          }
+        },
+        {
+          "client_id": "137275816840-s5fndajs4j4utuioc027gc2ub5l5i43g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnre6-Xc1W1q2yJQuVag6vzYlbocosnwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137275816840-s5fndajs4j4utuioc027gc2ub5l5i43g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137275816840:android:21ed746a96602d184ed83d",
+        "android_client_info": {
+          "package_name": "com.example.resto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137275816840-s5fndajs4j4utuioc027gc2ub5l5i43g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnre6-Xc1W1q2yJQuVag6vzYlbocosnwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137275816840-s5fndajs4j4utuioc027gc2ub5l5i43g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
