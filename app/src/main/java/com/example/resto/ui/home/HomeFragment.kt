@@ -18,7 +18,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.dashboard.DashboardFragmentDirections
 import com.example.resto.ui.home.item.ItemTopCategories
 import com.example.resto.ui.home.item.Item_Resto_Extended
 import com.xwray.groupie.GroupAdapter
@@ -55,7 +54,7 @@ class HomeFragment : Fragment() {
         initTopCategories()
         setOnClickListener()
         openDialogPassword()
-       // showDialog1(requireView())
+      // showDialog1(requireView())
 
     }
     fun initRecycleview(){
@@ -82,7 +81,7 @@ class HomeFragment : Fragment() {
             }
         }
     }
-    fun setOnClickListener(){
+   fun setOnClickListener(){
         icon_search.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(HomeFragmentDirections.actionNavigationHomeToSearch())
