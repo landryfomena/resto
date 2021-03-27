@@ -43,14 +43,15 @@
         android:background="#E5E5EA">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_10dp">
             <TextView
                 android:id="@+id/nbr_places"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimens_20dp"
                 android:text="128 places"
                 android:textSize="@dimen/dimens_20sp"
+                android:layout_marginStart="@dimen/dimens_10dp"
                 android:textColor="@color/Title_color"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -58,7 +59,6 @@
                 android:id="@+id/asia_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimens_10dp"
                 android:layout_marginVertical="@dimen/dimens_45dp"
                 tools:itemCount="1"
                 tools:listitem="@layout/restaurant_item"
