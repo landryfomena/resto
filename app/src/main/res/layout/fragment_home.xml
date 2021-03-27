@@ -9,7 +9,7 @@
 <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/dimens_80sp"
+    android:layout_marginBottom="@dimen/dimens_50sp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,17 +26,16 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent" />
         <ImageView
-            android:id="@+id/search_fragment"
+            android:id="@+id/icon_search"
             android:layout_width="48dp"
             android:layout_marginHorizontal="8dp"
-            android:padding="10dp"
-            android:background="@drawable/rounded_plein_shape"
+            android:padding="5dp"
             android:src="@drawable/ic_baseline_sort_24"
             app:layout_constraintBottom_toBottomOf="@id/main_searchView"
             app:layout_constraintStart_toEndOf="@id/main_searchView"
             app:layout_constraintTop_toTopOf="@id/main_searchView"
             android:layout_height="48dp"
-            app:tint="@color/white" />
+            />
 
         <TextView
             android:id="@+id/pageTitle"
@@ -55,7 +54,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
-            android:orientation="horizontal"
             tools:itemCount="1"
             tools:listitem="@layout/new_places_item"
             app:layout_constraintTop_toBottomOf="@id/pageTitle" />
@@ -72,10 +70,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/top_categories"
+                android:textSize="@dimen/dimens_20dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/topCategories_Title"/>
+                android:id="@+id/topCat"/>
 
             <TextView
                 android:layout_width="wrap_content"

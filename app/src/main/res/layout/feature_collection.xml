@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/dimens_200dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="@dimen/dimens_8dp"
         android:layout_margin="@dimen/dimens_8dp"
         android:id="@+id/image"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:textColor="@color/black"
         android:layout_marginTop="@dimen/dimens_16dp"
-        android:textSize="@dimen/dimens_20sp"
+        android:textSize="@dimen/dimens_16sp"
         android:id="@+id/title"
         app:layout_constraintStart_toStartOf="@+id/image"
         android:text="Peanut Chaat With Dahi"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="match_parent"
-        android:textSize="@dimen/dimens_20sp"
+        android:textSize="@dimen/dimens_16sp"
         android:id="@+id/location"
         app:layout_constraintStart_toStartOf="@+id/title"
         android:text="$ 9.50"

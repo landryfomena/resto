@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.phoneverification.VerifyYourPhoneActivity"
+    tools:context=".ui.verifyyourphone.VerifyYourPhoneActivity"
     android:background="@drawable/rounded_shape_authentification">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verify your \n phone"
+        android:text="Verify your\nphone"
         android:gravity="center"
         android:textSize="@dimen/dimens_40sp"
         android:textColor="@color/Title_color"
@@ -38,6 +38,9 @@
         app:layout_constraintTop_toBottomOf="@id/phoneverifiction_consign"
         android:id="@+id/phoneverifiction_numero1"
         android:layout_marginHorizontal="@dimen/dimens_16sp"
+        android:paddingTop="@dimen/dimens_5dp"
+        android:paddingBottom="@dimen/dimens_5dp"
+        android:paddingEnd="@dimen/dimens_10dp"
         android:background="@drawable/rounded_shape_input_text"
         >
         <com.hbb20.CountryCodePicker
@@ -47,6 +50,7 @@
             app:ccp_showPhoneCode="true"
             android:id="@+id/calendar_icon"
             app:tint="#229bb4"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"/>
         <EditText
             android:layout_width="match_parent"
@@ -54,9 +58,9 @@
             app:layout_constraintTop_toBottomOf="@id/phoneverifiction_consign"
             android:inputType="phone"
             android:background="@android:color/transparent"
-            android:layout_marginHorizontal="@dimen/dimens_16dp"
             android:textSize="@dimen/dimens_15sp"
-            android:padding="@dimen/dimens_16dp"
+            android:layout_marginEnd="@dimen/dimens_10dp"
+            android:layout_gravity="center"
             android:id="@+id/phoneverifiction_numero"
             />
     </LinearLayout>
@@ -83,7 +87,7 @@
             android:id="@+id/phoneverifiction_end2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/authentification_Social_network"
+            android:text="@string/Social_network"
             android:textAlignment="textStart"
             android:fontFamily="sans-serif"
             android:textColor="@color/purple_700"
@@ -98,7 +102,8 @@
         android:layout_marginTop="@dimen/dimens_40sp"
         android:layout_marginHorizontal="@dimen/dimens_16dp"
         android:background="@drawable/rounded_shape_butom"
-        android:text="Next"
+        android:hint="@string/next"
+        android:textColorHint="@color/white"
         android:textSize="@dimen/dimens_20sp"
         android:fontFamily="sans-serif-medium"
         android:id="@+id/phoneverifiction_button"
