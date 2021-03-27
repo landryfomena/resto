@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,9 +36,24 @@ class DashboardFragment : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        var items=ItemPopular()
         initPopular()
         initCollection()
         setOnClickListener()
+    }
+    fun setOnClickListener(){
+        show1.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToCheckoutFragment())
+        }
+        search_icon.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToSearch())
+        }
+        show2.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToRestoFeatureBoonLayFragment())
+        }
     }
     fun initPopular(){
         var items= mutableListOf<ItemPopular>()
@@ -66,14 +79,6 @@ class DashboardFragment : Fragment() {
             adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))
             }
-        }
-    }
-    fun setOnClickListener(){
-        view_all_collection.setOnClickListener {
-            Navigation.findNavController(it).navigate(DashboardFragmentDirections.actionNavigationDashboardToCollectionByFozzi2())
-        }
-        view_all_popular.setOnClickListener {
-            Navigation.findNavController(it).navigate(DashboardFragmentDirections.actionNavigationDashboardToRestoFeatureBoonLayFragment())
         }
     }
 }

@@ -14,7 +14,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
-        send=findViewById<Button>(R.id.send_btn)
+        send=findViewById<Button>(R.id.recoverpassword_SendButon)
         send.setOnClickListener {
             val intent= Intent(this@ForgotPasswordActivity, VerifyYourPhoneActivity::class.java)
             startActivity(intent)

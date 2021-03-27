@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dimens_8sp">8dp</dimen>
+    <dimen name="dimens_50sp">50sp</dimen>
     <dimen name="dimens_20dp">20dp</dimen>
     <dimen name="dimens_35dp">35dp</dimen>
     <dimen name="dimens_edit_phone_code">60dp</dimen>
@@ -15,7 +17,6 @@
     <dimen name="dimens_48dp">48dp</dimen>
     <dimen name="dimens_300dp">300dp</dimen>
     <dimen name="dimens_4dp">4dp</dimen>
-    <dimen name="dimens_8sp">8sp</dimen>
     <dimen name="dimens_10sp">10sp</dimen>
     <dimen name="dimens_100dp">100dp</dimen>
     <dimen name="dimens_60dp">60dp</dimen>

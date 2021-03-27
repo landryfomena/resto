@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.notifications.item.Collection_Item
 import com.example.resto.ui.restaurant.item.Item_Asia_Restaurant
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
