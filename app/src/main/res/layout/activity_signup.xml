@@ -22,7 +22,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/Title_color"
                 android:textSize="@dimen/dimens_40sp"
-                android:onClick="showDialog"
                 android:textStyle="bold"
                 android:text="@string/create_an_account"
                 android:id="@+id/titleresgistration"

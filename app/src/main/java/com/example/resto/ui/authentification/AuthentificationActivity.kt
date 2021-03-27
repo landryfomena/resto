@@ -16,7 +16,6 @@ class AuthentificationActivity : AppCompatActivity() {
     //*********************************************************
     lateinit var signup : TextView
     lateinit var recover : TextView
-    lateinit var details : TextView
     //*********************************************************
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,12 +35,6 @@ class AuthentificationActivity : AppCompatActivity() {
         recover = findViewById<TextView>(R.id.fogotText)
         recover.setOnClickListener {
             var intent = Intent(this@AuthentificationActivity, ForgotPasswordActivity::class.java)
-            startActivity(intent)
-        }
-            //*********************************************************************
-        details = findViewById<TextView>(R.id.endText)
-        details.setOnClickListener {
-            var intent = Intent(this@AuthentificationActivity, activity_restaurant_details::class.java)
             startActivity(intent)
         }
     }
