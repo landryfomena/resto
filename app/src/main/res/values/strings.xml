@@ -117,5 +117,13 @@
     <string name="from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889_as_a_family_bakery_and_patisserie_savour_a_selection_of_viennoiserie_croissants_etc">From the French countryside, to your doorstep. PAUL was founded in 1889 as a family bakery and patisserie. Savour a selection of viennoiserie (croissants etc.)…</string>
     <string name="photo">Photo</string>
     <string name="next">Next</string>
+    <string name="about_us">about us</string>
+    <string name="help_center">help center</string>
+    <string name="invite_friends">invite friends</string>
+    <string name="settings">settings</string>
+    <string name="my_promo_code">my promo code</string>
+    <string name="reward_credits">Reward credits</string>
+    <string name="payment_method">Payment method</string>
+    <string name="notifications">Notifications</string>
 
 </resources>

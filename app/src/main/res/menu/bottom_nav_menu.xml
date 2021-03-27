@@ -17,7 +17,7 @@
         android:title="@string/title_notifications" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:icon="@drawable/ic_baseline_account_box_24"
         android:title="@string/title_profile" />
 
 </menu>

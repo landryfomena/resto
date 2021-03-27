@@ -50,6 +50,10 @@ class DashboardFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(DashboardFragmentDirections.actionNavigationDashboardToSearch())
         }
+        show2.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(DashboardFragmentDirections.actionNavigationDashboardToRestoFeatureBoonLayFragment())
+        }
     }
     fun initPopular(){
         var items= mutableListOf<ItemPopular>()
