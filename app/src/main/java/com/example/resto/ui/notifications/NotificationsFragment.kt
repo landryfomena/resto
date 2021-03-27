@@ -4,28 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.home.item.Item_Resto_Extended
-import com.example.resto.ui.notifications.item.Collection_Item
 import com.example.resto.ui.restaurant.item.Item_Asia_Restaurant
-import com.example.resto.ui.restaurant.item.Item_Feature_Boon
-import com.example.resto.ui.restaurant.item.Item_Recommend
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.asia_restaurant_fragment.*
-import kotlinx.android.synthetic.main.asia_restaurant_fragment.*
-import kotlinx.android.synthetic.main.boon_lay_fragment.*
-import kotlinx.android.synthetic.main.fragment_dashboard.*
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_notifications.*
 import kotlinx.android.synthetic.main.my_favorite_fragment.*
-import kotlinx.android.synthetic.main.search_fragment.*
 
 class NotificationsFragment : Fragment() {
 

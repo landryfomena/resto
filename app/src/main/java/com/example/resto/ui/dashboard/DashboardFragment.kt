@@ -49,11 +49,11 @@ class DashboardFragment : Fragment() {
         show2.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(DashboardFragmentDirections.actionNavigationDashboardToCollectionByFozzi2())
-        }
+        }/*
         search_icon.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(DashboardFragmentDirections.actionNavigationDashboardToSearch())
-        }
+        }*/
         show2.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(DashboardFragmentDirections.actionNavigationDashboardToRestoFeatureBoonLayFragment())

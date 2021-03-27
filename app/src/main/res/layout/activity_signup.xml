@@ -34,7 +34,7 @@
                 android:layout_marginHorizontal="@dimen/dimens_16dp"
                 android:background="@drawable/rounded_shape_input_text"
                 android:textSize="@dimen/dimens_20sp"
-                android:hint="@string/username"
+                android:hint="@string/user_name"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:singleLine="true"

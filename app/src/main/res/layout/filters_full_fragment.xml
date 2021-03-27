@@ -337,7 +337,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cost_low_to_high"
+                android:text="Cost Low to High"
                 android:textSize="@dimen/dimens_18sp"
                 android:layout_marginTop="@dimen/dimens_20sp"
                 android:textColor="@color/black"
@@ -474,7 +474,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/price"
+                android:text="PRICE"
                 android:paddingTop="@dimen/dimens_20sp"
                 android:textSize="@dimen/dimens_18sp"
                 app:layout_constraintTop_toTopOf="parent"

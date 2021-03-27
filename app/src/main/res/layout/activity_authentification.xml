@@ -107,13 +107,13 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:gravity="center"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="150dp"
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/endText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="don't have an account? "
+                android:text="@string/don_t_have_an_account"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
                 android:textSize="20dp"

@@ -49,11 +49,11 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        setOnClickListener()
+       // setOnClickListener()
         initRecycleview()
         initTopCategories()
         //openDialogPassword()
-    }
+    }/*
     fun setOnClickListener(){
         icon_search.setOnClickListener {
             Navigation.findNavController(it)
@@ -67,7 +67,7 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(HomeFragmentDirections.actionNavigationHomeToCollectionByFozzy())
         }
-    }
+    }*/
     fun initRecycleview(){
         var items= mutableListOf<Item_Resto_Extended>()
         (0..5).forEach{
