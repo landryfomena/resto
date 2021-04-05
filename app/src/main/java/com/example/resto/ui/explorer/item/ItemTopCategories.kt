@@ -1,4 +1,4 @@
-package com.example.resto.ui.home.item
+package com.example.resto.ui.explorer.item
 
 import com.example.resto.R
 import com.xwray.groupie.kotlinandroidextensions.Item

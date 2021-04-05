@@ -11,7 +11,11 @@
         android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/filter_bottomsheet"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable ="false"
+        app:behavior_peekHeight="@dimen/dimens_30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -510,15 +514,15 @@
                     />
             </LinearLayout>
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:indeterminate="false"
-                android:progressTint="@color/purple_700"
-                style="?android:attr/progressBarStyleHorizontal"
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekbar"
+                style="?android:attr/seekBarStyle"
                 android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_16dp"
                 android:layout_marginTop="@dimen/dimens_10sp"
-                android:layout_height="@dimen/dimens_20sp"
-                android:layout_marginBottom="@dimen/dimens_10dp"/>
+                android:layout_marginBottom="@dimen/dimens_10dp"
+                android:indeterminate="false"
+                android:progressTint="@color/purple_700"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

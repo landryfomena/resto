@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_places"
         android:checked="true"
         android:title="@string/places" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_food"
         android:checked="true"
-        android:title="Food" />
+        android:title="@string/food" />
 
 </menu>

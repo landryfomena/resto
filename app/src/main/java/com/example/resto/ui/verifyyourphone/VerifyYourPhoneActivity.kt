@@ -3,12 +3,10 @@ package com.example.resto.ui.verifyyourphone
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.Button
 import com.example.resto.R
+import com.example.resto.ui.phoneVerification.PhoneVerificationActivity
 import kotlinx.android.synthetic.main.activity_forgot_password.*
-import kotlinx.android.synthetic.main.activity_forgot_password.recoverpassword_SendButon
 import kotlinx.android.synthetic.main.activity_verify_yourphone.*
 import kotlinx.android.synthetic.main.password_confirm_dialog.view.*
 
@@ -23,4 +21,5 @@ class VerifyYourPhoneActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

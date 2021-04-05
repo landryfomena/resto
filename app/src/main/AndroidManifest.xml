@@ -10,18 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resto">
-        <activity android:name=".ui.profile.ProfileActivity"></activity>
         <activity android:name=".ui.registration.SignupActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.otp.PhoneVerificationActivity" />
-        <activity android:name=".ui.phoneverification.VerifyYourPhoneActivity" />
         <activity android:name=".ui.recoverpassword.ForgotPasswordActivity" />
         <activity android:name=".ui.restaurant.AsiaRestaurantFragment"
             tools:ignore="Instantiatable"></activity>
-        <activity android:name=".ui.verifyyourphone.PhoneVerificationActivity">
+        <activity android:name=".ui.phoneVerification.PhoneVerificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,13 +27,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.verifyyourphone.VerifyYourPhoneActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.createaccount.CreateAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

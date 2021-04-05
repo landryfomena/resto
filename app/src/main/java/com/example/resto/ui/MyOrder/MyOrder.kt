@@ -1,27 +1,61 @@
-package com.example.resto.ui.dashboard
+package com.example.resto.ui.MyOrder
 
+import android.app.Dialog
+import android.graphics.drawable.ColorDrawable
+import android.icu.lang.UCharacter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.dashboard.item.ItemCollection
-import com.example.resto.ui.dashboard.item.ItemPopular
-import com.example.resto.ui.home.item.ItemTopCategories
-import com.example.resto.ui.home.item.Item_Resto_Extended
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.Section
-import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.fragment_dashboard.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
-class DashboardFragment : Fragment() {
+class MyOrder : Fragment() {
+    lateinit var dialog: Dialog
+    lateinit var cardView: CardView
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    companion object {
+        fun newInstance() = MyOrder()
+    }
+
+    private lateinit var viewModel: MyOrderViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.my_order, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(MyOrderViewModel::class.java)
+        // TODO: Use the ViewModel
+        dialog= Dialog(requireContext())
+        openDialogOrder()
+    }
+    private fun openDialogOrder() {
+        dialog.setContentView(R.layout.dialog_your_order_is_successfully_fragment)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
+        cardView=dialog.findViewById(R.id.card)
+        cardView.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View) {
+                dialog.dismiss()
+                //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show
+            }
+        })
+        dialog.setCanceledOnTouchOutside(false)
+        dialog.show()
+    }
+
+}
+
+/*
+class MyOrder : Fragment() {
+
+    private lateinit var dashboardViewModel: MyOrderViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -29,8 +63,8 @@ class DashboardFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         dashboardViewModel =
-                ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
+                ViewModelProvider(this).get(MyOrderViewModel::class.java)
+        val root = inflater.inflate(R.layout.my_order, container, false)
 
         return root
     }
@@ -86,3 +120,4 @@ class DashboardFragment : Fragment() {
         }
     }
 }
+*/

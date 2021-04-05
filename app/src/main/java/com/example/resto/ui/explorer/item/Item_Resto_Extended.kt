@@ -1,11 +1,11 @@
-package com.example.resto.ui.dashboard.item
+package com.example.resto.ui.explorer.item
 
 import com.example.resto.R
 import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
 
-class ItemCollection  : Item() {
+class Item_Resto_Extended :Item() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
     }
-    override fun getLayout()= R.layout.collections_by_fozzi
+    override fun getLayout()= R.layout.new_places_item
 }

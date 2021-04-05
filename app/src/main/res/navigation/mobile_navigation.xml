@@ -3,93 +3,167 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_explorer">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.resto.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
+        android:id="@+id/navigation_explorer"
+        android:name="com.example.resto.ui.explorer.ExplorerFragment"
+        android:label="@string/title_explorer"
+        tools:layout="@layout/fragment_explorer" >
         <action
-            android:id="@+id/action_navigation_home_to_search"
+            android:id="@+id/action_navigation_explorer_self"
+            app:destination="@id/navigation_explorer" />
+        <action
+            android:id="@+id/action_navigation_explorer_to_navigation_order"
+            app:destination="@id/navigation_order" />
+        <action
+            android:id="@+id/action_navigation_explorer_to_collection_by_fozzy"
+            app:destination="@id/collection_by_fozzy" />
+        <action
+            android:id="@+id/action_navigation_explorer_to_search"
             app:destination="@id/search" />
         <action
-            android:id="@+id/action_navigation_home_to_chocolatSpiceRestaurant"
-            app:destination="@id/chocolatSpiceRestaurant" />
+            android:id="@+id/action_navigation_explorer_to_navigation_favourite"
+            app:destination="@id/navigation_favourite" />
         <action
-            android:id="@+id/action_navigation_home_to_boonLayFragment"
+            android:id="@+id/action_navigation_explorer_to_explorerSecondFragment"
+            app:destination="@id/explorerSecondFragment" />
+        <action
+            android:id="@+id/action_navigation_explorer_to_boonLayFragment"
             app:destination="@id/boonLayFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.resto.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
-        <action
-            android:id="@+id/action_navigation_dashboard_to_collectionByFozzi2"
-            app:destination="@id/collectionByFozzi" />
-        <action
-            android:id="@+id/action_navigation_dashboard_to_restoFeatureBoonLayFragment"
-            app:destination="@id/restoFeatureBoonLayFragment" />
+        android:id="@+id/navigation_order"
+        android:name="com.example.resto.ui.MyOrder.MyOrder"
+        android:label="@string/title_my_order"
+        tools:layout="@layout/my_order" >
     </fragment>
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.resto.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/collectionByFozzi"
-        android:name="com.example.resto.ui.CollectionByFozzi.CollectionByFozzi"
-        android:label="popular_this_week_fragment"
-        tools:layout="@layout/popular_this_week_fragment" >
-        <action
-            android:id="@+id/action_collectionByFozzi_to_asiaRestaurantFragment"
-            app:destination="@id/asiaRestaurantFragment" />
+        android:id="@+id/navigation_favourite"
+        android:name="com.example.resto.ui.favorite.MyFavorite"
+        android:label="@string/title_favourite"
+        tools:layout="@layout/my_favorite_fragment" >
+
     </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.resto.ui.profile.ProfileNav"
+        android:label="@string/profile"
+        tools:layout="@layout/profile_nav" >
+        <action
+            android:id="@+id/navigation_explorer_to_profilefragment"
+            app:destination="@+id/profilefragment"/>
+    </fragment>
+    <activity
+        android:id="@+id/authentificationActivity"
+        android:name="com.example.resto.ui.authentification.AuthentificationActivity"
+        android:label="activity_authentification"
+        tools:layout="@layout/activity_authentification">
+
+    </activity>
+    <fragment
+        android:id="@+id/boonLayFragment"
+        android:name="com.example.resto.ui.restaurant.BoonLayFragment"
+        android:label="boon_lay_fragment"
+        tools:layout="@layout/boon_lay_fragment" />
     <fragment
         android:id="@+id/asiaRestaurantFragment"
         android:name="com.example.resto.ui.restaurant.AsiaRestaurantFragment"
         android:label="asia_restaurant_fragment"
-        tools:layout="@layout/asia_restaurant_fragment" />
+        tools:layout="@layout/asia_restaurant_fragment" >
+        <action
+            android:id="@+id/action_asiaRestaurantFragment_to_boonLayFragment"
+            app:destination="@id/boonLayFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/search"
-        android:name="com.example.resto.ui.search.Search"
-        android:label="search_fragment"
-        tools:layout="@layout/search_fragment" />
+        android:id="@+id/checkout_fragment"
+        android:name="com.example.resto.ui.checkout.checkout_fragment"
+        android:label="checkout_fragment_fragment"
+        tools:layout="@layout/checkout_fragment_fragment" />
     <fragment
         android:id="@+id/chocolatSpiceRestaurant"
         android:name="com.example.resto.ui.restaurant.ChocolatSpiceRestaurant"
         android:label="chocolat_spice_restaurant_fragment"
-        tools:layout="@layout/chocolat_spice_restaurant_fragment" />
+        tools:layout="@layout/chocolat_spice_restaurant_fragment" >
+        <action
+            android:id="@+id/action_chocolatSpiceRestaurant_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
+    </fragment>
     <fragment
-        android:id="@+id/myOrder"
-        android:name="com.example.resto.ui.order.MyOrder"
-        android:label="my_order_fragment"
-        tools:layout="@layout/my_order_fragment" />
+        android:id="@+id/collection_by_fozzy"
+        android:name="com.example.resto.ui.CollectionByFozzi.item.collection_by_fozzy"
+        android:label="collection_by_fozzy_fragment"
+        tools:layout="@layout/collection_by_fozzy_fragment" />
+    <fragment
+        android:id="@+id/explorerSecondFragment"
+        android:name="com.example.resto.ui.explorer.ExplorerSecondFragment"
+        android:label="fragment_secondexplorer"
+        tools:layout="@layout/fragment_secondexplorer" >
+        <action
+            android:id="@+id/action_explorerSecondFragment_to_collection_by_fozzy"
+            app:destination="@id/collection_by_fozzy" />
+        <action
+            android:id="@+id/action_explorerSecondFragment_to_boonLayFragment"
+            app:destination="@id/boonLayFragment" />
+        <action
+            android:id="@+id/action_explorerSecondFragment_to_navigation_explorer"
+            app:destination="@id/navigation_explorer" />
+    </fragment>
+    <fragment
+        android:id="@+id/filters_full_fragment"
+        android:name="com.example.resto.ui.filtersfull.filters_full_fragment"
+        android:label="filters_full_fragment" >
+        <action
+            android:id="@+id/action_filters_full_fragment_to_asiaRestaurantFragment"
+            app:destination="@id/asiaRestaurantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myOrderResto"
+        android:name="com.example.resto.ui.order.MyOrderResto"
+        android:label="my_order_resto_fragment"
+        tools:layout="@layout/my_order_resto_fragment" />
     <fragment
         android:id="@+id/restoFeatureBoonLayFragment"
         android:name="com.example.resto.ui.restaurant.RestoFeatureBoonLayFragment"
         android:label="resto_feature_boon_lay_fragment"
         tools:layout="@layout/resto_feature_boon_lay_fragment" />
     <fragment
-        android:id="@+id/boonLayFragment"
-        android:name="com.example.resto.ui.restaurant.BoonLayFragment"
-        android:label="boon_lay_fragment"
-        tools:layout="@layout/boon_lay_fragment" >
-        <action
-            android:id="@+id/action_boonLayFragment_to_myOrder"
-            app:destination="@id/myOrder" />
-    </fragment>
+        android:id="@+id/search"
+        android:name="com.example.resto.ui.search.Search"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
+    <activity
+        android:id="@+id/forgotPasswordActivity"
+        android:name="com.example.resto.ui.recoverpassword.ForgotPasswordActivity"
+        android:label="activity_forgot_password"
+        tools:layout="@layout/activity_forgot_password" />
+    <activity
+        android:id="@+id/phoneVerificationActivity"
+        android:name="com.example.resto.ui.otp.PhoneVerificationActivity"
+        android:label="activity_phone_verification"
+        tools:layout="@layout/activity_phone_verification" />
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profilefragment"
         android:name="com.example.resto.ui.profile.ProfileFragment"
-        android:label="profile_fragment"
-        tools:layout="@layout/profile_fragment" />
-    <fragment
-        android:id="@+id/myFavorite"
-        android:name="com.example.resto.ui.favorite.MyFavorite"
-        android:label="my_favorite_fragment"
-        tools:layout="@layout/my_favorite_fragment" />
+        android:label="activity_fragment"
+        tools:layout="@layout/profile_fragment" >
+
+    </fragment>
+    <activity
+        android:id="@+id/activity_restaurant_details"
+        android:name="com.example.resto.ui.restaurantDetails.activity_restaurant_details"
+        android:label="activity_restaurant_details"
+        tools:layout="@layout/activity_restaurant_details" />
+    <activity
+        android:id="@+id/signupActivity"
+        android:name="com.example.resto.ui.registration.SignupActivity"
+        android:label="activity_signup"
+        tools:layout="@layout/activity_signup" />
+    <activity
+        android:id="@+id/verifyYourPhoneActivity"
+        android:name="com.example.resto.ui.verifyyourphone.VerifyYourPhoneActivity"
+        android:label="activity_verify_yourphone"
+        tools:layout="@layout/activity_verify_yourphone" />
 
 </navigation>

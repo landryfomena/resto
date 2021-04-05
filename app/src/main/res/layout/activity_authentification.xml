@@ -33,6 +33,7 @@
             android:layout_marginTop="@dimen/dimens_8dp"
             android:text="Welcome back"
             android:gravity="center"
+            android:fontFamily="@font/avenirltstd_black"
             android:textColor="@color/Title_color"
             android:textSize="40dp"
             android:textStyle="bold"

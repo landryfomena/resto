@@ -91,6 +91,7 @@
             android:singleLine="true"
             android:lines="1"
             android:maxLength="1"
+            android:onClick="openDialogOrder"
             tools:ignore="LabelFor,Suspicious0dp" />
     </LinearLayout>
     <TextView

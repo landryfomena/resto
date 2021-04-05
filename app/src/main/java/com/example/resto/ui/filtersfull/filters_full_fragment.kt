@@ -33,9 +33,9 @@ class filters_full_fragment : Fragment() {
         progressBar()
     }
     fun progressBar(){
-        progressBar.max= 4000
+        seekbar.max= 4000
         val currentProgress = 2000
-        ObjectAnimator.ofInt(progressBar,"progress",currentProgress)
+        ObjectAnimator.ofInt(seekbar,"progress",currentProgress)
             .setDuration(2000)
             .start()
     }
