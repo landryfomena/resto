@@ -19,6 +19,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/verify_your_phone"
             android:textColor="@color/Title_color"
+            android:fontFamily="@font/avenir_ltstd_black"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_34sp"
             android:layout_marginTop="@dimen/dimens8dp"
@@ -29,7 +30,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/TitleAuthentification"
             android:text="@string/we_have_sent_you_an_sms_with_a_code_to_number"
-            android:textColor="@color/Text_color_sub"
+            android:textColor="@color/Text_Sub_Title"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_16sp"
             android:layout_marginTop="@dimen/dimens8dp" />
@@ -41,25 +42,25 @@
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/dimens_30dp"
             android:layout_marginHorizontal="@dimen/dimens_16dp">
-        <com.hbb20.CountryCodePicker
-            android:layout_width="wrap_content"
-            app:ccp_textSize="@dimen/dimens_15dp"
-            android:layout_marginVertical="@dimen/dimens5dp"
-            android:layout_marginStart="@dimen/dimens8dp"
-            app:ccp_defaultNameCode="CM"
-            app:ccp_showPhoneCode="true"
-            android:id="@+id/calendar_icon"
-            android:layout_height="match_parent"/>
+            <com.hbb20.CountryCodePicker
+                android:layout_width="wrap_content"
+                app:ccp_textSize="@dimen/dimens_15dp"
+                android:layout_marginVertical="@dimen/dimens5dp"
+                android:layout_marginStart="@dimen/dimens8dp"
+                app:ccp_defaultNameCode="CM"
+                app:ccp_showPhoneCode="true"
+                android:id="@+id/calendar_icon"
+                android:layout_height="match_parent"/>
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:layout_marginEnd="@dimen/dimens8dp"
-                android:textSize="@dimen/dimens_20sp"
+                android:textSize="@dimen/dimens_25sp"
                 android:inputType="phone"
                 android:textColorHint="@color/Text_color_sub"/>
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/social_network"
@@ -67,6 +68,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/username"
             android:layout_marginTop="@dimen/dimens_45dp"
+            android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:gravity="center">
 
@@ -75,7 +77,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/forgot"
                 android:text="@string/or_login_with"
-                android:textColor="@color/Text_color_sub"
+                android:textColor="@color/Text_Sub_Title"
                 android:textAlignment="center"
                 android:textSize="@dimen/dimens_16sp"/>
             <TextView

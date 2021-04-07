@@ -24,6 +24,7 @@
         android:layout_marginTop="8dp"
         android:textSize="25sp"
         android:id="@+id/title"
+        android:fontFamily="@font/avenir_ltstd_black"
         app:layout_constraintStart_toStartOf="@+id/image"
         android:text="Burgers"
         app:layout_constraintTop_toBottomOf="@+id/image"
@@ -32,13 +33,11 @@
     <TextView
         android:layout_width="match_parent"
         android:textSize="16sp"
+        android:fontFamily="@font/avenir_ltstd_roman"
         android:id="@+id/location"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/title"
         android:text="1126 places"
         app:layout_constraintTop_toBottomOf="@+id/title"
         android:layout_height="wrap_content"/>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

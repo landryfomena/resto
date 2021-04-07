@@ -10,20 +10,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
+import com.example.resto.ui.favourite.MyFavouriteFragmentDirections
 import com.example.resto.ui.restaurant.item.Item_Feature_Boon
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.boon_lay_fragment.*
-import kotlinx.android.synthetic.main.password_confirm_dialog.*
+import kotlinx.android.synthetic.main.fragment_favourite.*
 
 class BoonLayFragment : Fragment() {
-
-//    companion object {
-//        fun newInstance() = BoonLayFragment()
-//    }
 
     private lateinit var viewModel: BoonLayViewModel
 
@@ -36,6 +34,17 @@ class BoonLayFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(BoonLayViewModel::class.java)
         initFeature_item()
+        setOnClickListener()
+    }
+    fun setOnClickListener(){
+        feature.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToRestoFeatureBoonLayFragment())
+        }
+        myOrder.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToMyOrder())
+        }
     }
     fun initFeature_item(){
         var items= mutableListOf<Item_Feature_Boon>()
@@ -59,7 +68,5 @@ class BoonLayFragment : Fragment() {
         //val mAlertDialog = builder.show()
         builder.dialog_button.setOnClickListener { builder.dismiss() }
         builder.setCanceledOnTouchOutside(false)
-
-
     }*/
 }

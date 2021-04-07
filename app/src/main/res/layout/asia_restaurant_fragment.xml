@@ -31,6 +31,7 @@
             android:gravity="center"
             android:text="Asia Restaurant"
             android:textColor="@color/white"
+            android:fontFamily="@font/avenir_ltstd_black"
             android:textSize="@dimen/dimens_34sp" />
     </LinearLayout>
     <androidx.core.widget.NestedScrollView
@@ -39,7 +40,7 @@
         app:layout_constraintHeight_default="percent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/dimens_50dp"
+        android:layout_marginBottom="@dimen/dimens_40dp"
         android:background="#E5E5EA">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

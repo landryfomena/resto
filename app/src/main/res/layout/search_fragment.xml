@@ -8,7 +8,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/dimens_60dp">
+        android:layout_marginBottom="@dimen/dimens_40dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,6 +29,7 @@
                 android:layout_marginHorizontal="@dimen/dimens_20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_ltstd_book"
                 android:text="Search"
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimens_34sp"
@@ -56,7 +57,6 @@
                     android:background="@android:color/transparent"
                     android:layout_marginEnd="@dimen/dimens8dp"
                     android:textSize="@dimen/dimens_20sp"
-                    android:inputType="phone"
                     android:paddingHorizontal="@dimen/dimens_16dp"
                     android:hint="Search"
                     android:textColorHint="#d1d1d6"/>

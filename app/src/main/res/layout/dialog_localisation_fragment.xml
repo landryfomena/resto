@@ -6,8 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="450dp"
         app:cardCornerRadius="@dimen/dimens_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,6 +34,7 @@
             android:layout_marginTop="@dimen/dimens_30dp"
             android:text="Enable Your Location"
             android:textAlignment="center"
+            android:fontFamily="@font/avenir_ltstd_black"
             android:layout_marginHorizontal="@dimen/dimens_10dp"
             android:textColor="@color/black"
             android:textSize="@dimen/dimens_30sp"

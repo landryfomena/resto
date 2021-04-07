@@ -24,6 +24,7 @@
         android:layout_marginTop="@dimen/dimens_16dp"
         android:textSize="@dimen/dimens_20sp"
         android:id="@+id/title"
+        android:fontFamily="@font/avenir_ltstd_black"
         app:layout_constraintStart_toStartOf="@+id/image"
         android:text="@string/andy_and_cindi_s_diner"
         app:layout_constraintTop_toBottomOf="@+id/image"
@@ -35,6 +36,7 @@
         app:layout_constraintStart_toStartOf="@+id/title"
         android:text="@string/_22_powlowski_plain"
         android:textColor="@color/gris_clear"
+        android:fontFamily="@font/avenir_ltstd_roman"
         app:layout_constraintTop_toBottomOf="@+id/title"
         android:layout_height="wrap_content"/>
 
