@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -14,7 +15,7 @@ import com.example.resto.R
 
 class MyOrder : Fragment() {
     lateinit var dialog: Dialog
-    lateinit var cardView: CardView
+    lateinit var button: Button
 
     companion object {
         fun newInstance() = MyOrder()
@@ -39,8 +40,8 @@ class MyOrder : Fragment() {
     private fun openDialogOrder() {
         dialog.setContentView(R.layout.dialog_your_order_is_successfully_fragment)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
-        cardView=dialog.findViewById(R.id.card)
-        cardView.setOnClickListener(object : View.OnClickListener {
+        button=dialog.findViewById(R.id.order_dialog_button)
+        button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View) {
                 dialog.dismiss()
                 //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show

@@ -10,7 +10,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="@dimen/dimens_8dp">
+        android:layout_marginVertical="@dimen/dimens_8dp">
         <ImageView
             android:layout_width="match_parent"
             android:background="#B8BBC6"

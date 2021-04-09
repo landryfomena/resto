@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.restaurant.item.Item_Feature_Boon
@@ -36,6 +37,13 @@ class BoonLayFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(BoonLayViewModel::class.java)
         initFeature_item()
+        setOnclickListener()
+    }
+    fun setOnclickListener(){
+        feature.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToChocolatSpiceRestaurant())
+        }
     }
     fun initFeature_item(){
         var items= mutableListOf<Item_Feature_Boon>()

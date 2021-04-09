@@ -29,12 +29,14 @@ class ChocolatSpiceRestaurant : Fragment() {
         return inflater.inflate(R.layout.chocolat_spice_restaurant_fragment, container, false)
     }
 
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ChocolatSpiceRestaurantViewModel::class.java)
         // TODO: Use the ViewModel
         initPhoto()
     }
+
     fun initPhoto(){
         var items= mutableListOf<Item_Photo>()
         (0..5).forEach{

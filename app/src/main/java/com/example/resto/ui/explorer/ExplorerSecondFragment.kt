@@ -38,9 +38,9 @@ class ExplorerSecondFragment : Fragment() {
         var items = ItemPopular()
         initPopular()
         initCollection()
-      //setOnClickListener()
+      setOnClickListener()
     }
-/*
+
     fun setOnClickListener() {
         show1.setOnClickListener {
            Navigation.findNavController(it)
@@ -48,14 +48,18 @@ class ExplorerSecondFragment : Fragment() {
        }
         search_icon.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(ExplorerSecondFragmentDirections.actionExplorerSecondFragmentToExplorerFragment())
+                .navigate(ExplorerSecondFragmentDirections.actionExplorerSecondFragmentToNavigationExplorer())
         }
         show2.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(ExplorerSecondFragmentDirections.actionExplorerSecondFragmentToCollectionByFozzy())
         }
+        main_searchView1.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(ExplorerSecondFragmentDirections.actionExplorerSecondFragmentToSearch())
+        }
     }
-*/
+
     fun initPopular() {
         var items = mutableListOf<ItemPopular>()
         (0..9).forEach {

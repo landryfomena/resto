@@ -10,7 +10,7 @@
     <string name="discover_new_places">Discover new places</string>
     <string name="top_categories">Top categories</string>
     <string name="show_all">Show all</string>
-    <string name="log_in_to_your_account">Log into your account</string>
+    <string name="log_in_to_your_account">Login into your account</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -50,7 +50,6 @@
     <string name="_2">2</string>
     <string name="free_delivery">Free delivery</string>
     <string name="boon_lay_ho_huat_fried_prawn_noodle">Boon Lay Ho Huat Fried Prawn Noodle</string>
-    <string name="_856_esta_underpass">856 Esta Underpass</string>
     <string name="_4_5">4.5</string>
     <string name="_233_ratings">233 ratings</string>
     <string name="_137k">137k</string>
@@ -93,12 +92,12 @@
     <string name="reward_credits">Reward credits</string>
     <string name="payment_method">Payment method</string>
     <string name="notifications">Notifications</string>
-    <string name="asia">asia</string>
+    <string name="asia">Asia</string>
     <string name="_128places">128places</string>
     <string name="authentification_sign_up">Sign_up</string>
-    <string name="your_emailrecovery">your_emailrecovery</string>
-    <string name="send">send</string>
-    <string name="resend_a_new_code">resend_a_new_code</string>
+    <string name="your_emailrecovery">Your email</string>
+    <string name="send">Send</string>
+    <string name="resend_a_new_code">Resend a new code</string>
     <string name="chocolat_n_spice">Chocolat N Spice</string>
     <string name="_33_min">33 min</string>
     <string name="_27_miles">27 miles</string>
@@ -130,5 +129,9 @@
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="cart_empty">Cart Empty</string>
     <string name="food">Food</string>
+    <string name="by_clicking_sign_up_you_agree_to_the_following_terms_and_conditions_without_reservation">By clicking Sign up you agree to the following Terms and Conditions without reservation</string>
+    <string name="you_can_track_the_delivery_in_the_order_section">You can track the delivery in the Order section.</string>
+    <string name="go_to_orders">Go to orders</string>
+    <string name="_03_jameson_manors_apt_177">03 Jameson Manors Apt. 177</string>
 
 </resources>

@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="windowNoTitle">true </item>
+        <item name="windowNoTitle">false </item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="windowActionBar">true</item>
         <!-- Secondary brand color. -->

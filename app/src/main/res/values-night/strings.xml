@@ -12,7 +12,7 @@
     <string name="top_categories">Top categories</string>
     <string name="show_all">Show all</string>
     <string name="safety_net_api_key">AIzaSyBFxiDvFPom2qm05tzoW0RFjzWIk-XqutA</string>
-    <string name="log_in_to_your_account">Log into your account</string>
+    <string name="log_in_to_your_account">Login into your account</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -52,7 +52,6 @@
     <string name="_2">2</string>
     <string name="free_delivery">Free delivery</string>
     <string name="boon_lay_ho_huat_fried_prawn_noodle">Boon Lay Ho Huat Fried Prawn Noodle</string>
-    <string name="_856_esta_underpass">856 Esta Underpass</string>
     <string name="_4_5">4.5</string>
     <string name="_233_ratings">233 ratings</string>
     <string name="_137k">137k</string>
@@ -87,11 +86,15 @@
     <string name="my_order">My Order</string>
     <string name="explore">Explore</string>
     <string name="places">Places</string>
-    <string name="authentification_sign_up">authentification_sign_up</string>
+    <string name="authentification_sign_up">sign_up</string>
     <string name="your_emailrecovery">your_emailrecovery</string>
     <string name="send">send</string>
     <string name="resend_a_new_code">resend_a_new_code</string>
     <string name="chocolat_n_spice">chocolat\' N Spice</string>
     <string name="from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889as_a_family_bakery_and_patisserie_saviour_a_selection_of_viennoiserie_croissants_etc">from the french countryside to your doorstep paul was founded in 1889as a family bakery and patisserie saviour a selection of viennoiserie croissants etc</string>
     <string name="food">Food</string>
+    <string name="by_clicking_sign_up_you_agree_to_the_following_terms_and_conditions_without_reservation">By clicking Sign up you agree to the following Terms and Conditions without reservation</string>
+    <string name="you_can_track_the_delivery_in_the_order_section">You can track the delivery in the Order section.</string>
+    <string name="go_to_orders">Go to orders</string>
+    <string name="_03_jameson_manors_apt_177">03 Jameson Manors Apt. 177</string>
 </resources>

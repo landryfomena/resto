@@ -8,10 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.resto.R
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.*
 import kotlinx.android.synthetic.main.filters_full_fragment.*
 
-class filters_full_fragment : Fragment() {
+class filters_full_fragment : BottomSheetDialogFragment() {
 
     companion object {
         fun newInstance() = filters_full_fragment()

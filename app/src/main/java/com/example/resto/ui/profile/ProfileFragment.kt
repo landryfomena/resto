@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.resto.R
+import kotlinx.android.synthetic.main.profile_fragment.*
 
 class ProfileFragment : Fragment() {
 
@@ -26,7 +28,16 @@ class ProfileFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-        // TODO: Use the ViewModel
+        setOnClickListener()
     }
-
+    fun setOnClickListener(){
+        backup.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(ProfileFragmentDirections.popupToParent())
+        }
+        idDone.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(ProfileFragmentDirections.actionProfilefragmentToNavigationProfile())
+        }
+    }
 }

@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.otp.PhoneVerificationActivity">
+    tools:context=".ui.phoneVerification.PhoneVerificationActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/dimens_40sp"
         android:text="@string/phone_verification"
-        android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="@dimen/dimens_40sp"
-        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/dimens_34sp"
+        android:fontFamily="@font/avenirltstd_black"
         android:textColor="@color/Title_color"
         android:id="@+id/otp_title"
         />
@@ -26,25 +25,31 @@
         android:text="@string/enter_your_otp_code_here"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:fontFamily="@font/avenirltstd_book"
+        android:textSize="@dimen/dimens_17sp"
         android:id="@+id/otp_subTitle"
         />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens_40sp"
-        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/otp_subTitle"
         android:layout_marginHorizontal="@dimen/dimens_16dp"
         android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:id="@+id/otp_inputlinear">
 
         <EditText
             android:id="@+id/otp_input1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/dimens_70dp"
+            android:layout_height="@dimen/dimens_70dp"
             android:backgroundTint="@color/purple_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/otp_input2"
+            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/rounded_shape_otp"
             android:textAlignment="center"
             android:inputType="number"
@@ -52,7 +57,9 @@
             android:hint="@string/_2"
             android:textColorHint="@color/white"
             android:textSize="@dimen/dimens_30sp"
+            android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
             android:lines="1"
+            android:nextFocusDown="@id/otp_input2"
             android:maxLength="1"
             android:layout_marginRight="@dimen/dimens_8dp"
             tools:ignore="LabelFor,Suspicious0dp"
@@ -60,40 +67,47 @@
             />
         <EditText
             android:id="@+id/otp_input2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/dimens_70dp"
+            android:layout_height="@dimen/dimens_70dp"
+            app:layout_constraintStart_toEndOf="@id/otp_input1"
+            app:layout_constraintEnd_toStartOf="@id/otp_input3"
+            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/rounded_shape_otp"
             android:textAlignment="center"
             android:inputType="number"
             android:singleLine="true"
+            android:nextFocusDown="@id/otp_input3"
             android:lines="1"
-            android:maxLength="1"
-            android:layout_marginRight="@dimen/dimens_8dp"
-            tools:ignore="LabelFor,Suspicious0dp" />
+            android:maxLength="1" />
         <EditText
             android:id="@+id/otp_input3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/dimens_70dp"
+            android:layout_height="@dimen/dimens_70dp"
+            app:layout_constraintStart_toEndOf="@id/otp_input2"
+            app:layout_constraintEnd_toStartOf="@id/otp_input4"
+            app:layout_constraintTop_toTopOf="parent"
             android:textAlignment="center"
             android:background="@drawable/rounded_shape_otp"
             android:inputType="number"
+            android:imeOptions="actionNext"
             android:singleLine="true"
             android:lines="1"
-            android:maxLength="1"
-            tools:ignore="LabelFor,Suspicious0dp" />
+            android:maxLength="1"/>
         <EditText
             android:id="@+id/otp_input4"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/dimens_70dp"
+            android:layout_height="@dimen/dimens_70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/otp_input3"
+            app:layout_constraintTop_toTopOf="parent"
             android:textAlignment="center"
             android:background="@drawable/rounded_shape_otp"
             android:inputType="number"
             android:singleLine="true"
             android:lines="1"
             android:maxLength="1"
-            android:onClick="openDialogOrder"
-            tools:ignore="LabelFor,Suspicious0dp" />
-    </LinearLayout>
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

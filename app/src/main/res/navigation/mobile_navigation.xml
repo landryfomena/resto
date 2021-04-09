@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_navigation_explorer_to_boonLayFragment"
             app:destination="@id/boonLayFragment" />
+        <action
+            android:id="@+id/action_navigation_explorer_to_filters_full_fragment"
+            app:destination="@id/filters_full_fragment" />
     </fragment>
 
     <fragment
@@ -54,7 +57,7 @@
         <action
             android:id="@+id/navigation_explorer_to_profilefragment"
             app:destination="@+id/profilefragment"/>
-    </fragment>
+        </fragment>
     <activity
         android:id="@+id/authentificationActivity"
         android:name="com.example.resto.ui.authentification.AuthentificationActivity"
@@ -66,7 +69,14 @@
         android:id="@+id/boonLayFragment"
         android:name="com.example.resto.ui.restaurant.BoonLayFragment"
         android:label="boon_lay_fragment"
-        tools:layout="@layout/boon_lay_fragment" />
+        tools:layout="@layout/boon_lay_fragment" >
+        <action
+            android:id="@+id/action_boonLayFragment_to_restoFeatureBoonLayFragment"
+            app:destination="@id/restoFeatureBoonLayFragment" />
+        <action
+            android:id="@+id/action_boonLayFragment_to_chocolatSpiceRestaurant"
+            app:destination="@id/chocolatSpiceRestaurant" />
+    </fragment>
     <fragment
         android:id="@+id/asiaRestaurantFragment"
         android:name="com.example.resto.ui.restaurant.AsiaRestaurantFragment"
@@ -109,25 +119,36 @@
         <action
             android:id="@+id/action_explorerSecondFragment_to_navigation_explorer"
             app:destination="@id/navigation_explorer" />
+        <action
+            android:id="@+id/action_explorerSecondFragment_to_search"
+            app:destination="@id/search" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/filters_full_fragment"
         android:name="com.example.resto.ui.filtersfull.filters_full_fragment"
         android:label="filters_full_fragment" >
         <action
             android:id="@+id/action_filters_full_fragment_to_asiaRestaurantFragment"
             app:destination="@id/asiaRestaurantFragment" />
-    </fragment>
+    </dialog>
     <fragment
         android:id="@+id/myOrderResto"
         android:name="com.example.resto.ui.order.MyOrderResto"
         android:label="my_order_resto_fragment"
-        tools:layout="@layout/my_order_resto_fragment" />
+        tools:layout="@layout/my_order_resto_fragment" >
+        <action
+            android:id="@+id/action_myOrderResto_to_checkout_fragment"
+            app:destination="@id/checkout_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/restoFeatureBoonLayFragment"
         android:name="com.example.resto.ui.restaurant.RestoFeatureBoonLayFragment"
         android:label="resto_feature_boon_lay_fragment"
-        tools:layout="@layout/resto_feature_boon_lay_fragment" />
+        tools:layout="@layout/resto_feature_boon_lay_fragment" >
+        <action
+            android:id="@+id/action_restoFeatureBoonLayFragment_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
+    </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.example.resto.ui.search.Search"
@@ -138,23 +159,20 @@
         android:name="com.example.resto.ui.recoverpassword.ForgotPasswordActivity"
         android:label="activity_forgot_password"
         tools:layout="@layout/activity_forgot_password" />
-    <activity
-        android:id="@+id/phoneVerificationActivity"
-        android:name="com.example.resto.ui.otp.PhoneVerificationActivity"
-        android:label="activity_phone_verification"
-        tools:layout="@layout/activity_phone_verification" />
+
     <fragment
         android:id="@+id/profilefragment"
         android:name="com.example.resto.ui.profile.ProfileFragment"
         android:label="activity_fragment"
-        tools:layout="@layout/profile_fragment" >
-
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/popup_to_parent"
+            app:popUpTo="@id/navigation_profile"
+            />
+        <action
+            android:id="@+id/action_profilefragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
     </fragment>
-    <activity
-        android:id="@+id/activity_restaurant_details"
-        android:name="com.example.resto.ui.restaurantDetails.activity_restaurant_details"
-        android:label="activity_restaurant_details"
-        tools:layout="@layout/activity_restaurant_details" />
     <activity
         android:id="@+id/signupActivity"
         android:name="com.example.resto.ui.registration.SignupActivity"
@@ -165,5 +183,6 @@
         android:name="com.example.resto.ui.verifyyourphone.VerifyYourPhoneActivity"
         android:label="activity_verify_yourphone"
         tools:layout="@layout/activity_verify_yourphone" />
+
 
 </navigation>

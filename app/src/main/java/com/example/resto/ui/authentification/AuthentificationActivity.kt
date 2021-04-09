@@ -20,6 +20,7 @@ class AuthentificationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentification)
+        //supportActionBar?.hide()
         login = findViewById<Button>(R.id.buttonlogin)
         login.setOnClickListener {
             var intent = Intent(this@AuthentificationActivity ,MainActivity::class.java)

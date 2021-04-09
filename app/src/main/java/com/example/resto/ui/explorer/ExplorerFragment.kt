@@ -1,6 +1,8 @@
 package com.example.resto.ui.explorer
 
 import android.app.Dialog
+import android.graphics.drawable.ColorDrawable
+import android.icu.lang.UCharacter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +23,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_explorer.*
+import kotlinx.android.synthetic.main.new_places_item.*
 
 class ExplorerFragment : Fragment() {
 
@@ -48,7 +51,7 @@ class ExplorerFragment : Fragment() {
         setOnClickListener()
         initRecycleview()
         initTopCategories()
-        //openDialogPassword()
+       // openDialogPassword()
     }
    fun setOnClickListener(){
         view_all_title.setOnClickListener {
@@ -63,9 +66,13 @@ class ExplorerFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(ExplorerFragmentDirections.actionNavigationExplorerToSearch())
         }
-       new_places_container.setOnClickListener{
+       view_all_title.setOnClickListener{
            Navigation.findNavController(it)
                .navigate(ExplorerFragmentDirections.actionNavigationExplorerToBoonLayFragment())
+       }
+       pageTitle.setOnClickListener {
+           Navigation.findNavController(it)
+               .navigate(ExplorerFragmentDirections.actionNavigationExplorerToFiltersFullFragment())
        }
     }
     fun initRecycleview(){
@@ -104,8 +111,10 @@ class ExplorerFragment : Fragment() {
                 //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show
             }
         })
+
         dialog.show()
-    }
+    }*/
+    /*
     fun bottomSheet(){
         bottomSheetBehavior = BottomSheetBehavior.from(filter_bottomsheet)
 

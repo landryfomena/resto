@@ -35,6 +35,9 @@ class RestoFeatureBoonLayFragment : Fragment() {
         // TODO: Use the ViewModel
         initFeature()
     }
+    fun setOnClickListener(){
+
+    }
     fun initFeature(){
         var items= mutableListOf<Item_Feature_Boon>()
         (0..7).forEach{

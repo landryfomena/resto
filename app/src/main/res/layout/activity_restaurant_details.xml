@@ -207,7 +207,8 @@
             android:fontFamily="sans-serif"
             android:text="@string/from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889as_a_family_bakery_and_patisserie_saviour_a_selection_of_viennoiserie_croissants_etc"
             android:textColor="@color/black"
-            android:textSize="@dimen/dimens_18sp"
+            android:gravity="start"
+            android:textSize="@dimen/dimens_17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/restaurant_Title"
             app:layout_constraintTop_toBottomOf="@id/linearLayout_resto3" />

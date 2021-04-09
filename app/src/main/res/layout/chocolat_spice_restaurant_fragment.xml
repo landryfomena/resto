@@ -6,6 +6,7 @@
     android:background="#707070"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.restaurant.ChocolatSpiceRestaurant">
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,9 +24,9 @@
             android:background="#707070">
             <ImageView
                 android:id="@+id/bookmark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_width="@dimen/dimens_18dp"
+                android:layout_height="@dimen/dimens_16dp"
+                android:src="@mipmap/arrow_left_foreground"
                 android:layout_gravity="start"
                 android:layout_marginTop="@dimen/dimens_20dp"
                 android:layout_marginStart="@dimen/dimens_10dp" />
@@ -45,8 +46,9 @@
             android:layout_marginTop="@dimen/dimens_30dp"
             android:layout_marginHorizontal="@dimen/dimens_15dp"
             android:text="Chocolat'N Spice"
+            android:fontFamily="@font/avenirltstd_black"
             android:textColor="@color/Title_color"
-            android:textSize="@dimen/dimens_34sp" />
+            android:textSize="@dimen/dimens_30sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/location"
@@ -71,8 +73,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dimens_10dp"
-                android:text="@string/_856_esta_underpass"
+                android:text="@string/_03_jameson_manors_apt_177"
                 android:textSize="@dimen/dimens_15sp"
+                android:fontFamily="@font/avenir_medium"
                 android:textColor="@color/gris_clear"
                 app:layout_constraintStart_toEndOf="@+id/location_on"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -97,10 +100,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dimens_16dp"
+                    android:layout_marginHorizontal="@dimen/dimens_11sp"
                     android:text="@string/free_delivery"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/dimens_15sp" />
+                    android:textSize="@dimen/dimens_11sp" />
             </androidx.cardview.widget.CardView>
             <TextView
                 android:id="@+id/times"
@@ -108,8 +111,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dimens_30dp"
                 android:text="33 min"
-                android:textSize="@dimen/dimens_15sp"
-                android:textColor="@color/black"
+                android:textSize="@dimen/dimens_13sp"
+                android:fontFamily="@font/avenirltstd_roman"
+                android:textColor="@color/Title_color"
                 app:layout_constraintStart_toEndOf="@+id/card_free"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
@@ -118,8 +122,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dimens_30dp"
                 android:text="27 milles"
-                android:textSize="@dimen/dimens_15sp"
-                android:textColor="@color/black"
+                android:fontFamily="@font/avenirltstd_roman"
+                android:textSize="@dimen/dimens_13sp"
+                android:textColor="@color/Title_color"
                 app:layout_constraintStart_toEndOf="@+id/times"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -127,165 +132,116 @@
             android:id="@+id/pageCaract"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimens_8dp"
-            android:background="#F7F8FA"
-            android:paddingVertical="@dimen/dimens_8dp"
-            android:layout_marginTop="@dimen/dimens_15dp"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/free"
-            android:orientation="horizontal">
+            android:layout_marginTop="@dimen/dimens_20sp"
+            android:background="@color/arriere_plan_transparant"
+            android:padding="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/free">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/Bookmark_image"
+                android:layout_width="@dimen/dimens_45dp"
+                android:layout_height="@dimen/dimens_45dp"
+                android:layout_marginStart="@dimen/dimens_10sp"
+                android:src="@mipmap/star_foreground" />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimens_10dp">
-                <ImageView
-                    android:id="@+id/oval_start"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_oval_start"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <ImageView
-                    android:id="@+id/start"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic__icon_start"
-                    android:layout_marginStart="@dimen/dimens_8dp"
-                    app:layout_constraintStart_toStartOf="@id/oval_start"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/dimens_10dp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/mark"
+                    android:id="@+id/value_rater"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dimens_8dp"
-                    android:text="@string/_4_5"
-                    android:textColor="@color/black"
+                    android:text="4.4"
+                    android:textColor="@color/Title_color"
                     android:textSize="@dimen/dimens_15sp"
-                    app:layout_constraintStart_toEndOf="@+id/start"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"/>
                 <TextView
+                    android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="ratings"
-                    android:textSize="@dimen/dimens_15sp"
+                    android:text="Ratings"
                     android:textColor="@color/gris_clear"
-                    app:layout_constraintStart_toEndOf="@+id/start"
-                    app:layout_constraintTop_toBottomOf="@+id/mark" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:textSize="@dimen/dimens_13sp"
+                    android:fontFamily="@font/avenirltstd_roman"/>
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/trait1"
-                android:layout_width="@dimen/dimens_1dp"
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/dimens_5dp"
-                app:cardBackgroundColor="@color/gris_clear" />
+                android:background="?android:attr/listDivider" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/star_icon"
+                android:layout_width="@dimen/dimens_50dp"
+                android:layout_height="@dimen/dimens_50dp"
+                android:src="@mipmap/bookmark_foreground" />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimens_10dp">
-                <ImageView
-                    android:id="@+id/oval_start1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_oval_start"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/red" />
-                <ImageView
-                    android:id="@+id/start1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_bookmark_24"
-                    android:layout_marginStart="@dimen/dimens_8dp"
-                    app:layout_constraintStart_toStartOf="@id/oval_start1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/dimens_10dp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/mark1"
+                    android:id="@+id/Bookmark_rater"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dimens_8dp"
-                    android:text="@string/_137k"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/dimens_15sp"
-                    app:layout_constraintStart_toEndOf="@+id/start1"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:text="173k"
+                    android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
+                    android:textColor="@color/Title_color"
+                    android:textSize="@dimen/dimens_15sp"/>
 
                 <TextView
+                    android:id="@+id/Bookmark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="@string/bookmark"
-                    android:textSize="@dimen/dimens_15sp"
-                    android:textColor="@color/gris_clear"
-                    app:layout_constraintStart_toEndOf="@+id/start1"
-                    app:layout_constraintTop_toBottomOf="@+id/mark1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/trait2"
-                android:layout_width="@dimen/dimens_1dp"
+                    android:text="Bookmark"
+                    android:fontFamily="@font/avenirltstd_roman"
+                    android:textSize="@dimen/dimens_13sp"
+                    android:textColor="@color/gris_clear"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/dimens_5dp"
-                app:cardBackgroundColor="@color/gris_clear" />
+                android:background="?android:attr/listDivider" />
+            <ImageView
+                android:id="@+id/photo_icon"
+                android:layout_width="@dimen/dimens_50dp"
+                android:layout_height="@dimen/dimens_50dp"
+                android:src="@mipmap/photo_foreground" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimens_10dp">
-                <ImageView
-                    android:id="@+id/oval_start2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_oval_start"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/blue" />
-                <ImageView
-                    android:id="@+id/start2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_photo"
-                    android:layout_marginStart="@dimen/dimens_5dp"
-                    android:layout_marginBottom="@dimen/dimens_8dp"
-                    app:layout_constraintStart_toStartOf="@id/oval_start2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/mark2"
+                    android:id="@+id/photo_rater"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dimens_8dp"
-                    android:text="@string/_346"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/dimens_15sp"
-                    app:layout_constraintStart_toEndOf="@+id/start2"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:text="173k"
+                    android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
+                    android:textColor="@color/Title_color"
+                    android:textSize="@dimen/dimens_15sp"/>
 
                 <TextView
+                    android:id="@+id/Photo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="@string/photo"
-                    android:textSize="@dimen/dimens_15sp"
+                    android:text="Bookmark"
+                    android:fontFamily="@font/avenirltstd_roman"
                     android:textColor="@color/gris_clear"
-                    app:layout_constraintStart_toEndOf="@+id/start2"
-                    app:layout_constraintTop_toBottomOf="@+id/mark2" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:textSize="@dimen/dimens_15sp"/>
+            </LinearLayout>
         </LinearLayout>
         <TextView
             android:id="@+id/text_des"
@@ -294,9 +250,9 @@
             android:text="@string/from_the_french_countryside_to_your_doorstep_paul_was_founded_in_1889_as_a_family_bakery_and_patisserie_savour_a_selection_of_viennoiserie_croissants_etc"
             app:layout_constraintTop_toBottomOf="@id/pageCaract"
             android:layout_marginTop="@dimen/dimens_25dp"
-            android:textAlignment="center"
-            android:textSize="@dimen/dimens_15sp"
-            android:textColor="@color/black"
+            android:fontFamily="@font/avenirltstd_book"
+            android:textSize="@dimen/dimens_17sp"
+            android:textColor="@color/text_color"
             android:layout_marginHorizontal="@dimen/dimens_10dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -304,8 +260,9 @@
             android:layout_marginTop="@dimen/dimens_20dp"
             app:layout_constraintTop_toBottomOf="@+id/text_des"
             android:text="@string/photo"
-            android:layout_marginHorizontal="@dimen/dimens_20dp"
-            android:textSize="@dimen/dimens_30sp"
+            android:layout_marginHorizontal="@dimen/dimens_15dp"
+            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
             android:id="@+id/text_photo"
             android:textColor="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView

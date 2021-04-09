@@ -6,13 +6,13 @@
     android:layout_marginEnd="@dimen/dimens_15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:layout_width="240dp"
+        android:layout_width="230dp"
         app:cardCornerRadius="10dp"
         android:layout_marginVertical="@dimen/dimens_8dp"
         android:id="@+id/image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="280dp">
+        android:layout_height="270dp">
         <ImageView
             android:layout_width="match_parent"
             android:background="#B8BBC6"
@@ -83,7 +83,8 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-                android:text="free delivery"
+                android:text="@string/free_delivery"
+                android:textSize="@dimen/dimens_10sp"
                 android:layout_marginHorizontal="10dp"
                 android:textColor="@color/white"
                 android:textAlignment="center"
