@@ -37,7 +37,7 @@
             android:layout_width="150dp"
             android:layout_height="25dp"
             android:text="@string/boon_lay_ho_huat_fried_prawn_noodle"
-            android:textSize="@dimen/dimens_20sp"
+            android:textSize="@dimen/dimens_17sp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -94,7 +94,8 @@
             android:layout_height="wrap_content"
             android:text="@string/full_menu"
             android:textColor="@color/black"
-            android:textSize="@dimen/dimens_25sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,6 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/view_all"
+            android:textSize="@dimen/dimens_16sp"
             android:layout_marginHorizontal="@dimen/dimens_5dp"
             android:textColor="@color/orange_clear"
             app:layout_constraintEnd_toStartOf="@id/dooble_arrow"
@@ -127,7 +129,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popular_items"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"/>
@@ -136,7 +139,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_3"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_15sp"
             android:textColor="@color/gris_clear"
             app:layout_constraintEnd_toStartOf="@id/option_popular"
             app:layout_constraintTop_toTopOf="parent" />
@@ -171,7 +175,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/salads"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"/>
@@ -180,7 +185,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_2"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_15sp"
             android:textColor="@color/gris_clear"
             app:layout_constraintEnd_toStartOf="@id/next1"
             app:layout_constraintTop_toTopOf="parent" />
@@ -204,7 +210,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chicken"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"/>
@@ -212,7 +219,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_5"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_15sp"
             android:textColor="@color/gris_clear"
             app:layout_constraintEnd_toStartOf="@id/next2"
             app:layout_constraintTop_toTopOf="parent" />
@@ -235,7 +243,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Soups"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"/>
@@ -243,7 +252,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_6"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_15sp"
             android:textColor="@color/gris_clear"
             app:layout_constraintEnd_toStartOf="@id/next3"
             app:layout_constraintTop_toTopOf="parent" />
@@ -266,7 +276,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Noodle"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"/>
@@ -274,7 +285,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_4"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_15sp"
             android:textColor="@color/gris_clear"
             app:layout_constraintEnd_toStartOf="@id/next4"
             app:layout_constraintTop_toTopOf="parent" />
@@ -297,7 +309,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Drink"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"/>
@@ -305,7 +318,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_5"
-            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:textSize="@dimen/dimens_15sp"
             android:textColor="@color/gris_clear"
             app:layout_constraintEnd_toStartOf="@id/next5"
             app:layout_constraintTop_toTopOf="parent" />
@@ -342,7 +356,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Add to Order"
-                android:textSize="@dimen/dimens_25sp"
+                android:fontFamily="@font/avenir_ltstd_heavy"
+                android:textSize="@dimen/dimens_17sp"
                 android:layout_marginEnd="@dimen/dimens_20dp"
                 android:textColor="@color/white" />
             <TextView
@@ -354,7 +369,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_gravity="center"
                 android:paddingEnd="@dimen/dimens_20dp"
-                android:textSize="@dimen/dimens_25sp"
+                android:fontFamily="@font/avenir_ltstd_heavy"
+                android:textSize="@dimen/dimens_17sp"
                 android:textColor="@color/white" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

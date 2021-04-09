@@ -79,8 +79,9 @@
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cart Empty"
+        android:text="@string/cart_empty"
         android:textColor="@color/gris_clear"
+        android:fontFamily="@font/avenir_ltstd_heavy"
         android:textAlignment="center"
         android:layout_marginTop="@dimen/dimens_30dp"
         android:textSize="@dimen/dimens_34sp"
@@ -93,7 +94,8 @@
         android:layout_marginTop="@dimen/dimens_30dp"
         android:text="@string/good_food_is_always_cooking_go_ahead_order_some_yummy_items_from_the_menu"
         android:textColor="@color/gris_clear"
-        android:textSize="@dimen/dimens_20sp"
+        android:fontFamily="@font/avenir_ltstd_roman"
+        android:textSize="@dimen/dimens_17sp"
         app:layout_constraintTop_toBottomOf="@+id/text1"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

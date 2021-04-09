@@ -48,7 +48,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/popular_this_weeek"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/dimens_20dp"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
+                    android:textSize="@dimen/dimens_20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
@@ -57,6 +58,8 @@
                     android:drawableRight="@drawable/ic_baseline_arrow_right_24"
                     android:text="@string/show_all"
                     android:textColor="@color/black"
+                    android:textSize="@dimen/dimens_15sp"
+                    android:fontFamily="@font/avenir_ltstd_book"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:id="@+id/show1"/>
@@ -85,16 +88,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/collections_by_fozzi"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/dimens_20dp"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
+                    android:textSize="@dimen/dimens_20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:id="@+id/id_Collections"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_baseline_arrow_right_24"
                     android:text="@string/show_all"
+                    android:textSize="@dimen/dimens_15sp"
+                    android:fontFamily="@font/avenir_ltstd_book"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

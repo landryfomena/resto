@@ -5,13 +5,13 @@
     android:paddingBottom="@dimen/dimens_20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
+        android:layout_width="@dimen/dimens_88dp"
         app:cardCornerRadius="10dp"
         android:layout_margin="8dp"
         android:id="@+id/image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="150dp">
+        android:layout_height="@dimen/dimens_88dp">
         <ImageView
             android:layout_width="match_parent"
             android:background="#B8BBC6"
@@ -22,9 +22,9 @@
         android:layout_width="match_parent"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
-        android:textSize="25sp"
+        android:textSize="@dimen/dimens_17sp"
         android:id="@+id/title"
-        android:fontFamily="@font/avenir_ltstd_black"
+        android:fontFamily="@font/avenir_ltstd_medium"
         app:layout_constraintStart_toStartOf="@+id/image"
         android:text="Burgers"
         app:layout_constraintTop_toBottomOf="@+id/image"
@@ -32,7 +32,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:textSize="16sp"
+        android:textSize="@dimen/dimens_13sp"
         android:fontFamily="@font/avenir_ltstd_roman"
         android:id="@+id/location"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -135,6 +135,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:id="@+id/asia_filter"
                         app:cardCornerRadius="@dimen/dimens_20sp"
                         android:layout_margin="1dp">
                         <TextView

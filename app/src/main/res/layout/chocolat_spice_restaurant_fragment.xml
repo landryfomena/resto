@@ -73,6 +73,7 @@
                 android:layout_marginHorizontal="@dimen/dimens_10dp"
                 android:text="@string/_856_esta_underpass"
                 android:textSize="@dimen/dimens_15sp"
+                android:fontFamily="@font/avenir_ltstd_medium"
                 android:textColor="@color/gris_clear"
                 app:layout_constraintStart_toEndOf="@+id/location_on"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -97,6 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_ltstd_roman"
                     android:layout_marginHorizontal="@dimen/dimens_16dp"
                     android:text="@string/free_delivery"
                     android:textColor="@color/white"
@@ -109,6 +111,7 @@
                 android:layout_marginHorizontal="@dimen/dimens_30dp"
                 android:text="33 min"
                 android:textSize="@dimen/dimens_15sp"
+                android:fontFamily="@font/avenir_ltstd_roman"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/card_free"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -118,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dimens_30dp"
                 android:text="27 milles"
+                android:fontFamily="@font/avenir_ltstd_roman"
                 android:textSize="@dimen/dimens_15sp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/times"
@@ -164,6 +168,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dimens_8dp"
                     android:text="@string/_4_5"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimens_15sp"
                     app:layout_constraintStart_toEndOf="@+id/start"
@@ -174,6 +179,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="4dp"
                     android:text="ratings"
+                    android:fontFamily="@font/avenir_ltstd_roman"
                     android:textSize="@dimen/dimens_15sp"
                     android:textColor="@color/gris_clear"
                     app:layout_constraintStart_toEndOf="@+id/start"
@@ -219,6 +225,7 @@
                     android:text="@string/_137k"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimens_15sp"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
                     app:layout_constraintStart_toEndOf="@+id/start1"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -227,6 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="4dp"
                     android:text="@string/bookmark"
+                    android:fontFamily="@font/avenir_ltstd_roman"
                     android:textSize="@dimen/dimens_15sp"
                     android:textColor="@color/gris_clear"
                     app:layout_constraintStart_toEndOf="@+id/start1"
@@ -271,6 +279,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dimens_8dp"
                     android:text="@string/_346"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimens_15sp"
                     app:layout_constraintStart_toEndOf="@+id/start2"
@@ -281,6 +290,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="4dp"
                     android:text="@string/photo"
+                    android:fontFamily="@font/avenir_ltstd_roman"
                     android:textSize="@dimen/dimens_15sp"
                     android:textColor="@color/gris_clear"
                     app:layout_constraintStart_toEndOf="@+id/start2"
@@ -296,6 +306,7 @@
             android:layout_marginTop="@dimen/dimens_25dp"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_15sp"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:textColor="@color/black"
             android:layout_marginHorizontal="@dimen/dimens_10dp"/>
         <TextView
@@ -306,6 +317,7 @@
             android:text="@string/photo"
             android:layout_marginHorizontal="@dimen/dimens_20dp"
             android:textSize="@dimen/dimens_30sp"
+            android:fontFamily="@font/avenir_ltstd_heavy"
             android:id="@+id/text_photo"
             android:textColor="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView

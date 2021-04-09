@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.welcome.Welcome">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_marginTop="150dp">
+            <TextView
+                android:id="@+id/Titlewelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/free_android_courses"
+                android:textColor="@color/white"
+                android:fontFamily="@font/avenir_ltstd_black"
+                android:textAlignment="center"
+                android:textSize="44sp"
+                android:layout_marginTop="@dimen/dimens8dp" />
+            <TextView
+                android:id="@+id/Sub_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_ltstd_book"
+                android:layout_marginHorizontal="@dimen/dimens_10dp"
+                android:text="@string/build_a_complete_mobile_application_with_android_be_part_of_a_new_genration_of_smart_developers"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="@dimen/dimens_17sp"
+                android:layout_marginTop="@dimen/dimens_60dp" />
+            <Button
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_16dp"
+                android:layout_marginTop="130dp"
+                android:background="@drawable/rounded_shape_into_log"
+                android:hint="@string/contact_237_695233625"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/avenir_ltstd_heavy"
+                android:textSize="@dimen/dimens_17sp"
+                app:layout_constraintTop_toBottomOf="@id/email" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_shape_blue"
+                android:backgroundTint="@color/blue"
+                android:fontFamily="@font/avenir_ltstd_heavy"
+                android:hint="@string/twiter_landryfomena1"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/dimens_17sp"
+                app:layout_constraintTop_toBottomOf="@id/email" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

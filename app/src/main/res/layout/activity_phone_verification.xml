@@ -23,6 +23,7 @@
         android:id="@+id/Sub_Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/avenir_ltstd_book"
         android:layout_marginTop="@dimen/dimens8dp"
         android:text="@string/enter_your_otp_code_here"
         android:textAlignment="center"
@@ -88,6 +89,7 @@
         android:layout_marginTop="@dimen/dimens_80dp"
         android:text="@string/didn_t_you_received_any_code"
         android:textColor="@color/Text_Sub_Title"
+        android:fontFamily="@font/avenir_ltstd_book"
         android:textSize="@dimen/dimens_16sp"
         android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/edit_text" />
@@ -96,6 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens8dp"
+        android:fontFamily="@font/avenir_ltstd_book"
         android:text="@string/recent_a_new_code"
         android:textAlignment="center"
         android:textColor="@color/orange_clear"

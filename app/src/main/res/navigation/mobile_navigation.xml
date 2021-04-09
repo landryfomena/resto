@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_navigation_explore_to_navigation_my_order"
             app:destination="@id/navigation_home2" />
+        <action
+            android:id="@+id/action_navigation_explore_to_filters"
+            app:destination="@id/filters" />
     </fragment>
 
     <fragment
@@ -110,11 +113,15 @@
         android:name="com.example.resto.ui.checkout.CheckOut"
         android:label="check_out_fragment"
         tools:layout="@layout/check_out_fragment" />
-    <fragment
+    <dialog
         android:id="@+id/filters"
         android:name="com.example.resto.ui.filters.Filters"
         android:label="filters_fragment"
-        tools:layout="@layout/filters_fragment" />
+        tools:layout="@layout/filters_fragment" >
+        <action
+            android:id="@+id/action_filters_to_asiaRestaurantFragment"
+            app:destination="@id/asiaRestaurantFragment" />
+    </dialog>
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.example.resto.ui.profile.EditProfileFragment"

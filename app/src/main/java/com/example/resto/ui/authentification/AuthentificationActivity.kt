@@ -2,14 +2,12 @@ package com.example.resto.ui.authentification
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.resto.MainActivity
 import com.example.resto.R
 import com.example.resto.ui.createaccount.CreateAccountActivity
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.activity_authentification.*
 import kotlinx.android.synthetic.main.filters_fragment.*
 

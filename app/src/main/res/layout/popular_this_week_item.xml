@@ -10,13 +10,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="80dp"
+            android:layout_width="@dimen/dimens_88dp"
             app:cardCornerRadius="10dp"
             android:layout_margin="8dp"
             android:id="@+id/image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_height="80dp">
+            android:layout_height="@dimen/dimens_88dp">
             <ImageView
                 android:layout_width="match_parent"
                 android:background="#B8BBC6"
@@ -33,9 +33,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:textColor="@color/black"
-                android:fontFamily="@font/avenir_ltstd_black"
+                android:fontFamily="@font/avenir_ltstd_heavy"
                 android:layout_marginTop="8dp"
-                android:textSize="18sp"
+                android:textSize="@dimen/dimens_17sp"
                 android:id="@+id/title"
                 android:text="Kellys Cafe and Espresso"
                 android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_marginTop="8dp"
-                android:textSize="@dimen/dimens_12sp"
+                android:textSize="@dimen/dimens_13sp"
                 android:id="@+id/location"
                 android:fontFamily="@font/avenir_ltstd_roman"
                 app:layout_constraintStart_toStartOf="@+id/title"
@@ -67,18 +67,18 @@
                     android:layout_width="wrap_content"
                     android:text="4.8"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/dimens_15sp"
+                    android:textSize="@dimen/dimens_13sp"
                     android:id="@+id/mark"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/start"
                     android:layout_marginStart="@dimen/dimens_5dp"
-                    android:fontFamily="@font/avenir_ltstd_roman"
+                    android:fontFamily="@font/avenir_ltstd_book"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="(233 ratings)"
-                    android:textSize="@dimen/dimens_12sp"
+                    android:textSize="@dimen/dimens_13sp"
                     android:id="@+id/votes"
                     android:layout_marginHorizontal="4dp"
                     android:fontFamily="@font/avenir_ltstd_roman"
@@ -101,7 +101,7 @@
                         android:layout_marginHorizontal="@dimen/dimens_10dp"
                         android:fontFamily="@font/avenir_ltstd_roman"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/dimens_10dp"
+                        android:textSize="11sp"
                         android:layout_height="wrap_content"
 
                         />

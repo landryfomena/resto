@@ -55,13 +55,12 @@
             app:layout_constraintTop_toBottomOf="@+id/pageTitle">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimens_0dp"
-                app:layout_constraintHeight_percent="0.9">
+                android:layout_height="match_parent">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/bas_page">
+                    android:id="@+id/bas_page"
+                    app:layout_constraintTop_toTopOf="parent">
                     <ImageView
                         android:id="@+id/replay"
                         android:layout_width="wrap_content"
@@ -75,15 +74,15 @@
                         app:layout_constraintBottom_toBottomOf="parent"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/bas_page"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dimens_20dp"
                     android:background="@drawable/rounded_shape_item_restaurant"
                     android:paddingHorizontal="@dimen/dimens_10dp"
+                    android:layout_marginTop="@dimen/dimens_30dp"
                     android:paddingTop="@dimen/dimens_150dp"
                     android:layout_marginBottom="@dimen/dimens_30dp"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintTop_toBottomOf="@id/bas_page">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -93,7 +92,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/user_name"
-                            android:textSize="@dimen/dimens_20sp"
+                            android:fontFamily="@font/avenir_ltstd_book"
+                            android:textSize="@dimen/dimens_17sp"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"/>
@@ -102,8 +102,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/cameron_cook"
-                            android:textSize="@dimen/dimens_20sp"
+                            android:textSize="@dimen/dimens_17sp"
                             android:textColor="@color/black"
+                            android:inputType="textPersonName"
+                            android:fontFamily="@font/avenir_ltstd_medium"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -123,8 +125,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_ltstd_book"
                                 android:text="@string/email"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:textSize="@dimen/dimens_17sp"
                                 android:textColor="@color/gris_clear"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -134,8 +137,10 @@
                                 android:background="@android:color/transparent"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_ltstd_medium"
+                                android:inputType="textEmailAddress"
                                 android:text="@string/darrell_bailey_gmail_com"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:textSize="@dimen/dimens_17sp"
                                 android:textColor="@color/black"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -161,7 +166,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/phone"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:fontFamily="@font/avenir_ltstd_book"
+                                android:textSize="@dimen/dimens_17sp"
                                 android:textColor="@color/gris_clear"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -169,8 +175,10 @@
                                 android:background="@android:color/transparent"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_ltstd_medium"
+                                android:inputType="phone"
                                 android:text="@string/_65_39879_343"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:textSize="@dimen/dimens_17sp"
                                 android:textColor="@color/black"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -196,8 +204,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_ltstd_book"
                                 android:text="@string/gender"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:textSize="@dimen/dimens_17sp"
                                 android:textColor="@color/gris_clear"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -206,7 +215,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/female"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:fontFamily="@font/avenir_ltstd_medium"
+                                android:textSize="@dimen/dimens_17sp"
                                 android:textColor="@color/black"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -234,7 +244,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/date_of_birth"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:textSize="@dimen/dimens_17sp"
+                                android:fontFamily="@font/avenir_ltstd_book"
                                 android:textColor="@color/gris_clear"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
@@ -243,7 +254,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/_16_04_1988"
-                                android:textSize="@dimen/dimens_20sp"
+                                android:textSize="@dimen/dimens_17sp"
+                                android:fontFamily="@font/avenir_ltstd_medium"
                                 android:textColor="@color/black"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>

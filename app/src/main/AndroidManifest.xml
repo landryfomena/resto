@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.resto">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +12,16 @@
         android:roundIcon="@mipmap/icon_check_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resto">
-        <activity android:name=".ui.restaurant.AsiaRestaurantFragment"
-            tools:ignore="Instantiatable"></activity>
+        <activity android:name=".ui.welcome.Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.restaurant.AsiaRestaurantFragment"
+            tools:ignore="Instantiatable" />
         <activity android:name=".ui.verifyyourphone.PhoneVerificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +54,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity

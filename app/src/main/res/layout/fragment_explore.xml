@@ -44,6 +44,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/discover_new_places"
+            android:fontFamily="@font/avenir_ltstd_heavy"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@id/main_searchView" />
@@ -70,7 +71,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/top_categories"
-                android:textSize="@dimen/dimens_20dp"
+                android:textSize="@dimen/dimens_20sp"
+                android:fontFamily="@font/avenir_ltstd_heavy"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -81,7 +83,9 @@
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_baseline_arrow_right_24"
                 android:text="@string/show_all"
+                android:textSize="@dimen/dimens_15sp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/avenir_ltstd_heavy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/show"/>

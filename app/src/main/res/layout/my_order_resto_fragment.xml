@@ -42,7 +42,7 @@
                         android:text="@string/little_creatures_club_street"
                         android:textColor="@color/black"
                         android:fontFamily="@font/avenir_ltstd_black"
-                        android:textSize="@dimen/dimens_25sp"
+                        android:textSize="@dimen/dimens_17sp"
                         app:layout_constraintTop_toTopOf="parent"
                         android:textStyle="bold"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,6 +60,7 @@
                             android:id="@+id/text_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_ltstd_roman"
                             android:text="856 Esta Underpass"
                             android:textSize="@dimen/dimens_15sp"
                             app:layout_constraintStart_toEndOf="@+id/location_on"
@@ -78,10 +79,11 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_ltstd_roman"
                                 android:layout_marginHorizontal="@dimen/dimens_16dp"
                                 android:text="Free delivery"
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/dimens_10sp" />
+                                android:textSize="11sp" />
                         </androidx.cardview.widget.CardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -91,9 +93,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dimens_10dp"
                         android:paddingHorizontal="@dimen/dimens_10dp"
-                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:fontFamily="@font/avenir_ltstd_medium"
                         android:text="Special Gajananad Bhel"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:textSize="@dimen/dimens_15sp"
                         android:textColor="@color/black"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -104,7 +106,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mixed vegetables, Chicken Egg"
-                            android:textSize="@dimen/dimens_15sp"
+                            android:textSize="@dimen/dimens_13sp"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintStart_toStartOf="parent"
                             android:fontFamily="@font/avenir_ltstd_roman"
@@ -114,7 +116,7 @@
                             android:layout_height="wrap_content"
                             android:text="$ 17.20"
                             android:fontFamily="@font/avenir_ltstd_roman"
-                            android:textSize="@dimen/dimens_15sp"
+                            android:textSize="@dimen/dimens_13sp"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"/>
@@ -131,9 +133,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cold Bournvita"
-                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:fontFamily="@font/avenir_ltstd_medium"
                         android:layout_marginTop="@dimen/dimens_10dp"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:textSize="@dimen/dimens_15sp"
                         android:paddingHorizontal="@dimen/dimens_10dp"
                         android:textColor="@color/black"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -145,7 +147,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Extra Hot Mild"
-                            android:textSize="@dimen/dimens_15sp"
+                            android:textSize="@dimen/dimens_13sp"
                             android:fontFamily="@font/avenir_ltstd_roman"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +156,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="$ 15.20"
-                            android:textSize="@dimen/dimens_15sp"
+                            android:textSize="@dimen/dimens_13sp"
                             android:fontFamily="@font/avenir_ltstd_roman"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -172,9 +174,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Butter Jam Maska Bun"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:textSize="@dimen/dimens_15sp"
                         android:paddingHorizontal="@dimen/dimens_10dp"
-                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:fontFamily="@font/avenir_ltstd_medium"
                         android:layout_marginTop="@dimen/dimens_10dp"
                         android:textColor="@color/black"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -186,7 +188,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="SweetFire Chicken Breast"
-                            android:textSize="@dimen/dimens_15sp"
+                            android:textSize="@dimen/dimens_13sp"
                             android:fontFamily="@font/avenir_ltstd_roman"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintStart_toStartOf="parent"
@@ -195,7 +197,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="$ 29.50"
-                            android:textSize="@dimen/dimens_15sp"
+                            android:textSize="@dimen/dimens_13sp"
                             android:fontFamily="@font/avenir_ltstd_roman"
                             android:textColor="@color/gris_clear"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -213,8 +215,8 @@
                         android:paddingHorizontal="@dimen/dimens_10dp"
                         android:fontFamily="@font/avenir_ltstd_book"
                         android:layout_height="wrap_content"
-                        android:text="Butter Jam Maska Bun"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:text="Add more items"
+                        android:textSize="@dimen/dimens_15sp"
                         android:layout_marginTop="@dimen/dimens_10dp"
                         android:textColor="@color/red"/>
 
@@ -223,7 +225,7 @@
                     android:id="@+id/down"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimens_50dp"
+                    android:layout_marginTop="@dimen/dimens_150dp"
                     android:orientation="vertical"
                     android:paddingHorizontal="@dimen/dimens_20dp"
                     android:background="@drawable/rounded_shape_item_restaurant"
@@ -239,7 +241,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Subtotal"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:textSize="@dimen/dimens_15sp"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
@@ -247,7 +250,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$93.40"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
                         android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
@@ -261,7 +265,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Tax &amp; Fees"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:textSize="@dimen/dimens_15sp"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
@@ -269,7 +274,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$2.00"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:textSize="@dimen/dimens_15sp"
                         android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
@@ -284,7 +290,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Delivery"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:fontFamily="@font/avenir_ltstd_book"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
@@ -292,42 +299,42 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Free"
-                        android:textSize="@dimen/dimens_20sp"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
                         android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/button_continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimens_30dp"
+                        android:layout_marginTop="@dimen/dimens_30dp"
+                        android:layout_marginBottom="@dimen/dimens_10dp"
+                        android:backgroundTint="@color/orange_clear"
+                        app:cardCornerRadius="@dimen/dimens_8dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/dimens_5dp"
+                            android:layout_marginStart="@dimen/dimens_50dp"
+                            android:text="Continue"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimens_17sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:paddingEnd="@dimen/dimens_20dp"
+                            android:text="$ 9.50"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimens_17sp" />
+                    </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
          </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/button_continue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimens_30dp"
-            android:layout_marginBottom="@dimen/dimens_30dp"
-            android:backgroundTint="@color/orange_clear"
-            app:cardCornerRadius="@dimen/dimens_8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/dimens_5dp"
-                android:layout_marginStart="@dimen/dimens_50dp"
-                android:text="Continue"
-                android:textColor="@color/white"
-                android:textSize="@dimen/dimens_25sp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="end"
-                android:paddingEnd="@dimen/dimens_20dp"
-                android:text="$ 9.50"
-                android:textColor="@color/white"
-                android:textSize="@dimen/dimens_25sp" />
-        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

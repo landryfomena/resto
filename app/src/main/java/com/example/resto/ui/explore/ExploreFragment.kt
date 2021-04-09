@@ -99,6 +99,10 @@ class ExploreFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(ExploreFragmentDirections.actionNavigationExploreToNavigationMyOrder())
         }
+        topCat.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(ExploreFragmentDirections.actionNavigationExploreToFilters())
+        }
     }
     private fun openDialogPassword() {
         dialog.setContentView(R.layout.dialog_localisation_fragment)

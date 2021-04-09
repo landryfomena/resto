@@ -127,4 +127,11 @@
     <string name="title_explore">Explore</string>
     <string name="title_profile">Profile</string>
     <string name="home2">Home_2</string>
+    <string name="free_android_courses">Free Android courses</string>
+    <string name="build_a_complete_mobile_application_with_android_be_part_of_a_new_genration_of_smart_developers">Build a complete mobile application with android. Be part of a new genration of smart developers</string>
+    <string name="contact_237_695233625">Contact : +237 695233625</string>
+    <string name="twiter_landryfomena1">twiter: @landryfomena1</string>
+    <string name="go_to_orders">Go to orders</string>
+    <string name="you_can_track_the_delivery_in_the_orders_section">You can track the delivery in the Orders section.</string>
+    <string name="cart_empty">Cart Empty</string>
 </resources>

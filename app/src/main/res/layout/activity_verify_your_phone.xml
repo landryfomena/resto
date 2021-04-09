@@ -32,7 +32,8 @@
             android:text="@string/we_have_sent_you_an_sms_with_a_code_to_number"
             android:textColor="@color/Text_Sub_Title"
             android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp"
+            android:fontFamily="@font/avenir_ltstd_book"
+            android:textSize="@dimen/dimens_17sp"
             android:layout_marginTop="@dimen/dimens8dp" />
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +58,9 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:layout_marginEnd="@dimen/dimens8dp"
-                android:textSize="@dimen/dimens_25sp"
+                android:hint="675041355"
+                android:fontFamily="@font/avenir_ltstd_heavy"
+                android:textSize="@dimen/dimens_17sp"
                 android:inputType="phone"
                 android:textColorHint="@color/Text_color_sub"/>
         </LinearLayout>
@@ -68,7 +71,6 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/username"
             android:layout_marginTop="@dimen/dimens_45dp"
-            android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:gravity="center">
 
@@ -77,23 +79,26 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/forgot"
                 android:text="@string/or_login_with"
+                android:fontFamily="@font/avenir_ltstd_book"
                 android:textColor="@color/Text_Sub_Title"
                 android:textAlignment="center"
-                android:textSize="@dimen/dimens_16sp"/>
+                android:textSize="@dimen/dimens_17sp"/>
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_ltstd_book"
                 android:text="@string/social_network"
                 android:textColor="@color/orange_clear"
                 android:textAlignment="center"
-                android:textSize="@dimen/dimens_16sp"/>
+                android:textSize="@dimen/dimens_17sp"/>
         </LinearLayout>
         <Button
             android:text="@string/next"
             android:id="@+id/next_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_ltstd_heavy"
             android:textColor="@color/white"
             android:background="@color/purple_700"
             app:layout_constraintTop_toBottomOf="@id/social_network"

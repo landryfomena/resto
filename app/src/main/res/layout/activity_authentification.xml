@@ -41,9 +41,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/TitleAuthentification"
             android:text="@string/log_into_your_acompt"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:textColor="@color/Text_Sub_Title"
             android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp"
+            android:textSize="@dimen/dimens_17sp"
             android:layout_marginTop="@dimen/dimens8dp"
             />
         <EditText
@@ -55,10 +56,12 @@
             android:background="@drawable/rounded_shape_into_text"
             android:hint="@string/email"
             android:paddingBottom="@dimen/dimens_5dp"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingHorizontal="@dimen/dimens_20dp"
+            android:inputType="textEmailAddress"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_17sp"
             app:layout_constraintTop_toBottomOf="@id/Sub_Title" />
         <EditText
             android:id="@+id/password"
@@ -70,17 +73,21 @@
             android:hint="@string/password"
             android:paddingHorizontal="@dimen/dimens_20dp"
             android:paddingTop="@dimen/dimens_15dp"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:paddingBottom="@dimen/dimens_5dp"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
-            app:layout_constraintTop_toBottomOf="@id/username" />
+            android:textSize="@dimen/dimens_17sp"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            android:inputType="textPassword" />
         <Button
             android:text="@string/login"
             android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:textSize="@dimen/dimens_17sp"
             android:backgroundTint="@color/purple_700"
+            android:fontFamily="@font/avenir_ltstd_heavy"
             android:layout_marginHorizontal="@dimen/dimens_16dp"
             app:layout_constraintTop_toBottomOf="@id/password"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,11 +98,12 @@
             android:id="@+id/forgot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_ltstd_book"
             app:layout_constraintTop_toBottomOf="@+id/login_btn"
             android:text="@string/forgot_your_password"
             android:textColor="@color/Text_Sub_Title"
             android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp"
+            android:textSize="@dimen/dimens_17sp"
             android:layout_marginTop="@dimen/dimens_20dp"
             />
         <LinearLayout
@@ -111,17 +119,19 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/forgot"
                 android:text="@string/dont_have_account"
+                android:fontFamily="@font/avenir_ltstd_book"
                 android:textColor="@color/Text_Sub_Title"
                 android:textAlignment="center"
-                android:textSize="@dimen/dimens_16sp" />
+                android:textSize="@dimen/dimens_17sp" />
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
+                android:fontFamily="@font/avenir_ltstd_book"
                 android:text="@string/sign_up"
                 android:textColor="@color/orange_clear"
                 android:textAlignment="center"
-                android:textSize="@dimen/dimens_16sp" />
+                android:textSize="@dimen/dimens_17sp" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

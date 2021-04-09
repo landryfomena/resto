@@ -56,11 +56,12 @@
                     android:layout_marginStart="@dimen/dimens_150dp"
                     android:background="@drawable/rounded_shape_item_favourite"
                     android:gravity="center"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
                     android:paddingVertical="@dimen/dimens_5dp"
                     android:paddingStart="@dimen/dimens_60dp"
                     android:text="Food"
                     android:textColor="@color/gris_clear"
-                    android:textSize="@dimen/dimens_20sp" />
+                    android:textSize="@dimen/dimens_15sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -68,10 +69,11 @@
                     android:background="@drawable/rounded_shape_into_log"
                     android:gravity="center"
                     android:paddingHorizontal="@dimen/dimens_50dp"
+                    android:fontFamily="@font/avenir_ltstd_heavy"
                     android:paddingVertical="@dimen/dimens_5dp"
                     android:text="Places"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/dimens_20sp" />
+                    android:textSize="@dimen/dimens_15sp" />
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout

@@ -5,8 +5,8 @@
     android:layout_gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="450dp"
+        android:layout_width="315dp"
+        android:layout_height="430dp"
         app:cardCornerRadius="@dimen/dimens_20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +43,9 @@
             android:id="@+id/text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:textAlignment="center"
-            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_marginTop="@dimen/dimens_20dp"
             android:text="@string/please_allow_to_use_your_location_to_show_nearby_restaurant_on_the_map"
             android:textColor="@color/black"
             android:textSize="@dimen/dimens_15sp"
@@ -64,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_marginVertical="@dimen/dimens_10dp"
+                android:fontFamily="@font/avenir_ltstd_heavy"
                 android:text="@string/enable_location"
                 android:textSize="@dimen/dimens_20sp"
                 android:textColor="@color/white"/>
