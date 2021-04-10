@@ -48,6 +48,7 @@ class PhoneVerificationActivity : AppCompatActivity() {
         dialog.show()
 
     }/*
+
     private fun addEditTextListener(editText: EditText?, nextEditText: EditText?) {
         editText?.setOnFocusChangeListener { view, focused ->
             if (focused) {
