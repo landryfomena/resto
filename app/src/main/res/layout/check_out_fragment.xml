@@ -27,6 +27,7 @@
                     android:paddingTop="@dimen/dimens_7dp"
                     android:id="@+id/constraintId1">
                     <ImageView
+                        android:id="@+id/arrowback"
                         android:layout_width="@dimen/dimens_30dp"
                         android:layout_height="@dimen/dimens_30dp"
                         android:src="@mipmap/black_arrow_foreground"
@@ -260,7 +261,7 @@
                         android:hint="Payment"
                         android:textColorHint="@color/white"
                         app:layout_constraintTop_toBottomOf="@id/idCheckoutCard4"
-                        android:background="@drawable/checkout_drawable_shape"
+                        android:background="@drawable/rounded_shape_cardview_8"
                         android:layout_marginTop="@dimen/dimens_30dp"
                         android:fontFamily="@font/avenir_ltstd_book"
                         app:layout_constraintStart_toStartOf="parent"

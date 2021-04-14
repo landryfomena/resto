@@ -14,7 +14,9 @@ import com.example.resto.ui.myorder.item.ItemPopular
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.fragment_explore.*
 import kotlinx.android.synthetic.main.fragment_my_order.*
+import kotlinx.android.synthetic.main.fragment_my_order.main_searchView
 
 class MyOrderFragment : Fragment() {
 
@@ -45,6 +47,10 @@ class MyOrderFragment : Fragment() {
         main_searchView.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(MyOrderFragmentDirections.actionNavigationMyOrderToSearch())
+        }
+        search_icon.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(MyOrderFragmentDirections.actionNavigationHome2ToFavouriteNavigation())
         }
     }
     fun initPopular(){

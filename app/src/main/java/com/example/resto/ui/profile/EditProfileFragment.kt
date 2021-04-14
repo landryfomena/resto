@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.resto.R
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 class EditProfileFragment : Fragment() {
 
@@ -27,6 +30,12 @@ class EditProfileFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModelEdit = ViewModelProvider(this).get(EditProfileViewModel::class.java)
         // TODO: Use the ViewModel
+        setOnClickListener()
+    }
+    private fun setOnClickListener(){
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+            }
     }
 
 }

@@ -15,8 +15,11 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 import kotlinx.android.synthetic.main.filters_fragment.*
 import kotlinx.android.synthetic.main.fragment_favourite.*
+import kotlinx.android.synthetic.main.fragment_favourite.arrowback
+import kotlinx.android.synthetic.main.fragment_favourite.text1
 import kotlinx.android.synthetic.main.fragment_my_order.*
 
 class MyFavouriteFragment : Fragment() {
@@ -40,15 +43,17 @@ class MyFavouriteFragment : Fragment() {
         setOnClickListener()
     }
     fun setOnClickListener(){
-        favourite_container.setOnClickListener {
+        text1.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(MyFavouriteFragmentDirections.actionNavigationFavouriteToChocolatSpiceRestaurant())
         }
-
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
     fun initRecycleview(){
         var items= mutableListOf<Item_Asia_Restaurant>()
-        (0..3).forEach{
+        (0..5).forEach{
             items.add(Item_Asia_Restaurant())
         }
         favourite_container.apply {

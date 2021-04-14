@@ -14,6 +14,9 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.collection_by_fozzy_fragment.*
+import kotlinx.android.synthetic.main.collection_by_fozzy_fragment.arrowback
+import kotlinx.android.synthetic.main.collection_by_fozzy_fragment.pageTitle
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 
 class CollectionByFozzy : Fragment() {
 
@@ -51,8 +54,11 @@ class CollectionByFozzy : Fragment() {
         }
     }
     fun setOnClickListener(){
-        pageTitle.setOnClickListener {
+        text.setOnClickListener {
               Navigation.findNavController(it).navigate(CollectionByFozzyDirections.actionCollectionByFozzy2ToAsiaRestaurantFragment())
+        }
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
         }
     }
 

@@ -29,9 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimens_8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/image"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent="0.7">
         <ImageView
@@ -52,7 +52,8 @@
             android:fontFamily="@font/avenir_ltstd_black"
             android:textSize="@dimen/dimens_20sp"
             app:layout_constraintTop_toTopOf="parent"
-            android:textStyle="bold"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bookmark"/>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,11 +88,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/location">
-
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gauche"
+                android:layout_width="@dimen/dimens_0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.6"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
             <ImageView
                 android:id="@+id/start"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:src="@drawable/ic_baseline_star_border_24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -103,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:text="4.8"
                 android:textColor="@color/black"
-                android:textSize="13sp"
+                android:textSize="11sp"
                 android:fontFamily="@font/avenir_ltstd_book"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/start"
@@ -113,34 +122,30 @@
                 android:id="@+id/votes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
+                android:layout_marginStart="4dp"
                 android:fontFamily="@font/avenir_ltstd_roman"
                 android:text="(233 ratings)"
-                android:textSize="13sp"
+                android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/mark"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimens_20dp"
-                android:layout_marginEnd="@dimen/dimens_5dp"
-                android:backgroundTint="@color/purple_700"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
                 <TextView
+                    android:id="@+id/free"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dimens_16dp"
+                    android:paddingHorizontal="@dimen/dimens_10dp"
+                    android:paddingVertical="2dp"
+                    android:layout_marginEnd="@dimen/dimens_10dp"
                     android:text="Free delivery"
                     android:fontFamily="@font/avenir_ltstd_roman"
                     android:textColor="@color/white"
-                    android:textSize="11dp" />
-            </androidx.cardview.widget.CardView>
+                    android:textSize="11dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_shape_cardview_20dp"
+                    app:layout_constraintBottom_toBottomOf="@id/gauche"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/gauche"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import com.example.resto.R
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 
 class MyOrder : Fragment() {
 
@@ -31,8 +33,12 @@ class MyOrder : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MyOrderViewModel::class.java)
         // TODO: Use the ViewModel
-
+        setOnClickListener()
     }
-
+    private fun setOnClickListener(){
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
+    }
 
 }

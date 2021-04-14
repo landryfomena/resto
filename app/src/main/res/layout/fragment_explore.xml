@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.explore.ExploreFragment">
-
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/dimens_40dp"
-    >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimens_55dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/line_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mainscroll"
+        android:paddingHorizontal="@dimen/dimens_10dp">
         <SearchView
             android:id="@+id/main_searchView"
             android:layout_width="0dp"
@@ -36,7 +39,20 @@
             app:layout_constraintTop_toTopOf="@id/main_searchView"
             android:layout_height="48dp"
             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/mainscroll"
+        app:layout_constraintTop_toBottomOf="@id/line_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
             android:id="@+id/pageTitle"
             android:layout_width="match_parent"
@@ -47,8 +63,8 @@
             android:fontFamily="@font/avenir_ltstd_heavy"
             android:textColor="@color/black"
             android:textSize="30sp"
-            app:layout_constraintTop_toBottomOf="@id/main_searchView" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/new_places_container"
             android:layout_width="match_parent"
@@ -57,7 +73,8 @@
             android:layout_marginTop="8dp"
             tools:itemCount="1"
             tools:listitem="@layout/new_places_item"
-            app:layout_constraintTop_toBottomOf="@id/pageTitle" />
+            app:layout_constraintTop_toBottomOf="@id/pageTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/view_all_title"
@@ -65,7 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/new_places_container">
+            app:layout_constraintTop_toBottomOf="@id/new_places_container"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,11 +117,12 @@
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/view_all_title"
+            app:layout_constraintStart_toStartOf="parent"
             tools:itemCount="1"
             tools:listitem="@layout/top_categories_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
-
+</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

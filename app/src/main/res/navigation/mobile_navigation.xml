@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_navigation_my_order_to_search"
             app:destination="@id/search" />
+        <action
+            android:id="@+id/action_navigation_home2_to_favourite_navigation"
+            app:destination="@id/favourite_navigation" />
     </fragment>
     <fragment
         android:id="@+id/navigation_favourite"
@@ -52,7 +55,11 @@
         android:id="@+id/asiaRestaurantFragment"
         android:name="com.example.resto.ui.restaurant.AsiaRestaurantFragment"
         android:label="asia_restaurant_fragment"
-        tools:layout="@layout/asia_restaurant_fragment" />
+        tools:layout="@layout/asia_restaurant_fragment" >
+        <action
+            android:id="@+id/action_asiaRestaurantFragment_to_collectionByFozzy22"
+            app:destination="@id/collectionByFozzy2" />
+    </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.example.resto.ui.search.Search"
@@ -76,6 +83,9 @@
         <action
             android:id="@+id/action_restoFeatureBoonLayFragment_to_myOrderResto"
             app:destination="@id/myOrderResto" />
+        <action
+            android:id="@+id/action_restoFeatureBoonLayFragment_to_boonLayFragment"
+            app:destination="@id/boonLayFragment" />
     </fragment>
     <fragment
         android:id="@+id/boonLayFragment"
@@ -98,6 +108,9 @@
         <action
             android:id="@+id/action_collectionByFozzy2_to_asiaRestaurantFragment"
             app:destination="@id/asiaRestaurantFragment" />
+        <action
+            android:id="@+id/action_collectionByFozzy2_to_navigation_explore2"
+            app:destination="@id/navigation_explore" />
     </fragment>
     <fragment
         android:id="@+id/myOrderResto"
@@ -112,7 +125,11 @@
         android:id="@+id/checkOut"
         android:name="com.example.resto.ui.checkout.CheckOut"
         android:label="check_out_fragment"
-        tools:layout="@layout/check_out_fragment" />
+        tools:layout="@layout/check_out_fragment" >
+        <action
+            android:id="@+id/action_checkOut_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
+    </fragment>
     <dialog
         android:id="@+id/filters"
         android:name="com.example.resto.ui.filters.Filters"
@@ -136,5 +153,6 @@
             android:id="@+id/action_profileFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
     </fragment>
+    <include app:graph="@navigation/favourite_navigation" />
 
 </navigation>

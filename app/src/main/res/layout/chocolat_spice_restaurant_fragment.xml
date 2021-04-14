@@ -6,10 +6,39 @@
     android:background="#707070"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.restaurant.ChocolatSpiceRestaurant">
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/dimens_40dp">
+        android:layout_marginBottom="@dimen/dimens_55dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/line_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Text_color_sub"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mainscroll"
+        android:padding="@dimen/dimens_10dp">
+        <ImageView
+            android:id="@+id/arrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/mainscroll"
+        app:layout_constraintTop_toBottomOf="@id/line_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -20,14 +49,6 @@
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent"
             android:background="#707070">
-            <ImageView
-                android:id="@+id/bookmark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                android:layout_gravity="start"
-                android:layout_marginTop="@dimen/dimens_20dp"
-                android:layout_marginStart="@dimen/dimens_10dp" />
         </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintTop_toBottomOf="@id/layo"
@@ -41,6 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="@dimen/dimens_30dp"
             android:layout_marginHorizontal="@dimen/dimens_15dp"
             android:text="Chocolat'N Spice"
@@ -86,24 +108,18 @@
             android:layout_marginVertical="@dimen/dimens_15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/location">
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/card_free"
-                android:backgroundTint="@color/orange_clear"
-                app:cardCornerRadius="@dimen/dimens_20dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
                 <TextView
+                    android:id="@+id/card_free"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/avenir_ltstd_roman"
-                    android:layout_marginHorizontal="@dimen/dimens_16dp"
+                    android:paddingHorizontal="@dimen/dimens_16dp"
+                    android:background="@drawable/rounded_shape_cardview_20dp"
                     android:text="@string/free_delivery"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/dimens_15sp" />
-            </androidx.cardview.widget.CardView>
+                    android:textSize="@dimen/dimens_15sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/times"
                 android:layout_width="wrap_content"
@@ -127,22 +143,28 @@
                 app:layout_constraintStart_toEndOf="@+id/times"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/pageCaract"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimens_10dp"
             android:layout_marginHorizontal="@dimen/dimens_8dp"
             android:background="#F7F8FA"
             android:paddingVertical="@dimen/dimens_8dp"
             android:layout_marginTop="@dimen/dimens_15dp"
-            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/free"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimens_10dp">
+                android:id="@+id/pageCaract1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/trait1">
                 <ImageView
                     android:id="@+id/oval_start"
                     android:layout_width="wrap_content"
@@ -151,7 +173,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
-
                 <ImageView
                     android:id="@+id/start"
                     android:layout_width="wrap_content"
@@ -161,7 +182,6 @@
                     app:layout_constraintStart_toStartOf="@id/oval_start"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/mark"
                     android:layout_width="wrap_content"
@@ -173,7 +193,6 @@
                     android:textSize="@dimen/dimens_15sp"
                     app:layout_constraintStart_toEndOf="@+id/start"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -188,15 +207,23 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/trait1"
-                android:layout_width="@dimen/dimens_1dp"
-                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/dimens_5dp"
-                app:cardBackgroundColor="@color/gris_clear" />
+                app:cardBackgroundColor="@color/gris_clear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/pageCaract2"
+                app:layout_constraintStart_toEndOf="@id/pageCaract1"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimens_10dp">
+                android:id="@+id/pageCaract2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/trait1"
+                app:layout_constraintEnd_toStartOf="@id/trait2">
                 <ImageView
                     android:id="@+id/oval_start1"
                     android:layout_width="wrap_content"
@@ -216,7 +243,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:tint="@color/white" />
-
                 <TextView
                     android:id="@+id/mark1"
                     android:layout_width="wrap_content"
@@ -228,7 +254,6 @@
                     android:fontFamily="@font/avenir_ltstd_heavy"
                     app:layout_constraintStart_toEndOf="@+id/start1"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -243,15 +268,23 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/trait2"
-                android:layout_width="@dimen/dimens_1dp"
-                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/dimens_5dp"
-                app:cardBackgroundColor="@color/gris_clear" />
+                app:cardBackgroundColor="@color/gris_clear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/pageCaract3"
+                app:layout_constraintStart_toEndOf="@id/pageCaract2"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimens_10dp">
+                android:id="@+id/pageCaract3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/trait2"
+                app:layout_constraintEnd_toEndOf="parent">
                 <ImageView
                     android:id="@+id/oval_start2"
                     android:layout_width="wrap_content"
@@ -296,7 +329,7 @@
                     app:layout_constraintStart_toEndOf="@+id/start2"
                     app:layout_constraintTop_toBottomOf="@+id/mark2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
             android:id="@+id/text_des"
             android:layout_width="match_parent"
@@ -308,7 +341,9 @@
             android:textSize="@dimen/dimens_15sp"
             android:fontFamily="@font/avenir_ltstd_book"
             android:textColor="@color/black"
-            android:layout_marginHorizontal="@dimen/dimens_10dp"/>
+            android:layout_marginHorizontal="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -319,7 +354,8 @@
             android:textSize="@dimen/dimens_30sp"
             android:fontFamily="@font/avenir_ltstd_heavy"
             android:id="@+id/text_photo"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"/>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -332,4 +368,5 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

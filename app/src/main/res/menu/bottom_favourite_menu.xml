@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:checked="true"
-        android:title="@string/places" />
+        android:id="@+id/myFavouriteFragment"
+        android:icon="@drawable/ic_favourite"
+        android:title="@string/places"/>
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:checked="true"
+        android:id="@+id/boonLayFragment2"
+        android:icon="@drawable/ic_favourite"
         android:title="Food" />
 
 </menu>

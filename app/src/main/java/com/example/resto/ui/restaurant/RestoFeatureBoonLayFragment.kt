@@ -15,9 +15,10 @@ import com.example.resto.ui.restaurant.item.Option
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.boon_lay_fragment.*
 import kotlinx.android.synthetic.main.boon_lay_fragment.feature_collection
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 import kotlinx.android.synthetic.main.resto_feature_boon_lay_fragment.*
+import kotlinx.android.synthetic.main.resto_feature_boon_lay_fragment.arrowback
 
 class RestoFeatureBoonLayFragment : Fragment() {
     companion object {
@@ -63,12 +64,14 @@ class RestoFeatureBoonLayFragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(RestoFeatureBoonLayFragmentDirections.actionRestoFeatureBoonLayFragmentToMyOrderResto())
         }
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
     fun initOption(){
         var items= mutableListOf<Option>()
 
         items.add(Option())
-
         option_collection.apply {
             layoutManager = LinearLayoutManager(requireContext(),
                 LinearLayoutManager.HORIZONTAL,false)

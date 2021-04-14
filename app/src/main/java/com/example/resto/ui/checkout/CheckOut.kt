@@ -10,7 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import com.example.resto.R
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 
 class CheckOut : Fragment() {
     lateinit var dialog: Dialog
@@ -35,6 +37,12 @@ class CheckOut : Fragment() {
         // TODO: Use the ViewModel
         dialog= Dialog(requireContext())
         openDialogOrder()
+        setOnClickListener()
+    }
+    private fun setOnClickListener(){
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
     private fun openDialogOrder() {
         dialog.setContentView(R.layout.dialog_your_order_is_successfully_fragment)

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.restaurant.item.Item_Recommend
@@ -13,6 +14,7 @@ import com.example.resto.ui.restaurant.item.Item_Search
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 import kotlinx.android.synthetic.main.search_fragment.*
 
 class Search : Fragment() {
@@ -36,6 +38,12 @@ class Search : Fragment() {
         // TODO: Use the ViewModel
         initSearch()
         initRecommend()
+        setOnClickListener()
+    }
+    private fun setOnClickListener(){
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
     fun initSearch(){
         var items= mutableListOf<Item_Search>()

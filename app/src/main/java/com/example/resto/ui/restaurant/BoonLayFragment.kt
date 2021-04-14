@@ -1,25 +1,29 @@
 package com.example.resto.ui.restaurant
 
-import android.annotation.SuppressLint
-import android.graphics.drawable.ColorDrawable
-import android.icu.lang.UCharacter
+
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.favourite.MyFavouriteFragmentDirections
 import com.example.resto.ui.restaurant.item.Item_Feature_Boon
+import com.example.resto.ui.restaurant.item.Option
+import com.example.resto.ui.restaurant.item.Option_Full_Menu
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.boon_lay_fragment.*
-import kotlinx.android.synthetic.main.fragment_favourite.*
+import kotlinx.android.synthetic.main.boon_lay_fragment.arrowback
+import kotlinx.android.synthetic.main.boon_lay_fragment.dooble_arrow
+import kotlinx.android.synthetic.main.boon_lay_fragment.feature_collection
+import kotlinx.android.synthetic.main.boon_lay_fragment.option_collection
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
+import kotlinx.android.synthetic.main.full_menu_collection.*
+import kotlinx.android.synthetic.main.resto_feature_boon_lay_fragment.option_popular
 
 class BoonLayFragment : Fragment() {
 
@@ -37,6 +41,18 @@ class BoonLayFragment : Fragment() {
         setOnClickListener()
     }
     fun setOnClickListener(){
+            dooble_arrow.setOnClickListener {
+                initOptionMenu()
+                dooble_arrow.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_expand_more_24))
+            }
+//        option_popular.setOnClickListener {
+//            initOption()
+//            option_popular.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_expand_more_24))
+//        }
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
+
         feature.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToRestoFeatureBoonLayFragment())
@@ -57,7 +73,33 @@ class BoonLayFragment : Fragment() {
                 add(Section(items))
             }
         }
-    }/*
+    }
+    fun initOptionMenu(){
+        var items= mutableListOf<Option_Full_Menu>()
+
+        items.add(Option_Full_Menu())
+        option_collection.apply {
+            layoutManager = LinearLayoutManager(requireContext(),
+                LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
+    fun initOption(){
+        var items= mutableListOf<Option>()
+
+        items.add(Option())
+        option_collection_full.apply {
+            layoutManager = LinearLayoutManager(requireContext(),
+                LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+
+    }
+/*
     @SuppressLint("ResourceType")
     fun showDialog(view: View?){
         val builder = AlertDialog.Builder(this)

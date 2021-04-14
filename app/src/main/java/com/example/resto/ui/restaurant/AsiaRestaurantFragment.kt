@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.restaurant.item.Item_Asia_Restaurant
@@ -34,6 +35,13 @@ class AsiaRestaurantFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(AsiaRestaurantViewModel::class.java)
         // TODO: Use the ViewModel
         initRecycleview()
+        setOnClickListener()
+
+    }
+    private fun setOnClickListener(){
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
     fun initRecycleview(){
         var items= mutableListOf<Item_Asia_Restaurant>()

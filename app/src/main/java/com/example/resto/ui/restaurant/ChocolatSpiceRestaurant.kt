@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
 import com.example.resto.ui.restaurant.item.Item_Photo
@@ -13,6 +14,8 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.chocolat_spice_restaurant_fragment.*
+import kotlinx.android.synthetic.main.chocolat_spice_restaurant_fragment.arrowback
+import kotlinx.android.synthetic.main.edit_profile_fragment.*
 
 class ChocolatSpiceRestaurant : Fragment() {
 
@@ -34,6 +37,12 @@ class ChocolatSpiceRestaurant : Fragment() {
         viewModel = ViewModelProvider(this).get(ChocolatSpiceRestaurantViewModel::class.java)
         // TODO: Use the ViewModel
         initPhoto()
+        setOnClickListener()
+    }
+    private fun setOnClickListener(){
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
     fun initPhoto(){
         var items= mutableListOf<Item_Photo>()

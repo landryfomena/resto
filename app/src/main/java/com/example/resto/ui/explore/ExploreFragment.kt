@@ -29,7 +29,6 @@ class ExploreFragment : Fragment() {
     private lateinit var exploreViewModel: ExploreViewModel
     lateinit var dialog: Dialog
     lateinit var cardView: CardView
-    lateinit var testeur: TextView
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,

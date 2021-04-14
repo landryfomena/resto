@@ -8,9 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.resto.R
-import com.example.resto.ui.restaurant.RestoFeatureBoonLayFragmentDirections
 import kotlinx.android.synthetic.main.my_order_resto_fragment.*
-import kotlinx.android.synthetic.main.resto_feature_boon_lay_fragment.*
 
 class MyOrderResto : Fragment() {
 
@@ -36,6 +34,9 @@ class MyOrderResto : Fragment() {
         button_continue.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(MyOrderRestoDirections.actionMyOrderRestoToCheckOut())
+        }
+        arrowback.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
         }
     }
 }
