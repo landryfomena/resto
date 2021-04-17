@@ -22,13 +22,12 @@ import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_explore.*
 import kotlinx.android.synthetic.main.top_categories_item.*
-import kotlinx.android.synthetic.main.top_categories_item.view.*
 
 class ExploreFragment : Fragment() {
 
     private lateinit var exploreViewModel: ExploreViewModel
     lateinit var dialog: Dialog
-    lateinit var cardView: CardView
+    lateinit var textView: TextView
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -45,7 +44,7 @@ class ExploreFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
        dialog= Dialog(requireContext())
-        pageTitle.setText("cool")
+        //pageTitle.setText("cool")
         initRecycleview()
         initTopCategories()
         setOnClickListener()
@@ -65,15 +64,14 @@ class ExploreFragment : Fragment() {
         }
     }
     fun initTopCategories(){
+        //image_top_cat.setImageDrawable(resources.getDrawable(R.drawable.ic_lock_overturning))
         var items= mutableListOf<ItemTopCategories>()
-        (0..5).forEach{
+        (0..4).forEach{
             items.add(ItemTopCategories())
         }
-       /* fun modif(view: View) {
-            var contenu= title.text.toString().toString()
-            contenu="cool"
-            title.text= "$contenu"
-        }*/
+        fun modif(view: View) {
+
+        }
         topCategories.apply {
             layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
             adapter = GroupAdapter<ViewHolder>().apply{
@@ -106,8 +104,8 @@ class ExploreFragment : Fragment() {
     private fun openDialogPassword() {
         dialog.setContentView(R.layout.dialog_localisation_fragment)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
-        cardView=dialog.findViewById(R.id.card)
-        cardView.setOnClickListener(object :View.OnClickListener{
+        textView=dialog.findViewById(R.id.card)
+        textView.setOnClickListener(object :View.OnClickListener{
             override fun onClick(view: View) {
                dialog.dismiss()
                 //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show
@@ -115,14 +113,4 @@ class ExploreFragment : Fragment() {
         })
         dialog.show()
     }
-
-   /*var mytitle=title.text.toString()
-            mytitle="cool"
-            title.text=mytitle
-             pageTitle.setText("cool")
-   fun diminuer(view: View) {
-        var contenu= findViewById<TextView>(R.id.textView).text.toString().toString()
-        contenu="cool"
-        findViewById<TextView>(R.id.textView).text= "$contenu"
-    }*/
 }

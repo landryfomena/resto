@@ -14,7 +14,6 @@ import com.example.resto.ui.restaurant.item.Item_Search
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.edit_profile_fragment.*
 import kotlinx.android.synthetic.main.search_fragment.*
 
 class Search : Fragment() {

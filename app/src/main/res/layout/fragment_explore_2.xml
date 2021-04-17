@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.myorder.MyOrderFragment">
+    tools:context=".ui.explore2.Explore2">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

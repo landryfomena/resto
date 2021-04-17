@@ -64,7 +64,7 @@
                             android:textStyle="bold"
                             android:fontFamily="@font/avenir_ltstd_black"
                             android:textSize="@dimen/dimens_20dp"
-                            android:layout_marginEnd="@dimen/dimens_40dp"
+                            android:layout_marginEnd="@dimen/dimens_20dp"
                             android:id="@+id/iduserName"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/arrow0"
@@ -74,7 +74,6 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_baseline_chevron_right_24"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/iduserName"
                             app:layout_constraintTop_toTopOf="parent"
                             android:id="@+id/arrow0" />
                     </androidx.constraintlayout.widget.ConstraintLayout>

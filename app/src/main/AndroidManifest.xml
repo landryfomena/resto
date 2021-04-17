@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/icon_check_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resto">
-        <activity android:name=".ui.favourite.ActivityFavouriteNavigation"></activity>
         <activity android:name=".ui.welcome.Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.resto.ui.myorder
+package com.example.resto.ui.explore2
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,16 +9,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.myorder.item.ItemCollection
-import com.example.resto.ui.myorder.item.ItemPopular
+import com.example.resto.ui.explore2.item.ItemCollection
+import com.example.resto.ui.explore2.item.ItemPopular
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.fragment_explore.*
-import kotlinx.android.synthetic.main.fragment_my_order.*
-import kotlinx.android.synthetic.main.fragment_my_order.main_searchView
+import kotlinx.android.synthetic.main.fragment_explore_2.*
 
-class MyOrderFragment : Fragment() {
+class Explore2 : Fragment() {
 
     private lateinit var myOrderViewModel: MyOrderViewModel
 
@@ -29,7 +27,7 @@ class MyOrderFragment : Fragment() {
     ): View? {
         myOrderViewModel =
             ViewModelProvider(this).get(MyOrderViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_my_order, container, false)
+        val root = inflater.inflate(R.layout.fragment_explore_2, container, false)
 
         return root
     }
@@ -42,15 +40,11 @@ class MyOrderFragment : Fragment() {
     fun setOnClickListener(){
         show2.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(MyOrderFragmentDirections.actionNavigationDashboardToCollectionByFozzy2())
+                .navigate(Explore2Directions.actionNavigationDashboardToCollectionByFozzy2())
         }
         main_searchView.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(MyOrderFragmentDirections.actionNavigationMyOrderToSearch())
-        }
-        search_icon.setOnClickListener {
-            Navigation.findNavController(it)
-                .navigate(MyOrderFragmentDirections.actionNavigationHome2ToFavouriteNavigation())
+                .navigate(Explore2Directions.actionNavigationMyOrderToSearch())
         }
     }
     fun initPopular(){

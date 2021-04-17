@@ -9,18 +9,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.myorder.MyOrderFragmentDirections
 import com.example.resto.ui.restaurant.item.Item_Asia_Restaurant
-import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.example.resto.ui.restaurant.item.Item_Feature_Boon
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.edit_profile_fragment.*
-import kotlinx.android.synthetic.main.filters_fragment.*
 import kotlinx.android.synthetic.main.fragment_favourite.*
 import kotlinx.android.synthetic.main.fragment_favourite.arrowback
+import kotlinx.android.synthetic.main.fragment_favourite.favourite_container
 import kotlinx.android.synthetic.main.fragment_favourite.text1
-import kotlinx.android.synthetic.main.fragment_my_order.*
 
 class MyFavouriteFragment : Fragment() {
 
@@ -39,10 +36,25 @@ class MyFavouriteFragment : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initRecycleview()
+        initRecycleviewpPlaces()
         setOnClickListener()
     }
     fun setOnClickListener(){
+
+        food.setOnClickListener{
+            initRecycleviewpFood()
+            food.setBackground(resources.getDrawable(R.drawable.rounded_shape_cardview_20dp))
+            food.setTextColor(resources.getColor(R.color.white))
+            places.setBackground(resources.getDrawable(R.drawable.rounded_shape_item_favourite))
+            places.setTextColor(resources.getColor(R.color.gris_clear))
+        }
+        places.setOnClickListener{
+            initRecycleviewpPlaces()
+            places.setBackground(resources.getDrawable(R.drawable.rounded_shape_cardview_20dp))
+            places.setTextColor(resources.getColor(R.color.white))
+            food.setBackground(resources.getDrawable(R.drawable.rounded_shape_item_favourite))
+            food.setTextColor(resources.getColor(R.color.gris_clear))
+        }
         text1.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(MyFavouriteFragmentDirections.actionNavigationFavouriteToChocolatSpiceRestaurant())
@@ -51,13 +63,26 @@ class MyFavouriteFragment : Fragment() {
             Navigation.findNavController(it).navigateUp()
         }
     }
-    fun initRecycleview(){
+    fun initRecycleviewpPlaces(){
         var items= mutableListOf<Item_Asia_Restaurant>()
         (0..5).forEach{
             items.add(Item_Asia_Restaurant())
         }
         favourite_container.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
+    fun initRecycleviewpFood(){
+        var items= mutableListOf<Item_Feature_Boon>()
+        (0..7).forEach{
+            items.add(Item_Feature_Boon())
+        }
+        favourite_container.apply {
+            layoutManager = LinearLayoutManager(requireContext(),
+                LinearLayoutManager.VERTICAL,false)
             adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))
             }

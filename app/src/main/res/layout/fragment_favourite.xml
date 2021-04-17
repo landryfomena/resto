@@ -36,7 +36,7 @@
                 app:tint="@color/black" />
             <TextView
                 android:id="@+id/text1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:text="My Favourite"
@@ -44,6 +44,8 @@
                 android:textSize="20sp"
                 android:layout_marginVertical="@dimen/dimens_15dp"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:gravity="center"/>
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -54,32 +56,40 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
-                <TextView
-                    android:id="@+id/food"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimens_150dp"
-                    android:background="@drawable/rounded_shape_item_favourite"
-                    android:gravity="center"
-                    android:fontFamily="@font/avenir_ltstd_heavy"
-                    android:paddingVertical="@dimen/dimens_8dp"
-                    android:paddingStart="@dimen/dimens_60dp"
-                    android:text="Food"
-                    android:textColor="@color/gris_clear"
-                    android:textSize="@dimen/dimens_15sp" />
-                <TextView
-                    android:id="@+id/places"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/dimens_150dp"
-                    android:background="@drawable/rounded_shape_into_log"
-                    android:gravity="center"
-                    android:paddingHorizontal="@dimen/dimens_50dp"
-                    android:fontFamily="@font/avenir_ltstd_heavy"
-                    android:paddingVertical="@dimen/dimens_8dp"
-                    android:text="Places"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/dimens_15sp" />
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/places"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_shape_into_log"
+                        android:fontFamily="@font/avenir_ltstd_heavy"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/dimens_50dp"
+                        android:paddingVertical="@dimen/dimens_8dp"
+                        android:text="Places"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimens_15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/food"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_shape_item_favourite"
+                        android:fontFamily="@font/avenir_ltstd_heavy"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/dimens_50dp"
+                        android:paddingVertical="@dimen/dimens_8dp"
+                        android:text="Food"
+                        android:textColor="@color/gris_clear"
+                        android:textSize="@dimen/dimens_15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/places" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -111,7 +121,7 @@
                 android:id="@+id/favourite_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/dimens_20dp"
+                android:layout_marginVertical="@dimen/dimens_10dp"
                 tools:itemCount="3"
                 tools:listitem="@layout/restaurant_item"
                 app:layout_constraintTop_toTopOf="parent"/>

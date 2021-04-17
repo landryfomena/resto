@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
+import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.resto.R
 import kotlinx.android.synthetic.main.edit_profile_fragment.*
 
 class CheckOut : Fragment() {
     lateinit var dialog: Dialog
-    lateinit var cardView: CardView
+    lateinit var textView: TextView
 
     companion object {
         fun newInstance() = CheckOut()
@@ -47,8 +47,8 @@ class CheckOut : Fragment() {
     private fun openDialogOrder() {
         dialog.setContentView(R.layout.dialog_your_order_is_successfully_fragment)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(UCharacter.JoiningType.TRANSPARENT))
-        cardView=dialog.findViewById(R.id.card)
-        cardView.setOnClickListener(object :View.OnClickListener{
+        textView=dialog.findViewById(R.id.card)
+        textView.setOnClickListener(object :View.OnClickListener{
             override fun onClick(view: View) {
                 dialog.dismiss()
                 //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show

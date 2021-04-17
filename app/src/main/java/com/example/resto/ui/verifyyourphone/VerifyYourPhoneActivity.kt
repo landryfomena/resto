@@ -12,7 +12,7 @@ class VerifyYourPhoneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_your_phone)
-        next=findViewById<Button>(R.id.next)
+        next=findViewById<Button>(R.id.next_btn)
         next.setOnClickListener {
             val intent= Intent(this@VerifyYourPhoneActivity, PhoneVerificationActivity::class.java)
             startActivity(intent)

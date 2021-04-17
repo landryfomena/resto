@@ -58,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:layout_marginEnd="@dimen/dimens8dp"
-                android:hint="675041355"
+                android:hint="675041615"
                 android:fontFamily="@font/avenir_ltstd_heavy"
                 android:textSize="@dimen/dimens_17sp"
                 android:inputType="phone"

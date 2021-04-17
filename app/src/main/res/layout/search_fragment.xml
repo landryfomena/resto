@@ -15,7 +15,7 @@
             android:layout_height="match_parent">
             <ImageView
                 app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/close_icon"
+                android:id="@+id/arrowback"
                 android:layout_width="48dp"
                 android:padding="@dimen/dimens_10dp"
                 android:src="@drawable/ic_baseline_close_24"
@@ -33,7 +33,7 @@
                 android:text="Search"
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimens_34sp"
-                app:layout_constraintTop_toBottomOf="@id/close_icon" />
+                app:layout_constraintTop_toBottomOf="@id/arrowback" />
             <LinearLayout
                 android:id="@+id/main_searchView"
                 android:layout_width="match_parent"

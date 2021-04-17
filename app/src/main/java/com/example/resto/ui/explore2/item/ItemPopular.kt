@@ -1,4 +1,4 @@
-package com.example.resto.ui.myorder.item
+package com.example.resto.ui.explore2.item
 
 import com.example.resto.R
 import com.xwray.groupie.kotlinandroidextensions.Item
