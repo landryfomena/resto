@@ -56,7 +56,7 @@ class ExplorerSecondFragment : Fragment() {
         }
         main_searchView1.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(ExplorerSecondFragmentDirections.actionExplorerSecondFragmentToSearch())
+                .navigate(ExplorerSecondFragmentDirections.actionExplormerSecondFragmentToSearch())
         }
     }
 

@@ -41,6 +41,9 @@
         android:name="com.example.resto.ui.MyOrder.MyOrder"
         android:label="@string/title_my_order"
         tools:layout="@layout/my_order" >
+        <action
+            android:id="@+id/action_navigation_order_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
     </fragment>
     <fragment
         android:id="@+id/navigation_favourite"
@@ -76,6 +79,9 @@
         <action
             android:id="@+id/action_boonLayFragment_to_chocolatSpiceRestaurant"
             app:destination="@id/chocolatSpiceRestaurant" />
+        <action
+            android:id="@+id/action_boonLayFragment_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
     </fragment>
     <fragment
         android:id="@+id/asiaRestaurantFragment"
@@ -88,7 +94,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkout_fragment"
-        android:name="com.example.resto.ui.checkout.checkout_fragment"
+        android:name="com.example.resto.ui.checkout.Checkout_fragment"
         android:label="checkout_fragment_fragment"
         tools:layout="@layout/checkout_fragment_fragment" />
     <fragment
@@ -120,8 +126,8 @@
             android:id="@+id/action_explorerSecondFragment_to_navigation_explorer"
             app:destination="@id/navigation_explorer" />
         <action
-            android:id="@+id/action_explorerSecondFragment_to_search"
-            app:destination="@id/search" />
+            android:id="@+id/action_explormerSecondFragment_to_search"
+            app:destination="@id/search"/>
     </fragment>
     <dialog
         android:id="@+id/filters_full_fragment"

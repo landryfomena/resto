@@ -11,4 +11,5 @@
     <color name="blue">#5856D6</color>
     <color name="arriere_plan_transparant">#F7F8FA</color>
     <color name="text_color">#1E2432</color>
+    <color name="bleu_fonce">#1E2432</color>
 </resources>

@@ -7,55 +7,54 @@
     tools:context=".ui.restaurant.RestoFeatureBoonLayFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/scroll"
-        android:layout_marginBottom="@dimen/dimens_55dp">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        android:layout_marginBottom="@dimen/dimens_55dp"
+        >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/line_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimens_10dp"
-        app:layout_constraintTop_toTopOf="parent">
+        android:paddingVertical="@dimen/dimens_20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:id="@+id/precedent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dimens_20dp"
+            android:layout_height="@dimen/dimens_20dp"
             android:layout_marginHorizontal="@dimen/dimens_10dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:src="@mipmap/black_arrow_foreground"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:tint="@color/black" />
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="25dp"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
             android:text="@string/boon_lay_ho_huat_fried_prawn_noodle"
-            android:textSize="@dimen/dimens_20sp"
+            android:textSize="@dimen/dimens_17sp"
+            android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/precedent"
-            app:layout_constraintEnd_toStartOf="@+id/reply"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
         <ImageView
             android:id="@+id/reply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dimens_20dp"
+            android:layout_height="@dimen/dimens_20dp"
             android:layout_marginHorizontal="@dimen/dimens_10dp"
             android:src="@drawable/ic_baseline_reply_24"
             app:layout_constraintEnd_toStartOf="@+id/bookmark"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/black" />
+            app:tint="#1E2432" />
         <ImageView
             android:id="@+id/bookmark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dimens_20dp"
+            android:layout_height="@dimen/dimens_20dp"
             android:layout_marginHorizontal="@dimen/dimens_10dp"
             android:src="@drawable/ic_baseline_bookmark_border_24"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,13 +62,27 @@
             app:tint="@color/black" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/trait"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimens_0dp"
+    app:layout_constraintTop_toBottomOf="@id/line_icon"
+    app:layout_constraintBottom_toTopOf="@id/botton_id"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/containt_view">
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimens_1dp"
-        android:backgroundTint="@color/gris_clear"
-        android:layout_marginTop="@dimen/dimens_5dp"
-        app:layout_constraintTop_toBottomOf="@+id/line_icon"/>
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/scroll"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,7 +92,8 @@
         android:orientation="horizontal"
         tools:itemCount="1"
         tools:listitem="@layout/feature_collection"
-        app:layout_constraintTop_toBottomOf="@+id/trait"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/full_menu"
@@ -95,6 +109,7 @@
             android:text="@string/full_menu"
             android:textColor="@color/black"
             android:textSize="@dimen/dimens_25sp"
+            android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,6 +117,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/view_all"
+            android:textSize="@dimen/dimens_16dp"
+            android:fontFamily="@font/avenirltstd_book"
             android:layout_marginHorizontal="@dimen/dimens_5dp"
             android:textColor="@color/orange_clear"
             app:layout_constraintEnd_toStartOf="@id/dooble_arrow"
@@ -115,213 +132,27 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/orange_clear" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/popular"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_fullMenu_recycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dimens_16dp"
-        android:layout_marginTop="@dimen/dimens_5dp"
-        app:layout_constraintTop_toBottomOf="@id/full_menu">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/popular_items"
-            android:textSize="@dimen/dimens_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_3"
-            android:textSize="@dimen/dimens_20sp"
-            android:textColor="@color/gris_clear"
-            app:layout_constraintEnd_toStartOf="@id/next"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
-            android:id="@+id/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/salads"
-        android:layout_marginHorizontal="@dimen/dimens_16dp"
-        android:layout_marginTop="@dimen/dimens_8dp"
-        app:layout_constraintTop_toBottomOf="@id/popular">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/salads"
-            android:textSize="@dimen/dimens_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_2"
-            android:textSize="@dimen/dimens_20sp"
-            android:textColor="@color/gris_clear"
-            app:layout_constraintEnd_toStartOf="@id/next1"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
-            android:id="@+id/next1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/chicken"
-        android:layout_marginHorizontal="@dimen/dimens_16dp"
-        android:layout_marginTop="@dimen/dimens_8dp"
-        app:layout_constraintTop_toBottomOf="@id/salads">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chicken"
-            android:textSize="@dimen/dimens_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_5"
-            android:textSize="@dimen/dimens_20sp"
-            android:textColor="@color/gris_clear"
-            app:layout_constraintEnd_toStartOf="@id/next2"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
-            android:id="@+id/next2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/soups"
-        android:layout_marginHorizontal="@dimen/dimens_16dp"
-        android:layout_marginTop="@dimen/dimens_8dp"
-        app:layout_constraintTop_toBottomOf="@id/chicken">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Soups"
-            android:textSize="@dimen/dimens_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_6"
-            android:textSize="@dimen/dimens_20sp"
-            android:textColor="@color/gris_clear"
-            app:layout_constraintEnd_toStartOf="@id/next3"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
-            android:id="@+id/next3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/noodle"
-        android:layout_marginHorizontal="@dimen/dimens_16dp"
-        android:layout_marginTop="@dimen/dimens_8dp"
-        app:layout_constraintTop_toBottomOf="@id/soups">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Noodle"
-            android:textSize="@dimen/dimens_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_4"
-            android:textSize="@dimen/dimens_20sp"
-            android:textColor="@color/gris_clear"
-            app:layout_constraintEnd_toStartOf="@id/next4"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
-            android:id="@+id/next4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/drink"
-        android:layout_marginHorizontal="@dimen/dimens_16dp"
-        android:layout_marginTop="@dimen/dimens_8dp"
-        app:layout_constraintTop_toBottomOf="@id/noodle">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Drink"
-            android:textSize="@dimen/dimens_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_5"
-            android:textSize="@dimen/dimens_20sp"
-            android:textColor="@color/gris_clear"
-            app:layout_constraintEnd_toStartOf="@id/next5"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
-            android:id="@+id/next5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange_clear"
-        app:cardCornerRadius="@dimen/dimens_8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/drink"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/dimens_50dp"
-        android:layout_marginHorizontal="@dimen/dimens_30dp"
-        android:layout_marginBottom="@dimen/dimens_30dp">
-
+        app:layout_constraintTop_toBottomOf="@id/full_menu"
+        tools:listitem="@layout/boonlay_fullmenu"
+        tools:itemCount="6"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/botton_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/dimens_16dp"
+            android:background="@drawable/shape_paiement_mode"
+            android:backgroundTint="@color/orange_clear"
+            android:layout_marginBottom="@dimen/dimens_10dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -347,10 +178,8 @@
                 android:paddingEnd="@dimen/dimens_20dp"
                 android:textSize="@dimen/dimens_25sp"
                 android:textColor="@color/white" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

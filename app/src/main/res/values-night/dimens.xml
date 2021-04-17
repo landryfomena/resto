@@ -36,4 +36,5 @@
     <dimen name="dimens_11sp">11sp</dimen>
     <dimen name="dimens_18dp">18dp</dimen>
     <dimen name="dimens_16dp">16dp</dimen>
+    <dimen name="dimens_24dp">24dp</dimen>
 </resources>

@@ -13,11 +13,16 @@ import androidx.appcompat.app.AlertDialog
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
+import com.example.resto.ui.restaurant.item.Item_Asia_Restaurant
 import com.example.resto.ui.restaurant.item.Item_Feature_Boon
+import com.example.resto.ui.restaurant.item.item_FullMenu_Boonley
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.asia_restaurant_fragment.*
 import kotlinx.android.synthetic.main.boon_lay_fragment.*
+import kotlinx.android.synthetic.main.boonlay_fullmenu.*
+import kotlinx.android.synthetic.main.boonlay_fullmenu.view.*
 import kotlinx.android.synthetic.main.password_confirm_dialog.*
 
 class BoonLayFragment : Fragment() {
@@ -38,9 +43,22 @@ class BoonLayFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(BoonLayViewModel::class.java)
         initFeature_item()
         setOnclickListener()
+        Recycleview()
     }
     fun setOnclickListener(){
         feature.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToChocolatSpiceRestaurant())
+        }
+        myOrder.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToMyOrderResto())
+        }
+        feature.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToRestoFeatureBoonLayFragment())
+        }
+        fullMenu_recycle.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(BoonLayFragmentDirections.actionBoonLayFragmentToChocolatSpiceRestaurant())
         }
@@ -52,6 +70,18 @@ class BoonLayFragment : Fragment() {
         }
         feature_collection.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL,false)
+            adapter = GroupAdapter<ViewHolder>().apply{
+                add(Section(items))
+            }
+        }
+    }
+    fun Recycleview(){
+        var items= mutableListOf<item_FullMenu_Boonley>()
+        (0..5).forEach{
+            items.add(item_FullMenu_Boonley())
+        }
+        fullMenu_recycle.apply {
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
             adapter = GroupAdapter<ViewHolder>().apply{
                 add(Section(items))
             }

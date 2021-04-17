@@ -5,30 +5,21 @@
     android:layout_height="match_parent"
     android:background="#E5E5EA"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.checkout.checkout_fragment">
-    <androidx.core.widget.NestedScrollView
+    tools:context=".ui.checkout.Checkout_fragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="@dimen/dimens_20dp"
-            android:layout_marginBottom="@dimen/dimens_50sp"
-            >
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimens_40sp"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimens_20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:background="@color/white"
-            android:paddingTop="@dimen/dimens_7dp"
-            android:id="@+id/constraintId1">
+            android:id="@+id/toolbar">
             <ImageView
-                android:layout_width="@dimen/dimens_30sp"
-                android:layout_height="@dimen/dimens_30sp"
+                android:layout_width="@dimen/dimens_20dp"
+                android:layout_height="@dimen/dimens_20dp"
                 android:src="@mipmap/black_arrow_foreground"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="@dimen/dimens_20sp"
@@ -40,21 +31,35 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/checkout"
-                android:textSize="@dimen/dimens_20sp"
+                android:textSize="@dimen/dimens_17sp"
+                android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/idCheckout"
-                android:textColor="@color/black"
+                android:textColor="@color/bleu_fonce"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimens_20dp"
+            android:layout_marginBottom="@dimen/dimens_50sp"
+            >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.718"
+        app:layout_constraintHeight_percent="0.96"
         android:background="@drawable/checkout_drawable_shape"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/dimens_20dp"
-        app:layout_constraintTop_toBottomOf="@id/constraintId1"
+        app:layout_constraintTop_toTopOf="parent"
         android:padding="@dimen/dimens_20sp"
         android:id="@+id/constraintId2"
         >
@@ -63,7 +68,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/delivery_address"
-            android:textColor="@color/black"
+            android:textSize="@dimen/dimens_13sp"
+            android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
+            android:textColor="#333A4D"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/idDelivery"
             />
@@ -90,17 +97,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/address"
                 android:paddingTop="@dimen/dimens_8dp"
-                android:textSize="@dimen/dimens_12sp"
+                android:textSize="@dimen/dimens_13sp"
+                android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
                 android:textColor="@color/purple_700"
                 android:id="@+id/idHomeAdress"/>
                 <EditText
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/idHomeAdress"
                 android:text="@string/_928_lehner_junction_apt_047"
-                android:textSize="@dimen/dimens_12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/checked1"
+                android:textSize="@dimen/dimens_17sp"
+                    android:fontFamily="@font/avenirltstd_book"
+                app:layout_constraintStart_toStartOf="parent"
                 android:background="@android:color/transparent"
                 />
                 <ImageView
@@ -136,15 +144,15 @@
             android:paddingStart="@dimen/dimens_10dp"
             android:background="@drawable/shape_paiement_mode">
             <ImageView
-                android:id="@+id/idVisa"
-                android:layout_width="@dimen/dimens_40sp"
-                android:layout_height="@dimen/dimens_40sp"
-                android:src="@mipmap/visa_foreground"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="@dimen/dimens_5sp"
-                android:layout_marginBottom="@dimen/dimens_5sp"
+            android:id="@+id/idVisa"
+            android:layout_width="@dimen/dimens_40sp"
+            android:layout_height="@dimen/dimens_40sp"
+            android:src="@mipmap/visa_foreground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/dimens_5sp"
+            android:layout_marginBottom="@dimen/dimens_5sp"
                 />
             <EditText
                 android:layout_width="wrap_content"
@@ -258,29 +266,14 @@
             android:textColorHint="@color/white"
             app:layout_constraintTop_toBottomOf="@id/idCheckoutCard4"
             android:background="@drawable/checkout_drawable_shape"
+            android:backgroundTint="@color/orange_clear"
             android:layout_marginTop="@dimen/dimens_30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
-            <ImageView
-                android:layout_width="@dimen/dimens_100dp"
-                android:layout_height="@dimen/dimens_100dp"
-                android:src="@mipmap/touch_id_foreground"
-                app:layout_constraintTop_toBottomOf="@id/constraintId2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/idEmpreinte"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/idEmpreinte"
-                android:textAlignment="center"
-                android:text="@string/pay_with_touch_id"
-                android:textColor="@color/black"
-                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
