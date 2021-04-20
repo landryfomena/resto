@@ -10,7 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 import com.example.resto.R
+import kotlinx.android.synthetic.main.checkout_fragment_fragment.*
 
 class Checkout_fragment : Fragment() {
     lateinit var dialog: Dialog
@@ -31,7 +33,13 @@ class Checkout_fragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(CheckoutFragmentViewModel::class.java)
-        // TODO: Use the ViewModel
+        //setOnClickListener()
+    }
+    fun setOnClickListener(){
+        checkout_button.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(Checkout_fragmentDirections.actionCheckoutFragmentToMyOrderResto())
+        }
     }
     private fun openDialogOrder() {
         dialog.setContentView(R.layout.dialog_your_order_is_successfully_fragment)

@@ -96,7 +96,11 @@
         android:id="@+id/checkout_fragment"
         android:name="com.example.resto.ui.checkout.Checkout_fragment"
         android:label="checkout_fragment_fragment"
-        tools:layout="@layout/checkout_fragment_fragment" />
+        tools:layout="@layout/checkout_fragment_fragment" >
+        <action
+            android:id="@+id/action_checkout_fragment_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
+    </fragment>
     <fragment
         android:id="@+id/chocolatSpiceRestaurant"
         android:name="com.example.resto.ui.restaurant.ChocolatSpiceRestaurant"

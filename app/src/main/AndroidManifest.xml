@@ -10,8 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resto">
-        <activity android:name=".ui.registration.SignupActivity"
-            android:screenOrientation="portrait">
+        <activity android:name=".ui.registration.SignupActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -19,7 +18,6 @@
 
         <activity
             android:name=".ui.restaurant.ChocolatSpiceRestaurant"
-            android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar"
             tools:ignore="Instantiatable">
             <intent-filter>
@@ -45,7 +43,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.authentification.AuthentificationActivity">
+        <activity android:name=".ui.authentification.AuthentificationActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

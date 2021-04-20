@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintHeight_percent="0.40"
         app:layout_constraintTop_toTopOf="parent"
         android:background="#707070"
         />
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.70"
+        app:layout_constraintHeight_percent="0.65"
         tools:layout_editor_absoluteX="30dp">
 
         <TextView
@@ -133,6 +133,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/avenirltstd_book"
                 android:textSize="@dimen/dimens_17sp"
+                android:textColor="@color/gris_clear"
                 app:layout_constraintTop_toBottomOf="@id/endText" />
             <TextView
                 android:id="@+id/sing_up"
