@@ -8,26 +8,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.resto.R
-import com.example.resto.ui.explore.item.ItemTopCategories
+import com.example.resto.adapters.RecyclerAdapter
 import com.example.resto.ui.explore.item.Item_Resto_Extended
+import com.example.resto.viewmodels.MainActivityViewModel
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_explore.*
-import kotlinx.android.synthetic.main.top_categories_item.*
 
 class ExploreFragment : Fragment() {
 
     private lateinit var exploreViewModel: ExploreViewModel
     lateinit var dialog: Dialog
     lateinit var textView: TextView
+    private var mRecyclerView: RecyclerView? = null
+    private var mAdapter: RecyclerAdapter? = null
+    private var mMainActivityViewModel: MainActivityViewModel? = null
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -44,12 +48,29 @@ class ExploreFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
        dialog= Dialog(requireContext())
-        //pageTitle.setText("cool")
         initRecycleview()
-        initTopCategories()
         setOnClickListener()
         openDialogPassword()
+        initRecycleViewLiveData()
+    }
+    private fun initRecycleViewLiveData(){
+        mRecyclerView = topCategories
 
+        mMainActivityViewModel = ViewModelProviders.of(this)[MainActivityViewModel::class.java]
+
+        mMainActivityViewModel!!.init()
+
+        mMainActivityViewModel!!.nicePlaces.observe(viewLifecycleOwner,
+            { mAdapter!!.notifyDataSetChanged() })
+
+        initRecyclerView()
+    }
+    private fun initRecyclerView() {
+        val i:Int
+        mAdapter = RecyclerAdapter(requireContext(), mMainActivityViewModel!!.nicePlaces.value,R.layout.top_categories_item)
+        val linearLayoutManager: RecyclerView.LayoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+        mRecyclerView!!.layoutManager = linearLayoutManager
+        mRecyclerView!!.adapter = mAdapter
     }
     fun initRecycleview(){
         var items= mutableListOf<Item_Resto_Extended>()
@@ -63,28 +84,12 @@ class ExploreFragment : Fragment() {
             }
         }
     }
-    fun initTopCategories(){
-        //image_top_cat.setImageDrawable(resources.getDrawable(R.drawable.ic_lock_overturning))
-        var items= mutableListOf<ItemTopCategories>()
-        (0..4).forEach{
-            items.add(ItemTopCategories())
-        }
-        fun modif(view: View) {
-
-        }
-        topCategories.apply {
-            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-            adapter = GroupAdapter<ViewHolder>().apply{
-                add(Section(items))
-            }
-        }
-    }
     private fun setOnClickListener(){
         main_searchView.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(ExploreFragmentDirections.actionNavigationHomeToSearch())
         }
-        pageTitle.setOnClickListener {
+        page_title.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(ExploreFragmentDirections.actionNavigationHomeToBoonLayFragment())
         }
@@ -111,6 +116,7 @@ class ExploreFragment : Fragment() {
                 //val show = Toast.makeText(requireContext(), cardView, Toast.LENGTH_SHORT).show
             }
         })
+        dialog.setCanceledOnTouchOutside(false)
         dialog.show()
     }
 }

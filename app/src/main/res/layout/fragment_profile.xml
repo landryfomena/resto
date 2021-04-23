@@ -26,21 +26,15 @@
                 android:background="#E5E5EA"
                 app:layout_constraintBottom_toTopOf="@id/mainBody"
                 app:layout_constraintEnd_toEndOf="parent">
-                <androidx.cardview.widget.CardView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="@dimen/dimens_100dp"
                     android:layout_height="@dimen/dimens_100dp"
-                    app:cardCornerRadius="@dimen/dimens_50dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@mipmap/oldrich_round"
                     android:id="@+id/imgProfile"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/oldrich_round"
-                        />
-                </androidx.cardview.widget.CardView>
+                    />
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

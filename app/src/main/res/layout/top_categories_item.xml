@@ -4,32 +4,25 @@
     android:layout_height="wrap_content"
     android:paddingBottom="@dimen/dimens_10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
+    <ImageView
         android:layout_width="@dimen/dimens_88dp"
-        app:cardCornerRadius="10dp"
         android:layout_margin="8dp"
-        android:id="@+id/imagecard"
+        android:id="@+id/image_resto"
         app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/oldrich_round"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="@dimen/dimens_88dp">
-        <ImageView
-            android:id="@+id/image_top_cat"
-            android:layout_width="match_parent"
-            android:background="#B8BBC6"
-            android:src="@mipmap/oldrich_round"
-            android:layout_height="match_parent"/>
-    </androidx.cardview.widget.CardView>
+        android:layout_height="@dimen/dimens_88dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
         android:textSize="@dimen/dimens_17sp"
-        android:id="@+id/title"
+        android:id="@+id/image_name"
         android:fontFamily="@font/avenir_ltstd_medium"
-        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image_resto"
         android:text="Burgers"
-        app:layout_constraintTop_toBottomOf="@+id/imagecard"
+        app:layout_constraintTop_toBottomOf="@+id/image_resto"
         android:layout_height="wrap_content"/>
 
     <TextView
@@ -38,8 +31,8 @@
         android:fontFamily="@font/avenir_ltstd_roman"
         android:id="@+id/location"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/image_name"
         android:text="1126 places"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/image_name"
         android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

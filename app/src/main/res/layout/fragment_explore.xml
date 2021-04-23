@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
-            android:id="@+id/pageTitle"
+            android:id="@+id/page_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -73,7 +73,7 @@
             android:layout_marginTop="8dp"
             tools:itemCount="1"
             tools:listitem="@layout/new_places_item"
-            app:layout_constraintTop_toBottomOf="@id/pageTitle"
+            app:layout_constraintTop_toBottomOf="@id/page_title"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
