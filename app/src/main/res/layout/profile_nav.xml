@@ -30,28 +30,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:padding="@dimen/dimens_20dp"
                 android:background="#E5E5EA"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/mainBody"
                 android:paddingStart="@dimen/dimens_20dp"
                 >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="@dimen/dimens_100dp"
-                    android:layout_height="@dimen/dimens_100dp"
-                    app:cardCornerRadius="@dimen/dimens_50sp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <com.mikhaellopez.circularimageview.CircularImageView
                     android:id="@+id/imgProfile"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/noe_foreground"
-                        />
-                </androidx.cardview.widget.CardView>
+                    android:layout_width="@dimen/dimens_150dp"
+                    android:layout_height="@dimen/dimens_150dp"
+                    app:civ_border_width="@dimen/dimens_4dp"
+                    app:layout_constraintEnd_toStartOf="@id/profif_identity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:civ_border="true"
+                    app:civ_shadow="true"
+                    app:civ_shadow_color="@color/gris_clear"
+                    app:civ_border_color="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:civ_shadow_radius="@dimen/dimens_10dp"
+                    android:src="@mipmap/noe_foreground"
+                    />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profif_identity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimens_20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/imgProfile"
                     app:layout_constraintBottom_toBottomOf="parent">
@@ -60,6 +64,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/idLinearname"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
                         <TextView
@@ -71,7 +76,7 @@
                             android:fontFamily="sans-serif"
                             android:textSize="@dimen/dimens_20dp"
                             app:layout_constraintBottom_toTopOf="@id/idVIPbutton"
-                            android:layout_marginEnd="@dimen/dimens_40dp"
+                            android:layout_marginEnd="@dimen/dimens_20dp"
                             android:id="@+id/iduserName"
                             />
                         <ImageView

@@ -15,35 +15,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/pageTitle"
+            android:paddingVertical="@dimen/dimens_20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/body">
             <ImageView
                 android:id="@+id/backup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimens_10dp"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                android:layout_marginStart="@dimen/dimens_10dp"
+                android:layout_width="@dimen/dimens_25dp"
+                android:layout_height="@dimen/dimens_20dp"
+                android:src="@mipmap/black_arrow_foreground"
+                android:layout_marginStart="@dimen/dimens_20dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:tint="@color/black" />
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/title_texte"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
+                app:layout_constraintStart_toEndOf="@id/backup"
+                app:layout_constraintEnd_toStartOf="@id/idDone"
                 android:text="@string/edit_profile"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dimens_20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:gravity="center"/>
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/dimens_17sp"
+                android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
             <TextView
                 android:id="@+id/idDone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimens_15dp"
                 android:text="@string/done"
                 android:textColor="@color/orange_clear"
-                android:textSize="@dimen/dimens_20sp"
+                android:textSize="@dimen/dimens_17sp"
+                android:fontFamily="@font/avenir_heavy_opentype_bigfontsite"
+                android:layout_marginEnd="@dimen/dimens_20dp"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -52,7 +58,6 @@
             android:layout_height="@dimen/dimens_0dp"
             app:layout_constraintHeight_percent="0.9"
             android:id="@+id/body"
-            android:layout_marginTop="@dimen/dimens_15dp"
             android:background="#F7F8FA"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pageTitle">
@@ -61,191 +66,236 @@
                 android:layout_height="@dimen/dimens_0dp"
                 app:layout_constraintHeight_percent="0.9">
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profile_card"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/bas_page">
-                    <ImageView
-                        android:id="@+id/replay"
-                        android:layout_width="wrap_content"
-                        android:layout_marginTop="@dimen/dimens_30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dimens_10dp"
-                        android:src="@drawable/ic_avatar"
-                        app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="0dp"
+                    android:background="@color/gris_clear"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="@dimen/dimens_150dp"
+                        android:layout_height="@dimen/dimens_150dp"
+                        app:civ_border_color="@color/blue"
+                        app:civ_border_width="@dimen/dimens_4dp"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@mipmap/noe"
+                        />
+
+                    <ImageView
+                        android:id="@+id/camera"
+                        android:layout_width="@dimen/dimens_80dp"
+                        android:layout_height="@dimen/dimens_80dp"
+                        android:src="@mipmap/icon_image_foreground"
+                        app:layout_constraintEnd_toEndOf="@id/imageview"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:layout_editor_absoluteX="221dp"
+                        tools:layout_editor_absoluteY="120dp" />
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/bas_page"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dimens_20dp"
+                    android:layout_marginBottom="52dp"
                     android:background="@drawable/rounded_shape_item_restaurant"
                     android:paddingHorizontal="@dimen/dimens_10dp"
                     android:paddingTop="@dimen/dimens_150dp"
-                    android:layout_marginBottom="@dimen/dimens_30dp"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintTop_toBottomOf="@id/profile_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="-188dp">
+
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:id="@+id/text1">
+                        app:layout_constraintTop_toTopOf="parent">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/user_name"
-                            android:textSize="@dimen/dimens_20sp"
                             android:textColor="@color/gris_clear"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenirltstd_book"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <TextView
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/cameron_cook"
-                            android:textSize="@dimen/dimens_20sp"
                             android:textColor="@color/black"
+                            android:background="@drawable/flag_transparent"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenir_medium"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/dimens_1dp"
-                            android:background="@color/gris_clear"
-                            app:layout_constraintTop_toBottomOf="@id/text1"
-                            android:layout_marginTop="@dimen/dimens_10dp"
-                            android:id="@+id/card1"/>
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_15dp"
+                        app:layout_constraintTop_toBottomOf="@id/card1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toBottomOf="@id/card1"
-                            android:layout_marginTop="@dimen/dimens_15dp"
-                            android:id="@+id/text2">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/email"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/gris_clear"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
+                            android:text="@string/email"
+                            android:textColor="@color/gris_clear"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenirltstd_book"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/darrell_bailey_gmail_com"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/black"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/dimens_1dp"
-                            android:background="@color/gris_clear"
-                            android:layout_marginTop="@dimen/dimens_10dp"
-                            app:layout_constraintTop_toBottomOf="@id/text2"
-                            android:id="@+id/card2"/>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                        <EditText
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toBottomOf="@id/card2"
-                            android:layout_marginTop="@dimen/dimens_15dp"
-                            android:id="@+id/text3">
+                            android:text="@string/darrell_bailey_gmail_com"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:background="@drawable/flag_transparent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/phone"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/gris_clear"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_65_39879_343"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/black"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        app:layout_constraintTop_toBottomOf="@id/text2" />
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/dimens_1dp"
-                            android:background="@color/gris_clear"
-                            android:layout_marginTop="@dimen/dimens_10dp"
-                            app:layout_constraintTop_toBottomOf="@id/text3"
-                            android:id="@+id/card3"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_15dp"
+                        app:layout_constraintTop_toBottomOf="@id/card2">
 
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toBottomOf="@id/card3"
-                            android:layout_marginTop="@dimen/dimens_15dp"
-                            android:id="@+id/text4">
+                            android:text="@string/phone"
+                            android:textColor="@color/gris_clear"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenirltstd_book"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/gender"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/gris_clear"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/female"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/black"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/dimens_1dp"
-                            android:background="@color/gris_clear"
-                            android:layout_marginTop="@dimen/dimens_10dp"
-                            app:layout_constraintTop_toBottomOf="@id/text4"
-                            android:id="@+id/card4"/>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                        <EditText
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toBottomOf="@id/card4"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginTop="@dimen/dimens_15dp"
-                            android:layout_marginBottom="@dimen/dimens_15dp"
-                            android:id="@+id/text5">
+                            android:text="@string/_65_39879_343"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:background="@drawable/flag_transparent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/date_of_birth"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/gris_clear"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_16_04_1988"
-                                android:textSize="@dimen/dimens_20sp"
-                                android:textColor="@color/black"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        app:layout_constraintTop_toBottomOf="@id/text3" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_15dp"
+                        app:layout_constraintTop_toBottomOf="@id/card3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gender"
+                            android:textColor="@color/gris_clear"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenirltstd_book"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/female"
+                            android:textColor="@color/black"
+                            android:background="@drawable/flag_transparent"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenir_medium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        app:layout_constraintTop_toBottomOf="@id/text4" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_15dp"
+                        android:layout_marginBottom="@dimen/dimens_15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_of_birth"
+                            android:textColor="@color/gris_clear"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenirltstd_book"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_16_04_1988"
+                            android:textColor="@color/black"
+                            android:background="@drawable/flag_transparent"
+                            android:textSize="@dimen/dimens_17sp"
+                            android:fontFamily="@font/avenir_medium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>

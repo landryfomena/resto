@@ -182,6 +182,9 @@
         <action
             android:id="@+id/action_profilefragment_to_navigation_profile"
             app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_profilefragment_to_cameraOption"
+            app:destination="@id/cameraOption" />
     </fragment>
     <activity
         android:id="@+id/signupActivity"
@@ -193,6 +196,15 @@
         android:name="com.example.resto.ui.verifyyourphone.VerifyYourPhoneActivity"
         android:label="activity_verify_yourphone"
         tools:layout="@layout/activity_verify_yourphone" />
+    <dialog
+        android:id="@+id/cameraOption"
+        android:name="com.example.resto.CameraOption"
+        android:label="camera_option_fragment"
+        tools:layout="@layout/camera_option_fragment" >
+        <action
+            android:id="@+id/action_cameraOption_to_profilefragment"
+            app:destination="@id/profilefragment" />
+    </dialog>
 
 
 </navigation>
