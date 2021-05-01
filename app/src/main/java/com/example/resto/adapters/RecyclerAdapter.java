@@ -23,11 +23,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private List<NicePlace> mNicePlaces = new ArrayList<>();
     private Context mContext;
-    private Integer layout_item;
-    public RecyclerAdapter(Context context, List<NicePlace> nicePlaces,int layout_item) {
-        mNicePlaces = nicePlaces;
-        mContext = context;
+    private Integer layout_item,id_image,id_title;
+    public RecyclerAdapter(Context context, List<NicePlace> nicePlaces,int layout_item,int id_image,int id_title) {
+        this.mNicePlaces = nicePlaces;
+        this.mContext = context;
         this.layout_item=layout_item;
+        this.id_image=id_image;
+        this.id_title=id_title;
     }
 
     @NonNull
@@ -46,7 +48,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         // Set the image
         RequestOptions defaultOptions = new RequestOptions()
-                .error(R.drawable.ic_launcher_background);
+                .error(R.drawable.shape_paiement_mode);
         Glide.with(mContext)
                 .setDefaultRequestOptions(defaultOptions)
                 .load(mNicePlaces.get(i).getImageUrl())
@@ -65,8 +67,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            mImage = itemView.findViewById(R.id.image_resto);
-            mName = itemView.findViewById(R.id.image_name);
+            mImage = itemView.findViewById(id_image);
+            mName = itemView.findViewById(id_title);
         }
     }
 }

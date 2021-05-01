@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.resto.models.NicePlace;
 import com.example.resto.repositories.NicePlaceRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivityViewModel extends ViewModel {
@@ -17,12 +18,13 @@ public class MainActivityViewModel extends ViewModel {
     private NicePlaceRepository mRepo;
     private MutableLiveData<Boolean> mIsUpdating = new MutableLiveData<>();
 
-    public void init(){
+
+    public void init(ArrayList<NicePlace> dataSet ){
         if(mNicePlaces != null){
             return;
         }
         mRepo = NicePlaceRepository.getInstance();
-        mNicePlaces = mRepo.getNicePlaces();
+        mNicePlaces = mRepo.getNicePlaces(dataSet);
     }
 
     public void addNewValue(final NicePlace nicePlace){
@@ -54,7 +56,6 @@ public class MainActivityViewModel extends ViewModel {
     public LiveData<List<NicePlace>> getNicePlaces(){
         return mNicePlaces;
     }
-
 
     public LiveData<Boolean> getIsUpdating(){
         return mIsUpdating;

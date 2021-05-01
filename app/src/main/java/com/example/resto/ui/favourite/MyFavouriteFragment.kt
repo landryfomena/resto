@@ -13,22 +13,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.resto.R
 import com.example.resto.adapters.RecyclerAdapter
+import com.example.resto.models.NicePlace
 import com.example.resto.ui.restaurant.item.Item_Feature_Boon
 import com.example.resto.viewmodels.MainActivityViewModel
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_favourite.*
+import java.util.ArrayList
 
 
 class MyFavouriteFragment : Fragment() {
-
-    private val TAG = "MyFavourite"
 
     private lateinit var myFavouriteViewModel: MyFavouriteViewModel
     private var mRecyclerView: RecyclerView? = null
     private var mAdapter: RecyclerAdapter? = null
     private var mMainActivityViewModel: MainActivityViewModel? = null
+    private val dataSet = ArrayList<NicePlace>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -42,6 +44,7 @@ class MyFavouriteFragment : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setNicePlaces()
         setOnClickListener()
         initRecycleViewLiveData()
     }
@@ -50,7 +53,7 @@ class MyFavouriteFragment : Fragment() {
 
         mMainActivityViewModel = ViewModelProviders.of(this)[MainActivityViewModel::class.java]
 
-        mMainActivityViewModel!!.init()
+        mMainActivityViewModel!!.init(dataSet)
 
         mMainActivityViewModel!!.nicePlaces.observe(viewLifecycleOwner,
             { mAdapter!!.notifyDataSetChanged() })
@@ -58,10 +61,17 @@ class MyFavouriteFragment : Fragment() {
         initRecyclerView()
     }
     private fun initRecyclerView() {
-        mAdapter = RecyclerAdapter(requireContext(), mMainActivityViewModel!!.nicePlaces.value,R.layout.restaurant_item)
+        mAdapter = RecyclerAdapter(requireContext(),
+            mMainActivityViewModel!!.nicePlaces.value,
+            R.layout.restaurant_item,R.id.image_resto,R.id.image_name)
         val linearLayoutManager: RecyclerView.LayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         mRecyclerView!!.layoutManager = linearLayoutManager
         mRecyclerView!!.adapter = mAdapter
+    }
+    private fun setNicePlaces() {
+        dataSet.add(NicePlace(1, "Little Creatures - Club Street"))
+        dataSet.add(NicePlace(2, "Yanti Nasi Padang"))
+        dataSet.add(NicePlace(3, "Tiong Bahru Bakery"))
     }
     fun setOnClickListener(){
         food.setOnClickListener{
