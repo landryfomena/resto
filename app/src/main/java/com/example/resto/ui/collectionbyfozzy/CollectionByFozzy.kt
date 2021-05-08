@@ -74,7 +74,7 @@ class CollectionByFozzy : Fragment() {
 
     fun setOnClickListener(){
         text.setOnClickListener {
-              Navigation.findNavController(it).navigate(CollectionByFozzyDirections.actionCollectionByFozzy2ToAsiaRestaurantFragment())
+
         }
         arrowback.setOnClickListener {
             Navigation.findNavController(it).navigateUp()

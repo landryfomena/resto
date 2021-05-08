@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import com.example.resto.MainActivity
 import com.example.resto.R
+import com.example.resto.models.NicePlace
 import com.example.resto.ui.explore.ExploreFragmentDirections
 import com.example.resto.ui.restaurant.AsiaRestaurantFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -47,8 +48,11 @@ class Filters : BottomSheetDialogFragment() {
 //            startActivity(intent)
 //        }
         asia_filter.setOnClickListener {
+
+
+
             Navigation.findNavController(it)
-                .navigate(FiltersDirections.actionFiltersToAsiaRestaurantFragment())
+                .navigate(FiltersDirections.actionFiltersToAsiaRestaurantFragment(NicePlace()))
         }
     }
     private fun progressBar(){

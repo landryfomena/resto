@@ -26,7 +26,9 @@ import kotlinx.android.synthetic.main.boon_lay_fragment.arrowback
 import kotlinx.android.synthetic.main.boon_lay_fragment.dooble_arrow
 import kotlinx.android.synthetic.main.boon_lay_fragment.feature_collection
 import kotlinx.android.synthetic.main.boon_lay_fragment.option_collection
+import kotlinx.android.synthetic.main.boon_lay_fragment.view.*
 import kotlinx.android.synthetic.main.full_menu_collection.*
+import kotlinx.android.synthetic.main.full_menu_collection.view.*
 
 class BoonLayFragment : Fragment() {
 
@@ -41,19 +43,23 @@ class BoonLayFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(BoonLayViewModel::class.java)
         initFeature_item()
-        setOnClickListener()
+        setOnClickListener(viewHolder = ViewHolder(requireView()))
        // val layoutInflater:LayoutInflater = LayoutInflater.from(applicationContext)
         //initOptionRecycle()
     }
-    fun setOnClickListener(){
+    fun setOnClickListener(viewHolder: ViewHolder){
             dooble_arrow.setOnClickListener {
-                initOptionMenu()
+                var isvisible=false
+                initOptionMenu(viewHolder)
+                if(!isvisible){
+                    viewHolder.itemView.option_collection.visibility= View.VISIBLE
+                    isvisible=!isvisible
+                }else{
+                    viewHolder.itemView.option_collection_full.visibility= View.GONE
+                    isvisible=!isvisible
+                }
                 dooble_arrow.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_expand_more_24))
             }
-//        option_popular.setOnClickListener {
-//            initOption()
-//            option_popular.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_expand_more_24))
-//        }
         arrowback.setOnClickListener {
             Navigation.findNavController(it).navigateUp()
         }
@@ -78,7 +84,7 @@ class BoonLayFragment : Fragment() {
             }
         }
     }
-    fun initOptionMenu(){
+    fun initOptionMenu(viewHolder: ViewHolder){
         var items= mutableListOf<Option_Full_Menu>()
 
         items.add(Option_Full_Menu())
@@ -90,19 +96,7 @@ class BoonLayFragment : Fragment() {
             }
         }
     }
-    fun initOption(){
-        var items= mutableListOf<Option>()
 
-        items.add(Option())
-        option_collection_full.apply {
-            layoutManager = LinearLayoutManager(requireContext(),
-                LinearLayoutManager.HORIZONTAL,false)
-            adapter = GroupAdapter<ViewHolder>().apply{
-                add(Section(items))
-            }
-        }
-
-    }
 //    fun initOptionRecycle(){
 //         Inflate the layout using LayoutInflater
 //        val view: View = layoutInflater.inflate(
