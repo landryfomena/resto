@@ -112,6 +112,7 @@ class ExploreFragment : Fragment() {
     private fun setNicePlacesNewPlace() {
         dataSet1.add(NicePlace(1, "Andy & Cindy s Diner"))
         dataSet1.add(NicePlace(2, "The Garage Bar & Grill"))
+
         dataSet1.add(NicePlace(3, "Tiong Bahru Bakery"))
     }
     private fun setOnClickListener(){
