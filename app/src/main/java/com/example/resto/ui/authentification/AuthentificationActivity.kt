@@ -9,7 +9,6 @@ import com.example.resto.MainActivity
 import com.example.resto.R
 import com.example.resto.ui.createaccount.CreateAccountActivity
 import kotlinx.android.synthetic.main.activity_authentification.*
-import kotlinx.android.synthetic.main.filters_fragment.*
 
 
 class AuthentificationActivity : AppCompatActivity() {

@@ -132,7 +132,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/login_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/signup_btn"
                     android:text="By clicking Sign up you agree the following Term and Condition without reservation"
                     android:textColor="@color/black"
                     android:fontFamily="@font/avenir_ltstd_book"
