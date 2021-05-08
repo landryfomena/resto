@@ -8,11 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.notifications.item.Collection_Item
+import com.example.resto.ui.collectionbyfozzy.item.Collection_Item
+
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.fragment_notifications.*
+import kotlinx.android.synthetic.main.collection_by_fozzy_fragment.*
 
 class popularThisWeek : Fragment() {
 
@@ -26,7 +27,7 @@ class popularThisWeek : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_notifications, container, false)
+        return inflater.inflate(R.layout.fragment_favourite, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
