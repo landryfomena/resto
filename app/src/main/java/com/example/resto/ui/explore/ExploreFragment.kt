@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,11 +17,14 @@ import com.example.resto.R
 import com.example.resto.models.NicePlace
 import com.example.resto.ui.explore.item.ItemTopCategories
 import com.example.resto.ui.explore.item.Item_Resto_Extended
-import com.example.resto.viewmodels.MainActivityViewModel
+import com.example.resto.ui.search.item.Item_Recommend
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_explore.*
+import kotlinx.android.synthetic.main.fragment_explore.main_searchView
+import kotlinx.android.synthetic.main.fragment_explore.recommend_collection
+import kotlinx.android.synthetic.main.search_fragment.*
 
 class ExploreFragment : Fragment() {
 
@@ -53,6 +54,7 @@ class ExploreFragment : Fragment() {
         exploreViewModel.apply {
             setNicePlaces()
             setNicePlacesNewPlace()
+            setRecommendedPlaces()
         }
         observeViewModel()
         setOnClickListener()
@@ -65,6 +67,9 @@ class ExploreFragment : Fragment() {
         })
         exploreViewModel.topCategories.observe(viewLifecycleOwner, Observer { topCategories ->
             initTopCategories(topCategories)
+        })
+        exploreViewModel.recommmended.observe(viewLifecycleOwner, Observer { recommended ->
+            initRecommend(recommended)
         })
     }
 
@@ -94,6 +99,20 @@ class ExploreFragment : Fragment() {
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             adapter = GroupAdapter<ViewHolder>().apply {
                 add(Section(aNicePlaces))
+            }
+        }
+    }
+
+    fun initRecommend(list: List<NicePlace>) {
+        var items = mutableListOf<Item_Recommend>()
+        list.forEach {
+            items.add(Item_Recommend(it))
+        }
+        recommend_collection.apply {
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            adapter = GroupAdapter<ViewHolder>().apply {
+                add(Section(items))
             }
         }
     }

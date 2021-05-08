@@ -17,6 +17,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:background="#B8BBC6"
+            android:scaleType="centerCrop"
+            android:id="@+id/recommended_image"
             android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>
 

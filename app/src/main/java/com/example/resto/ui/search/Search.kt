@@ -9,8 +9,9 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resto.R
-import com.example.resto.ui.restaurant.item.Item_Recommend
+import com.example.resto.models.NicePlace
 import com.example.resto.ui.restaurant.item.Item_Search
+import com.example.resto.ui.search.item.Item_Recommend
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
@@ -34,7 +35,7 @@ class Search : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-        // TODO: Use the ViewModel
+
         initSearch()
         initRecommend()
         setOnClickListener()
@@ -59,7 +60,7 @@ class Search : Fragment() {
     fun initRecommend(){
         var items= mutableListOf<Item_Recommend>()
         (0..5).forEach{
-            items.add(Item_Recommend())
+            items.add(Item_Recommend(NicePlace()))
         }
         recommend_collection.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)

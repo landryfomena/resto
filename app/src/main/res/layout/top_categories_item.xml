@@ -8,6 +8,7 @@
         android:layout_width="@dimen/dimens_88dp"
         android:layout_margin="8dp"
         android:id="@+id/image_resto"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@mipmap/oldrich_round"
         app:layout_constraintTop_toTopOf="parent"

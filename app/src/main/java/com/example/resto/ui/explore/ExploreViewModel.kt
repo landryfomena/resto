@@ -17,6 +17,9 @@ class ExploreViewModel : ViewModel() {
     var topCategories = MutableLiveData<List<NicePlace>>().apply {
         value = mutableListOf()
     }
+    var recommmended = MutableLiveData<List<NicePlace>>().apply {
+        value = mutableListOf()
+    }
     val text: LiveData<String> = _text
 
     fun setNicePlaces() {
@@ -32,9 +35,26 @@ class ExploreViewModel : ViewModel() {
 
     fun setNicePlacesNewPlace() {
         var dataSet = mutableSetOf<NicePlace>()
-        dataSet.add(NicePlace(1, "Andy & Cindy s Diner"))
-        dataSet.add(NicePlace(2, "The Garage Bar & Grill"))
-        dataSet.add(NicePlace(3, "Tiong Bahru Bakery"))
+        dataSet.add(NicePlace(R.drawable.restau_one, "Andy & Cindy s Diner"))
+        dataSet.add(NicePlace(R.drawable.restau_tree, "The Garage Bar & Grill"))
+        dataSet.add(NicePlace(R.drawable.restau_five, "Tiong Bahru Bakery"))
+        dataSet.add(NicePlace(R.drawable.restau_six, "  Bahru Tiong Bakery"))
         newPlaces.value = dataSet.toList()
     }
+
+    fun setRecommendedPlaces() {
+        var dataSet = mutableSetOf<NicePlace>()
+        dataSet.add(NicePlace(R.drawable.restau_six, "Andy & Cindy s Diner"))
+        dataSet.add(NicePlace(R.drawable.restau_one, "The Garage Bar & Grill"))
+        dataSet.add(NicePlace(R.drawable.ic_burger, "Burger"))
+        dataSet.add(NicePlace(R.drawable.restau_tree, "Tiong Bahru Bakery"))
+        dataSet.add(NicePlace(R.drawable.ic_american, "American"))
+        dataSet.add(NicePlace(R.drawable.ic_pizza, "Pizza"))
+        dataSet.add(NicePlace(R.drawable.restau_two, "Andy & Cindy s Diner"))
+        dataSet.add(NicePlace(R.drawable.restau_one, "The Garage Bar & Grill"))
+        dataSet.add(NicePlace(R.drawable.ic_pizza, "Tiong Bahru Bakery"))
+        recommmended.value = dataSet.toList()
+    }
+
+
 }
