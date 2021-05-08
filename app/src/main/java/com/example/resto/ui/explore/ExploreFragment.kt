@@ -67,7 +67,6 @@ class ExploreFragment : Fragment() {
             initTopCategories(topCategories)
         })
     }
-
     private fun initTopCategories(mtopCategories: List<NicePlace>?) {
         aTopCategories = mutableListOf()
         mtopCategories?.forEach { nicePlace ->
