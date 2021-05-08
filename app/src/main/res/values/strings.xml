@@ -133,4 +133,5 @@
     <string name="go_to_orders">Go to orders</string>
     <string name="you_can_track_the_delivery_in_the_orders_section">You can track the delivery in the "Orders" section.</string>
     <string name="cart_empty">Cart Empty</string>
+    <string name="collection_by_fozy">Collection by Fozzi</string>
 </resources>
