@@ -5,98 +5,125 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.verifyyourphone.PhoneVerificationActivity"
-    android:paddingTop="100dp"
     android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimens_150dp"
+            android:layout_gravity="top"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                    android:id="@+id/TitlePhoneVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_verification"
+                    android:fontFamily="@font/avenir_ltstd_black"
+                    android:textAlignment="center"
+                    android:textColor="@color/Title_color"
+                    android:textSize="@dimen/dimens_34sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/Sub_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:layout_marginTop="@dimen/dimens8dp"
+                    android:text="@string/enter_your_otp_code_here"
+                    android:textAlignment="center"
+                    android:textColor="@color/Text_Sub_Title"
+                    android:textSize="@dimen/dimens_16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/TitlePhoneVerification" />
+                <LinearLayout
+                    android:id="@+id/edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="@dimen/dimens_16dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/Sub_Title">
+                    <EditText
+                        android:layout_width="@dimen/dimens_edit_phone_code"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimens8dp"
+                        android:background="@drawable/rounded_shape_phone_verification"
+                        android:inputType="phone"
+                        android:textAlignment="center"
+                        android:maxLength="1"
+                        android:textColorHint="@color/Text_color_sub"
+                        android:imeOptions="actionNext" />
+                    <EditText
+                        android:layout_width="@dimen/dimens_edit_phone_code"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/dimens8dp"
+                        android:background="@drawable/rounded_shape_phone_verification"
+                        android:inputType="phone"
+                        android:textAlignment="center"
+                        android:maxLength="1"
+                        android:textColorHint="@color/Text_color_sub"
+                        android:imeOptions="actionNext" />
+                    <EditText
+                        android:layout_width="@dimen/dimens_edit_phone_code"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/dimens8dp"
+                        android:background="@drawable/rounded_shape_phone_verification"
+                        android:inputType="phone"
+                        android:textAlignment="center"
+                        android:maxLength="1"
+                        android:textColorHint="@color/Text_color_sub"
+                        android:imeOptions="actionNext" />
+                    <EditText
+                        android:layout_width="@dimen/dimens_edit_phone_code"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dimens8dp"
+                        android:background="@drawable/rounded_shape_phone_verification"
+                        android:inputType="phone"
+                        android:textAlignment="center"
+                        android:maxLength="1"
+                        android:textColorHint="@color/Text_color_sub"
+                        android:imeOptions="actionNext" />
 
-        <TextView
-            android:id="@+id/TitlePhoneVerification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimens8dp"
-            android:text="@string/phone_verification"
-            android:textAlignment="center"
-            android:textColor="@color/Title_color"
-            android:textSize="@dimen/dimens_34sp"
-            app:layout_constraintTop_toTopOf="parent" />
-        <TextView
-            android:id="@+id/Sub_Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimens8dp"
-            android:text="@string/enter_your_otp_code_here"
-            android:textAlignment="center"
-            android:textColor="@color/Text_Sub_Title"
-            android:textSize="@dimen/dimens_16sp"
-            app:layout_constraintTop_toBottomOf="@+id/TitlePhoneVerification" />
-        <LinearLayout
-            android:id="@+id/edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="@dimen/dimens_16dp"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/Sub_Title">
-            <EditText
-                android:layout_width="@dimen/dimens_edit_phone_code"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/dimens8dp"
-                android:background="@drawable/rounded_shape_phone_verification"
-                android:inputType="phone"
-                android:textAlignment="center"
-                android:maxLength="1"
-                android:textColorHint="@color/Text_color_sub"
-                android:imeOptions="actionNext" />
-            <EditText
-                android:layout_width="@dimen/dimens_edit_phone_code"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="@dimen/dimens8dp"
-                android:background="@drawable/rounded_shape_phone_verification"
-                android:inputType="phone"
-                android:textAlignment="center"
-                android:maxLength="1"
-                android:textColorHint="@color/Text_color_sub"
-                android:imeOptions="actionNext" />
-            <EditText
-                android:layout_width="@dimen/dimens_edit_phone_code"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="@dimen/dimens8dp"
-                android:background="@drawable/rounded_shape_phone_verification"
-                android:inputType="phone"
-                android:textAlignment="center"
-                android:maxLength="1"
-                android:textColorHint="@color/Text_color_sub"
-                android:imeOptions="actionNext" />
-            <EditText
-                android:layout_width="@dimen/dimens_edit_phone_code"
-                android:layout_height="match_parent"
-                android:layout_marginRight="@dimen/dimens8dp"
-                android:background="@drawable/rounded_shape_phone_verification"
-                android:inputType="phone"
-                android:textAlignment="center"
-                android:maxLength="1"
-                android:textColorHint="@color/Text_color_sub"
-                android:imeOptions="actionNext" />
+                </LinearLayout>
 
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/didnt_code"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimens_80dp"
-            android:text="@string/didn_t_you_received_any_code"
-            android:textColor="@color/Text_Sub_Title"
-            android:textSize="@dimen/dimens_16sp"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text" />
-        <TextView
-            android:id="@+id/recent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimens8dp"
-            android:text="@string/recent_a_new_code"
-            android:textAlignment="center"
-            android:textColor="@color/orange_clear"
-            android:textSize="@dimen/dimens_16sp"
-            app:layout_constraintTop_toBottomOf="@+id/didnt_code" />
+                <TextView
+                    android:id="@+id/didnt_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_50dp"
+                    android:text="@string/didn_t_you_received_any_code"
+                    android:textColor="@color/Text_Sub_Title"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:textSize="@dimen/dimens_16sp"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_text" />
+                <TextView
+                    android:id="@+id/recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens8dp"
+                    android:layout_marginBottom="@dimen/dimens_30dp"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:text="@string/recent_a_new_code"
+                    android:textAlignment="center"
+                    android:textColor="@color/orange_clear"
+                    android:textSize="@dimen/dimens_16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/didnt_code" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

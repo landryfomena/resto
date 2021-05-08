@@ -23,20 +23,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_130dp"
-            android:text="@string/burgers"
+            android:text="Asia"
             android:textAlignment="center"
+            android:fontFamily="@font/avenir_ltstd_heavy"
             android:textColor="@color/white"
-            android:textSize="@dimen/dimens_25sp" />
+            android:textSize="@dimen/dimens_17sp" />
 
         <TextView
             android:id="@+id/location"
             android:layout_width="match_parent"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_160dp"
             android:text="1126 places"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/dimens_20sp" />
+            android:textSize="@dimen/dimens_17sp" />
     </androidx.cardview.widget.CardView>
 
 

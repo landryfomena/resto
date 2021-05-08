@@ -6,22 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".ui.authentification.AuthentificationActivity"
     android:background="#E4E4E4">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.40"
-        android:background="#707070">
-
-    </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.65"
-        app:layout_constraintHeight_default="percent"
-        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:id="@+id/line_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Text_color_sub"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/dimens_10dp">
+        <ImageView
+            android:id="@+id/arrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:id="@+id/mainscroll"
+        app:layout_constraintTop_toBottomOf="@id/line_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_250dp"
+            android:background="@color/Text_color_sub"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_200dp"
+        android:paddingBottom="@dimen/dimens_90dp"
         android:background="@drawable/rounded_shape_authentification">
         <TextView
             android:id="@+id/TitleAuthentification"
@@ -30,6 +66,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/welcome_back"
             android:textColor="@color/Title_color"
+            android:fontFamily="@font/avenir_ltstd_black"
             android:textAlignment="center"
             android:textSize="@dimen/dimens_34sp"
             android:layout_marginTop="@dimen/dimens8dp"
@@ -40,13 +77,13 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/TitleAuthentification"
             android:text="@string/log_into_your_acompt"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:textColor="@color/Text_Sub_Title"
             android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp"
+            android:textSize="@dimen/dimens_17sp"
             android:layout_marginTop="@dimen/dimens8dp"
             />
         <EditText
-            android:inputType="textEmailAddress"
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,13 +92,14 @@
             android:background="@drawable/rounded_shape_into_text"
             android:hint="@string/email"
             android:paddingBottom="@dimen/dimens_5dp"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:paddingTop="@dimen/dimens_15dp"
             android:paddingHorizontal="@dimen/dimens_20dp"
+            android:inputType="textEmailAddress"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
+            android:textSize="@dimen/dimens_17sp"
             app:layout_constraintTop_toBottomOf="@id/Sub_Title" />
         <EditText
-            android:inputType="textPassword"
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,17 +109,21 @@
             android:hint="@string/password"
             android:paddingHorizontal="@dimen/dimens_20dp"
             android:paddingTop="@dimen/dimens_15dp"
+            android:fontFamily="@font/avenir_ltstd_book"
             android:paddingBottom="@dimen/dimens_5dp"
             android:textColorHint="@color/Text_color_sub"
-            android:textSize="@dimen/dimens_25sp"
-            app:layout_constraintTop_toBottomOf="@id/username" />
+            android:textSize="@dimen/dimens_17sp"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            android:inputType="textPassword" />
         <Button
-           android:text="@string/login"
+            android:text="@string/login"
             android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:textSize="@dimen/dimens_17sp"
             android:backgroundTint="@color/purple_700"
+            android:fontFamily="@font/avenir_ltstd_heavy"
             android:layout_marginHorizontal="@dimen/dimens_16dp"
             app:layout_constraintTop_toBottomOf="@id/password"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,11 +134,12 @@
             android:id="@+id/forgot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_ltstd_book"
             app:layout_constraintTop_toBottomOf="@+id/login_btn"
             android:text="@string/forgot_your_password"
             android:textColor="@color/Text_Sub_Title"
             android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp"
+            android:textSize="@dimen/dimens_17sp"
             android:layout_marginTop="@dimen/dimens_20dp"
             />
         <LinearLayout
@@ -107,22 +150,27 @@
             android:layout_marginTop="@dimen/dimens_20dp"
             android:orientation="horizontal"
             android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/forgot"
-            android:text="@string/dont_have_account"
-            android:textColor="@color/Text_Sub_Title"
-            android:textAlignment="center"
-            android:textSize="@dimen/dimens_16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/forgot"
+                android:text="@string/dont_have_account"
+                android:fontFamily="@font/avenir_ltstd_book"
+                android:textColor="@color/Text_Sub_Title"
+                android:textAlignment="center"
+                android:textSize="@dimen/dimens_17sp" />
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
+                android:fontFamily="@font/avenir_ltstd_book"
                 android:text="@string/sign_up"
                 android:textColor="@color/orange_clear"
                 android:textAlignment="center"
-                android:textSize="@dimen/dimens_16sp" />
+                android:textSize="@dimen/dimens_17sp" />
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

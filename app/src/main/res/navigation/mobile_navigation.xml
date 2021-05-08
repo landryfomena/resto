@@ -3,32 +3,145 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_explore">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.resto.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
+        android:id="@+id/navigation_explore"
+        android:name="com.example.resto.ui.explore.ExploreFragment"
+        android:label="@string/title_explore"
+        tools:layout="@layout/fragment_explore" >
         <action
-            android:id="@+id/action_navigation_home_to_popularThisWeek"
-            app:destination="@id/popularThisWeek" />
+            android:id="@+id/action_navigation_home_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_navigation_home_to_boonLayFragment"
+            app:destination="@id/boonLayFragment" />
+        <action
+            android:id="@+id/action_navigation_explore_to_collectionByFozzy2"
+            app:destination="@id/collectionByFozzy2" />
+        <action
+            android:id="@+id/action_navigation_explore_to_navigation_my_order"
+            app:destination="@id/navigation_home2" />
+        <action
+            android:id="@+id/action_navigation_explore_to_filters"
+            app:destination="@id/filters" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.resto.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_home2"
+        android:name="com.example.resto.ui.explore2.Explore2"
+        android:label="@string/home2"
+        tools:layout="@layout/fragment_explore_2" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_collectionByFozzy2"
+            app:destination="@id/collectionByFozzy2" />
+        <action
+            android:id="@+id/action_navigation_my_order_to_search"
+            app:destination="@id/search" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.example.resto.ui.favourite.MyFavouriteFragment"
+        android:label="@string/title_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_navigation_favourite_to_chocolatSpiceRestaurant"
+            app:destination="@id/chocolatSpiceRestaurant" />
+    </fragment>
+    <fragment
+        android:id="@+id/asiaRestaurantFragment"
+        android:name="com.example.resto.ui.restaurant.AsiaRestaurantFragment"
+        android:label="asia_restaurant_fragment"
+        tools:layout="@layout/asia_restaurant_fragment" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.resto.ui.search.Search"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/chocolatSpiceRestaurant"
+        android:name="com.example.resto.ui.restaurant.ChocolatSpiceRestaurant"
+        android:label="chocolat_spice_restaurant_fragment"
+        tools:layout="@layout/chocolat_spice_restaurant_fragment" />
+    <fragment
+        android:id="@+id/myOrder"
+        android:name="com.example.resto.ui.order.MyOrder"
+        android:label="my_order_fragment"
+        tools:layout="@layout/my_order_fragment" />
+    <fragment
+        android:id="@+id/restoFeatureBoonLayFragment"
+        android:name="com.example.resto.ui.restaurant.RestoFeatureBoonLayFragment"
+        android:label="resto_feature_boon_lay_fragment"
+        tools:layout="@layout/resto_feature_boon_lay_fragment" >
+        <action
+            android:id="@+id/action_restoFeatureBoonLayFragment_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
+        <action
+            android:id="@+id/action_restoFeatureBoonLayFragment_to_boonLayFragment"
+            app:destination="@id/boonLayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boonLayFragment"
+        android:name="com.example.resto.ui.restaurant.BoonLayFragment"
+        android:label="boon_lay_fragment"
+        tools:layout="@layout/boon_lay_fragment" >
+        <action
+            android:id="@+id/action_boonLayFragment_to_myOrder"
+            app:destination="@id/myOrder" />
+        <action
+            android:id="@+id/action_boonLayFragment_to_restoFeatureBoonLayFragment"
+            app:destination="@id/restoFeatureBoonLayFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.resto.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/collectionByFozzy2"
+        android:name="com.example.resto.ui.collectionbyfozzy.CollectionByFozzy"
+        android:label="collection_by_fozzy_fragment"
+        tools:layout="@layout/collection_by_fozzy_fragment" >
+        <action
+            android:id="@+id/action_collectionByFozzy2_to_asiaRestaurantFragment"
+            app:destination="@id/asiaRestaurantFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/popularThisWeek"
-        android:name="com.example.resto.ui.popularThisWeek.popularThisWeek"
-        android:label="popular_this_week_fragment"
-        tools:layout="@layout/popular_this_week_fragment" />
+        android:id="@+id/myOrderResto"
+        android:name="com.example.resto.ui.order.MyOrderResto"
+        android:label="my_order_resto_fragment"
+        tools:layout="@layout/my_order_resto_fragment" >
+        <action
+            android:id="@+id/action_myOrderResto_to_checkOut"
+            app:destination="@id/checkOut" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOut"
+        android:name="com.example.resto.ui.checkout.CheckOut"
+        android:label="check_out_fragment"
+        tools:layout="@layout/check_out_fragment" >
+        <action
+            android:id="@+id/action_checkOut_to_myOrderResto"
+            app:destination="@id/myOrderResto" />
+    </fragment>
+    <dialog
+        android:id="@+id/filters"
+        android:name="com.example.resto.ui.filters.Filters"
+        android:label="filters_fragment"
+        tools:layout="@layout/filters_fragment" >
+        <action
+            android:id="@+id/action_filters_to_asiaRestaurantFragment"
+            app:destination="@id/asiaRestaurantFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.resto.ui.profile.EditProfileFragment"
+        android:label="edit_profile_fragment"
+        tools:layout="@layout/edit_profile_fragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.resto.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+
 </navigation>

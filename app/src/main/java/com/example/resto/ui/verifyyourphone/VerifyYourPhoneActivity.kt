@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.resto.R
+import kotlinx.android.synthetic.main.activity_forgot_password.*
 
 class VerifyYourPhoneActivity : AppCompatActivity() {
     lateinit var next:Button

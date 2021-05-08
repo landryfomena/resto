@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/arriere_plan_transparant"
+    tools:ignore="MissingConstraints">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/popular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_5dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:textSize="@dimen/dimens_17sp"
+        android:id="@+id/title"
+        android:text="Special Gajananad Bhel"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="@dimen/dimens_13sp"
+        android:id="@+id/location"
+        android:fontFamily="@font/avenir_ltstd_roman"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        android:text="$ 9.50"
+        android:textColor="@color/gris_clear"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_1dp"
+        android:background="@color/gris_clear"
+        android:layout_marginTop="@dimen/dimens_10dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dimens_16dp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_17sp"
+            android:id="@+id/title2"
+            android:text="Cold Bournvita"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:layout_marginStart="@dimen/dimens_20dp"
+                android:backgroundTint="@color/red"
+                app:layout_constraintStart_toEndOf="@+id/title2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_shape_cardview_20dp"
+                android:paddingHorizontal="@dimen/dimens_10dp"
+                android:paddingVertical="3dp"
+                android:fontFamily="@font/avenir_ltstd_roman"
+                android:text="Best Seller"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimens_11sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="@dimen/dimens_13sp"
+            android:fontFamily="@font/avenir_ltstd_roman"
+            android:id="@+id/location2"
+            app:layout_constraintStart_toStartOf="@+id/title2"
+            android:text="$ 5.00"
+            android:textColor="@color/gris_clear"
+            app:layout_constraintTop_toBottomOf="@+id/title2"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_1dp"
+        android:background="@color/gris_clear"
+        android:layout_marginTop="@dimen/dimens_10dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dimens_16dp"
+            android:fontFamily="@font/avenir_ltstd_medium"
+            android:textSize="@dimen/dimens_17sp"
+            android:id="@+id/title3"
+            android:text="Butter Jam Maska Bun"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="@dimen/dimens_13sp"
+            android:fontFamily="@font/avenir_ltstd_roman"
+            android:id="@+id/location3"
+            app:layout_constraintStart_toStartOf="@+id/title3"
+            android:text="$ 9.50"
+            android:textColor="@color/gris_clear"
+            app:layout_constraintTop_toBottomOf="@+id/title3"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

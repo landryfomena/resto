@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.order.MyOrderResto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimens_55dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/line_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/mainscroll"
+            android:padding="@dimen/dimens_10dp">
+            <ImageView
+                android:id="@+id/arrowback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_10dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_marginStart="@dimen/dimens_10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="My Order"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/mainscroll"
+            android:background="@color/arriere_plan_transparant"
+            app:layout_constraintTop_toBottomOf="@id/line_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+         <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/bas_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimens_20dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_shape_item_restaurant"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/arriere_plan_transparant">
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/dimens_16dp"
+                        android:text="@string/little_creatures_club_street"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/avenir_ltstd_black"
+                        android:textSize="@dimen/dimens_17sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textStyle="bold"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/title">
+                        <ImageView
+                            android:id="@+id/location_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_location_on_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/text_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            android:text="856 Esta Underpass"
+                            android:textSize="@dimen/dimens_15sp"
+                            app:layout_constraintStart_toEndOf="@+id/location_on"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                            <TextView
+                                android:layout_marginStart="@dimen/dimens_30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/text_location"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rounded_shape_cardview_20dp"
+                                android:fontFamily="@font/avenir_ltstd_roman"
+                                android:paddingHorizontal="@dimen/dimens_16dp"
+                                android:text="Free delivery"
+                                android:textColor="@color/white"
+                                android:textSize="11sp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:text="Special Gajananad Bhel"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:textColor="@color/black"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mixed vegetables, Chicken Egg"
+                            android:textSize="@dimen/dimens_13sp"
+                            android:textColor="@color/gris_clear"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 17.20"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            android:textSize="@dimen/dimens_13sp"
+                            android:textColor="@color/gris_clear"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginHorizontal="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        android:layout_marginTop="@dimen/dimens_10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cold Bournvita"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        android:textColor="@color/black"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Extra Hot Mild"
+                            android:textSize="@dimen/dimens_13sp"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            android:textColor="@color/gris_clear"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 15.20"
+                            android:textSize="@dimen/dimens_13sp"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            android:textColor="@color/gris_clear"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginHorizontal="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        android:layout_marginTop="@dimen/dimens_10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Butter Jam Maska Bun"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:textColor="@color/black"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SweetFire Chicken Breast"
+                            android:textSize="@dimen/dimens_13sp"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            android:textColor="@color/gris_clear"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 29.50"
+                            android:textSize="@dimen/dimens_13sp"
+                            android:fontFamily="@font/avenir_ltstd_roman"
+                            android:textColor="@color/gris_clear"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1dp"
+                        android:layout_marginHorizontal="@dimen/dimens_10dp"
+                        android:background="@color/gris_clear"
+                        android:layout_marginTop="@dimen/dimens_10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/dimens_10dp"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:layout_height="wrap_content"
+                        android:text="Add more items"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:layout_marginTop="@dimen/dimens_10dp"
+                        android:textColor="@color/red"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/down"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_150dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dimens_20dp"
+                    android:background="@drawable/rounded_shape_item_restaurant"
+                    app:layout_constraintTop_toBottomOf="@+id/bas_page"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$93.40"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tax &amp; Fees"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$2.00"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textSize="@dimen/dimens_15sp"
+                        android:fontFamily="@font/avenir_ltstd_medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/button_continue"
+                            android:layout_marginHorizontal="@dimen/dimens_30dp"
+                            android:layout_marginTop="@dimen/dimens_30dp"
+                            android:layout_marginBottom="@dimen/dimens_10dp"
+                            android:paddingVertical="@dimen/dimens_5dp"
+                            android:background="@drawable/rounded_shape_cardview_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Continue"
+                            android:layout_marginEnd="@dimen/dimens_20dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimens_17sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:paddingEnd="@dimen/dimens_20dp"
+                            android:text="$ 9.50"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimens_17sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+         </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
