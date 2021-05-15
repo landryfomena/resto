@@ -145,4 +145,19 @@
     <string name="contribution">contribution</string>
     <string name="notifications_str">notification</string>
     <string name="save">save</string>
+    <string name="theme_colour">Theme Colour</string>
+    <string name="delivery_time_debute">Delivery Time Debute</string>
+    <string name="prices">Price</string>
+    <string name="every">Every</string>
+    <string name="week">week</string>
+    <string name="tontine">Tontine</string>
+    <string name="rich_en_sels_mineraux">rich en sels mineraux</string>
+    <string name="important_pour_diminuer_le_poids">important pour diminuer le poids</string>
+    <string name="contient_du_fer">contient du fer</string>
+    <string name="dietetic_properties">dietetic properties</string>
+    <string name="photos">Photos</string>
+    <string name="add_to_order">Add to Order</string>
+    <string name="menu_name">Menu Name</string>
+    <string name="contributors">Contributors</string>
+    <string name="days">Days</string>
 </resources>
