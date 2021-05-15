@@ -13,6 +13,53 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="CustomProgressBarHorizontalAllRadiused" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal_fully_radiused</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="formStyle">
+        <item name="android:layout_width">@dimen/dimen_300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:backgroundTint">#B5B5B5</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textColor">@color/black_title</item>
+        <item name="android:textColorHint">@color/gray_formular</item>
+    </style>
+
+    <style name="formSavingsStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:backgroundTint">#B5B5B5</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textColorHint">@color/gray_formular</item>
+        <item name="android:textColor">@color/black_title</item>
+    </style>
+
+    <style name="ButtonEnabled">
+        <item name="android:layout_width">@dimen/dimen_120dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/button_enabled_shape</item>
+        <item name="android:fontFamily">@font/avenir_ltstd_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="ButonRoundedDisabled">
+        <item name="android:layout_width">@dimen/dimen_120dp</item>
+        <item name="android:layout_height">@dimen/dim_40dp</item>
+        <item name="android:background">@drawable/button_enabled_disabled_selector</item>
+        <item name="android:fontFamily">@font/avenir_ltstd_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -42,4 +89,11 @@
         <item name="bottomSheetDialogTheme">@style/Theme.AppCompat.DayNight.NoActionBar</item>
 
     </style>
+
+    <dimen name="dim_16dp">16dp</dimen>
+    <dimen name="dimen_14sp">14sp</dimen>
+    <dimen name="dim_40dp">40dp</dimen>
+    <dimen name="dimen_300dp">300dp</dimen>
+    <color name="gray_formular">#B5B5B5</color>
+    <color name="black_title">#1C1C1C</color>
 </resources>

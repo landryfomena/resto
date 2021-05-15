@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_quick_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    android:paddingBottom="@dimen/dim_20dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+            app:title="@string/add_savings"
+            android:id="@+id/campaign_detail_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:titleTextColor="@color/colorPrimary"
+            style="@style/Theme.Resto" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/task_date"
+                    style="@style/formSavingsStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#B5B5B5"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:hint="@string/date"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black_title"
+                    android:textColorHint="@color/gray_formular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/goal_amount" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/select_color_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/task_date"
+                    app:layout_constraintTop_toBottomOf="@+id/task_date">
+
+                    <TextView
+                        android:id="@+id/color_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_32dp"
+                        android:fontFamily="@font/avenir_ltstd_book"
+                        android:text="@string/color"
+                        android:textColor="@color/black_title"
+                        android:textSize="@dimen/dimen_17sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/color_select_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/color_text"
+                        app:layout_constraintStart_toEndOf="@id/color_text"
+                        app:layout_constraintTop_toTopOf="@id/color_text"
+                        app:tint="@color/gray_formular" />
+
+                    <ImageView
+                        android:id="@+id/color_selected_img"
+                        android:layout_width="@dimen/dimen_32dp"
+                        android:layout_height="@dimen/dimen_32dp"
+                        android:layout_marginStart="@dimen/dimen_16dp"
+                        android:src="@drawable/background_expense_bills"
+                        app:layout_constraintBottom_toBottomOf="@id/color_text"
+                        app:layout_constraintStart_toEndOf="@+id/color_select_img"
+                        app:layout_constraintTop_toTopOf="@+id/color_text"
+                        app:tint="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/color_list_to_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_24dp"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/color_text"
+                        app:spanCount="6"
+                        tools:listitem="@layout/image_item" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <EditText
+                    android:id="@+id/goal_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dim_16dp"
+                    android:backgroundTint="@color/gray_formular"
+                    android:ems="10"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:maxLength="240"
+                    android:maxLines="10"
+                    android:minLines="1"
+                    android:textColorHint="@color/gray_formular"
+                    app:layout_constraintStart_toStartOf="@+id/task_date"
+                    app:layout_constraintTop_toBottomOf="@+id/select_color_container" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/goal_name">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="@dimen/dim_8dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/add_member_text"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginHorizontal="@dimen/dim_16dp"
+                            android:layout_marginVertical="@dimen/dim_8dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contribution" />
+                        <ImageView
+                            android:layout_width="@dimen/dimen_24dp"
+                            android:id="@+id/add_member"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:src="@drawable/ic_baseline_add_24"
+                            android:background="@drawable/circular_shape_transfer_empty_inside"
+                            android:layout_marginHorizontal="@dimen/dim_16dp"
+                            android:layout_marginVertical="@dimen/dim_8dp"
+                            android:layout_gravity="right"
+                            android:layout_height="@dimen/dimen_24dp"
+                            app:tint="@color/colorPrimary" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_of_contributors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="8"
+                        tools:listitem="@layout/contributor_item" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/goal_amount"
+                    style="@style/formSavingsStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray_formular"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:hint="@string/amount"
+                    android:maxLength="25"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black_title"
+                    android:textColorHint="@color/gray_formular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+                <EditText
+                    android:id="@+id/goal_name"
+                    style="@style/formSavingsStyle"
+                    android:fontFamily="@font/avenir_ltstd_book"
+                    android:hint="@string/goal_title"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/notification_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dim_16dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dim_16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/goal_description">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/notifications_str" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dim_8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Every" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/perriod_spinner"
+                            android:layout_marginHorizontal="@dimen/dim_4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/date_spinner"
+                            android:layout_marginHorizontal="@dimen/dim_4dp" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/notification_switch"
+                            android:layout_marginHorizontal="@dimen/dim_4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_100dp"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:backgroundTint="#EBEBEB"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/notification_container">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/image_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_ltstd_book"
+                            android:text="+"
+                            android:textColor="#919191"
+                            android:textSize="@dimen/dimen_50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/task_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/image_upload_progression"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:id="@+id/delete_task_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_goneMarginEnd="@dimen/dim_8dp"
+                            app:srcCompat="@drawable/ic_baseline_delete_24"
+                            app:tint="#919191" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/save_goal"
+                    style="@style/ButtonEnabled"
+                    android:layout_marginTop="@dimen/dim_16dp"
+                    android:text="@string/save"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView"
+                    app:layout_constraintVertical_bias="0.487" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+    <include layout="@layout/layout_bottom_sheet"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
