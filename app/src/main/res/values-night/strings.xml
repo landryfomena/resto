@@ -134,4 +134,13 @@
     <string name="go_to_orders">Go to orders</string>
     <string name="you_can_track_the_delivery_in_the_orders_section">You can track the delivery in the Orders section.</string>
     <string name="cart_empty">Cart Empty</string>
+    <string name="menu_name">Menu Name</string>
+    <string name="contributors">Contributors</string>
+    <string name="days">Days</string>
+    <string name="description">Description</string>
+    <string name="theme_colour">Theme Colour</string>
+    <string name="delivery_time_debute">Delivery Time Debute</string>
+    <string name="prices">Price</string>
+    <string name="every">Every</string>
+    <string name="week">week</string>
 </resources>
