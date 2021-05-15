@@ -11,7 +11,7 @@ class CollectionByFozzyViewModel : ViewModel() {
     fun setCollectionByFozzy() {
         var dataSet = mutableSetOf<NicePlace>()
         dataSet.add(NicePlace(1, "Andy & Cindy s Diner"))
-        dataSet.add(NicePlace(2, "The Garage Bar & Grill"))
+        dataSet.add(NicePlace(2, "Chocolat nice place"))
         dataSet.add(NicePlace(3, "Tiong Bahru Bakery"))
         newColllection.value = dataSet.toList()
     }

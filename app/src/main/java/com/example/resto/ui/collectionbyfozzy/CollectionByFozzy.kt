@@ -54,14 +54,12 @@ class CollectionByFozzy : Fragment() {
         observeViewModel()
         setOnClickListener()
     }
-
     private fun observeViewModel() {
         collectionByFozzyViewModel.newColllection.observe(viewLifecycleOwner,
             Observer { newCollection ->
                 initItemCollection(newCollection)
             })
     }
-
     private fun initItemCollection(mCollection: List<NicePlace>?) {
         aCollection_Item = mutableListOf()
         mCollection?.forEach { nicePlace ->

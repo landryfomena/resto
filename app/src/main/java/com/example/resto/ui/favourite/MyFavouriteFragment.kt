@@ -90,7 +90,7 @@ class MyFavouriteFragment : Fragment() {
         }
         text1.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(MyFavouriteFragmentDirections.actionNavigationFavouriteToChocolatSpiceRestaurant())
+                .navigate(MyFavouriteFragmentDirections.actionNavigationFavouriteToChocolatSpiceRestaurant(NicePlace()))
         }
         arrowback.setOnClickListener {
             Navigation.findNavController(it).navigateUp()

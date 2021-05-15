@@ -52,7 +52,12 @@
         android:id="@+id/asiaRestaurantFragment"
         android:name="com.example.resto.ui.restaurant.AsiaRestaurantFragment"
         android:label="asia_restaurant_fragment"
-        tools:layout="@layout/asia_restaurant_fragment" />
+        tools:layout="@layout/asia_restaurant_fragment" >
+        <argument
+            android:name="place"
+            app:argType="com.example.resto.models.NicePlace"
+            app:nullable="true" />
+    </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.example.resto.ui.search.Search"
@@ -62,7 +67,12 @@
         android:id="@+id/chocolatSpiceRestaurant"
         android:name="com.example.resto.ui.restaurant.ChocolatSpiceRestaurant"
         android:label="chocolat_spice_restaurant_fragment"
-        tools:layout="@layout/chocolat_spice_restaurant_fragment" />
+        tools:layout="@layout/chocolat_spice_restaurant_fragment" >
+        <argument
+            android:name="place"
+            app:argType="com.example.resto.models.NicePlace"
+            app:nullable="true" />
+    </fragment>
     <fragment
         android:id="@+id/myOrder"
         android:name="com.example.resto.ui.order.MyOrder"
@@ -91,6 +101,10 @@
         <action
             android:id="@+id/action_boonLayFragment_to_restoFeatureBoonLayFragment"
             app:destination="@id/restoFeatureBoonLayFragment" />
+        <argument
+            android:name="place"
+            app:argType="com.example.resto.models.NicePlace"
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -101,6 +115,12 @@
         <action
             android:id="@+id/action_collectionByFozzy2_to_asiaRestaurantFragment"
             app:destination="@id/asiaRestaurantFragment" />
+        <action
+            android:id="@+id/action_collectionByFozzy2_to_chocolatSpiceRestaurant"
+            app:destination="@id/chocolatSpiceRestaurant" />
+        <action
+            android:id="@+id/action_collectionByFozzy2_to_boonLayFragment"
+            app:destination="@id/boonLayFragment" />
     </fragment>
     <fragment
         android:id="@+id/myOrderResto"

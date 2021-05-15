@@ -24,7 +24,6 @@ import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_explore.*
 import kotlinx.android.synthetic.main.fragment_explore.main_searchView
 import kotlinx.android.synthetic.main.fragment_explore.recommend_collection
-import kotlinx.android.synthetic.main.search_fragment.*
 
 class ExploreFragment : Fragment() {
 
@@ -123,7 +122,7 @@ class ExploreFragment : Fragment() {
         }
         page_title.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(ExploreFragmentDirections.actionNavigationHomeToBoonLayFragment())
+                .navigate(ExploreFragmentDirections.actionNavigationHomeToBoonLayFragment(NicePlace()))
         }
         show.setOnClickListener {
             Navigation.findNavController(it)

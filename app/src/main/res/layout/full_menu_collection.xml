@@ -46,6 +46,7 @@
             android:layout_marginStart="@dimen/dimens_16dp"
             android:id="@+id/option_collection_full"
             android:orientation="horizontal"
+            android:visibility="gone"
             tools:itemCount="1"
             tools:listitem="@layout/resto_feature_option"
             app:layout_constraintStart_toStartOf="parent"
