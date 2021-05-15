@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimens_10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dimens_88dp"
+        android:layout_margin="8dp"
+        android:id="@+id/image_resto"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/oldrich_round"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="@dimen/dimens_88dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimens_17sp"
+        android:id="@+id/image_name"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        app:layout_constraintStart_toStartOf="@+id/image_resto"
+        app:layout_constraintEnd_toEndOf="@+id/image_resto"
+        android:text="whatsapp"
+        app:layout_constraintTop_toBottomOf="@+id/image_resto"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="@dimen/dimens_13sp"
+        android:fontFamily="@font/avenir_ltstd_roman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/image_name"
+        app:layout_constraintEnd_toEndOf="@+id/image_name"
+        android:text="698481557"
+        app:layout_constraintTop_toBottomOf="@+id/image_name"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

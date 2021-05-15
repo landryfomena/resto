@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_navigation_explore_to_filters"
             app:destination="@id/filters" />
+        <action
+            android:id="@+id/action_navigation_explore_to_parisHoliday"
+            app:destination="@id/parisHoliday" />
     </fragment>
 
     <fragment
@@ -163,5 +166,10 @@
             android:id="@+id/action_profileFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/parisHoliday"
+        android:name="com.example.resto.ui.paris_holiday.ParisHoliday"
+        android:label="paris_holiday_fragment"
+        tools:layout="@layout/paris_holiday_fragment" />
 
 </navigation>

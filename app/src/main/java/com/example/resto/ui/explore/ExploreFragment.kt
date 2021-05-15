@@ -130,7 +130,7 @@ class ExploreFragment : Fragment() {
         }
         icon_search.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(ExploreFragmentDirections.actionNavigationExploreToNavigationMyOrder())
+                .navigate(ExploreFragmentDirections.actionNavigationExploreToParisHoliday())
         }
         topCat.setOnClickListener {
             Navigation.findNavController(it)

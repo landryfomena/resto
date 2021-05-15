@@ -49,8 +49,6 @@ class Filters : BottomSheetDialogFragment() {
 //        }
         asia_filter.setOnClickListener {
 
-
-
             Navigation.findNavController(it)
                 .navigate(FiltersDirections.actionFiltersToAsiaRestaurantFragment(NicePlace()))
         }

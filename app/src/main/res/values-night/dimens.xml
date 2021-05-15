@@ -59,4 +59,7 @@
     <dimen name="dimens_13sp">13sp</dimen>
     <dimen name="dimens_88dp">88dp</dimen>
     <dimen name="dimens_11sp">11sp</dimen>
+    <dimen name="dimens_14dp">14dp</dimen>
+    <dimen name="dimens_14sp">14sp</dimen>
+    <dimen name="dimens_26sp">26sp</dimen>
 </resources>

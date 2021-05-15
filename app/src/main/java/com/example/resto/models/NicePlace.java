@@ -16,6 +16,9 @@ public class NicePlace implements Parcelable {
         this.title = title;
         this.imageUrl = imageUrl;
     }
+    public NicePlace(Integer imageUrl){
+        this.imageUrl=imageUrl;
+    }
 
     public NicePlace() {
     }

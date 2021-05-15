@@ -15,7 +15,6 @@ class Collection_Item(var nicePlace: NicePlace) : Item() {
             when(nicePlace.title){
                 "Andy & Cindy s Diner"->{
 
-
                     Navigation.findNavController(it).navigate(CollectionByFozzyDirections.actionCollectionByFozzy2ToBoonLayFragment(nicePlace))
                 }
                 "Chocolat nice place"->{
