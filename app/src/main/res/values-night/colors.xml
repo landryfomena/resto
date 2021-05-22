@@ -10,4 +10,6 @@
     <color name="red">#FF2D55</color>
     <color name="blue">#5856D6</color>
     <color name="arriere_plan_transparant">#F7F8FA</color>
+    <color name="light_grey">#919191</color>
+    <color name="gris">#4B4A4A</color>
 </resources>

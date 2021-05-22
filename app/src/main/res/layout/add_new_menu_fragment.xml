@@ -43,6 +43,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/flag_transparent"
                     android:hint="@string/menu_name"
+                    android:textColor="@color/light_grey"
                     android:fontFamily="@font/roboto_regular"
                     android:textSize="@dimen/dimens_20sp"
                     android:autofillHints=""
@@ -63,6 +64,7 @@
                     android:textSize="@dimen/dimens_16sp"
                     android:background="@drawable/flag_transparent"
                     android:hint="@string/prices"
+                    android:textColor="@color/light_grey"
                     android:autofillHints="" />
 
                 <androidx.cardview.widget.CardView
@@ -77,7 +79,9 @@
                     android:fontFamily="@font/roboto_regular"
                     android:textSize="@dimen/dimens_16sp"
                     android:background="@drawable/flag_transparent"
-                    android:hint="@string/delivery_time_debute" />
+                    android:hint="@string/delivery_time_debute"
+                    android:textColor="@color/light_grey"
+                    android:textColorHint="@color/light_grey"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -95,6 +99,7 @@
                         android:text="@string/theme_colour"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="@dimen/dimens_16sp"
+                        android:textColor="@color/light_grey"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -105,7 +110,7 @@
                         android:layout_height="@dimen/dimens_25dp"
                         android:layout_marginEnd="@dimen/dimens_10dp"
                         android:background="@drawable/rounded_shape_otp"
-                        android:backgroundTint="#4D92F0"
+                        android:backgroundTint="@color/blue"
                         app:cardCornerRadius="@dimen/dimens_50dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/arrow_more"
@@ -127,6 +132,7 @@
                     android:layout_marginTop="@dimen/dimens_50dp"
                     android:background="@drawable/flag_transparent"
                     android:hint="@string/description"
+                    android:textColorHint="@color/light_grey"
                     android:fontFamily="@font/roboto_regular"
                     android:textSize="@dimen/dimens_16sp"/>
 
@@ -140,6 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimens_50dp"
                     android:text="@string/days"
+                    android:textColor="@color/light_grey"
                     android:fontFamily="@font/roboto_regular"
                     android:textSize="@dimen/dimens_16sp"/>
 
@@ -153,6 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/every"
+                        android:textColor="@color/light_grey"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="@dimen/dimens_14sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -172,6 +180,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
                             android:text="@string/week"
+                            android:textColor="#1C1C1C"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_14sp" />
 
@@ -197,6 +206,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
                             android:text="@string/week"
+                            android:textColor="@color/light_grey"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_14sp" />
 
@@ -224,6 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimens_20dp"
                     android:text="@string/dietetic_properties"
+                    android:textColor="#7B7B7B"
                     android:fontFamily="@font/roboto_regular"
                     android:textSize="@dimen/dimens_16sp"/>
 
@@ -239,6 +250,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dimens_20dp"
                         android:text="@string/tontine"
+                        android:textColor="@color/gris"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="@dimen/dimens_16sp"/>
 
@@ -253,7 +265,7 @@
                             android:layout_width="@dimen/dimens_8dp"
                             android:layout_height="@dimen/dimens_8dp"
                             android:background="@drawable/rounded_shape_otp"
-                            android:backgroundTint="@color/black" />
+                            android:backgroundTint="@color/gris" />
 
                         <TextView
                             android:id="@+id/item1"
@@ -261,6 +273,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dimens_10dp"
                             android:text="@string/contient_du_fer"
+                            android:textColor="@color/gris"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_16sp"/>
                     </LinearLayout>
@@ -276,13 +289,14 @@
                             android:layout_width="@dimen/dimens_8dp"
                             android:layout_height="@dimen/dimens_8dp"
                             android:background="@drawable/rounded_shape_otp"
-                            android:backgroundTint="@color/black" />
+                            android:backgroundTint="@color/gris" />
 
                         <TextView
                             android:id="@+id/item2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dimens_10dp"
+                            android:textColor="@color/gris"
                             android:text="@string/important_pour_diminuer_le_poids"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_16sp" />
@@ -299,7 +313,7 @@
                             android:layout_width="@dimen/dimens_8dp"
                             android:layout_height="@dimen/dimens_8dp"
                             android:background="@drawable/rounded_shape_otp"
-                            android:backgroundTint="@color/black" />
+                            android:backgroundTint="@color/gris" />
 
                         <TextView
                             android:id="@+id/item3"
@@ -307,6 +321,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dimens_10dp"
                             android:text="@string/rich_en_sels_mineraux"
+                            android:textColor="@color/gris"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_16sp" />
                     </LinearLayout>
@@ -363,6 +378,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/every"
+                        android:textColor="@color/light_grey"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="@dimen/dimens_14sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -381,6 +397,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
+                            android:textColor="#1C1C1C"
                             android:text="@string/week"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_14sp" />
@@ -407,6 +424,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
                             android:text="@string/week"
+                            android:textColor="@color/light_grey"
                             android:fontFamily="@font/roboto_regular"
                             android:textSize="@dimen/dimens_14sp" />
 
