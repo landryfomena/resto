@@ -93,6 +93,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/theme_colour"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/dimens_16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -124,7 +126,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimens_50dp"
                     android:background="@drawable/flag_transparent"
-                    android:hint="@string/description" />
+                    android:hint="@string/description"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -135,7 +139,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimens_50dp"
-                    android:text="@string/days" />
+                    android:text="@string/days"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -147,6 +153,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/every"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/dimens_14sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -163,7 +171,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
-                            android:text="@string/week" />
+                            android:text="@string/week"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_14sp" />
 
                         <ImageView
                             android:id="@+id/week_drop_down"
@@ -186,7 +196,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
-                            android:text="@string/week" />
+                            android:text="@string/week"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_14sp" />
 
                         <ImageView
                             android:id="@+id/day_drop_down"
@@ -211,7 +223,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimens_20dp"
-                    android:text="@string/dietetic_properties" />
+                    android:text="@string/dietetic_properties"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -224,7 +238,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dimens_20dp"
-                        android:text="@string/tontine" />
+                        android:text="@string/tontine"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/dimens_16sp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -244,7 +260,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dimens_10dp"
-                            android:text="@string/contient_du_fer" />
+                            android:text="@string/contient_du_fer"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_16sp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -265,7 +283,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dimens_10dp"
-                            android:text="@string/important_pour_diminuer_le_poids" />
+                            android:text="@string/important_pour_diminuer_le_poids"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_16sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -286,7 +306,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dimens_10dp"
-                            android:text="@string/rich_en_sels_mineraux" />
+                            android:text="@string/rich_en_sels_mineraux"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_16sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -294,7 +316,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimens_50dp"
-                    android:text="@string/photos" />
+                    android:text="@string/photos"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -326,7 +350,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/days"/>
+                    android:text="@string/days"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp"/>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -337,6 +363,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/every"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/dimens_14sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -353,7 +381,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
-                            android:text="@string/week" />
+                            android:text="@string/week"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_14sp" />
 
                         <ImageView
                             android:id="@+id/week_drop_down2"
@@ -376,7 +406,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dimens_10dp"
-                            android:text="@string/week" />
+                            android:text="@string/week"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/dimens_14sp" />
 
                         <ImageView
                             android:id="@+id/day_drop_down2"
@@ -402,7 +434,6 @@
                     android:paddingVertical="@dimen/dimens_10dp"
                     android:background="@drawable/shape_paiement_mode"
                     android:layout_marginBottom="@dimen/dimens_100dp"
-                    android:layout_marginHorizontal="@dimen/dimens_16dp"
                     android:layout_marginTop="@dimen/dimens_25dp">
                     <TextView
                         android:layout_width="wrap_content"
@@ -411,6 +442,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         android:text="@string/add_to_order"
+                        android:fontFamily="@font/avenir_ltstd_heavy"
+                        android:textSize="@dimen/dimens_17sp"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -418,6 +451,8 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:text="$95.40"
+                        android:fontFamily="@font/avenir_ltstd_heavy"
+                        android:textSize="@dimen/dimens_17sp"
                         android:layout_marginEnd="@dimen/dimens_20dp"
                         android:textColor="@color/white"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>

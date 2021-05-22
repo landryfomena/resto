@@ -141,7 +141,7 @@
     <string name="goal_title">"restau name "</string>
     <string name="name">contact name</string>
     <string name="amount">amount</string>
-    <string name="description">"add description "</string>
+    <string name="description">description</string>
     <string name="contribution">contribution</string>
     <string name="notifications_str">notification</string>
     <string name="save">save</string>

@@ -121,6 +121,7 @@
     <string name="reward_credits">Reward credits</string>
     <string name="payment_method">Payment method</string>
     <string name="notifications">Notifications</string>
+    <string name="description">description</string>
     <string name="send">Send</string>
     <string name="title_favourite">Favourite</string>
     <string name="title_my_order">My Order</string>
