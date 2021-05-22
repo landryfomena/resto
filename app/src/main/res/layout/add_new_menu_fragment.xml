@@ -43,6 +43,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/flag_transparent"
                     android:hint="@string/menu_name"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_20sp"
                     android:autofillHints=""
                     android:inputType="text" />
 
@@ -56,7 +58,9 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimens_50dp"
+                    android:layout_marginTop="@dimen/dimens_40dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp"
                     android:background="@drawable/flag_transparent"
                     android:hint="@string/prices"
                     android:autofillHints="" />
@@ -69,7 +73,9 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimens_50dp"
+                    android:layout_marginTop="@dimen/dimens_40dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/dimens_16sp"
                     android:background="@drawable/flag_transparent"
                     android:hint="@string/delivery_time_debute" />
 
@@ -97,7 +103,7 @@
                         android:layout_height="@dimen/dimens_25dp"
                         android:layout_marginEnd="@dimen/dimens_10dp"
                         android:background="@drawable/rounded_shape_otp"
-                        android:backgroundTint="@color/blue"
+                        android:backgroundTint="#4D92F0"
                         app:cardCornerRadius="@dimen/dimens_50dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/arrow_more"
